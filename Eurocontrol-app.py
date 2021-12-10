@@ -17,9 +17,9 @@ st.markdown("""
 Tekst\n
 """)
 
-with st.expander('Meer informatie:'):
-	st.subheader('Extra informatie')
-	st.markdown('''TEKST''')
+# with st.expander('Meer informatie:'):
+# 	st.subheader('Extra informatie')
+# 	st.markdown('''TEKST''')
 
 #Kies inspectie
 st.sidebar.title("Choose page")
