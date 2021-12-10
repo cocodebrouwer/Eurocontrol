@@ -30,5 +30,3 @@ Veel plezier met het bekijken van ons interactieve Dashboard en het uitproberen 
 st.sidebar.title("Kies inspectie")
 nav = st.sidebar.radio(label = "", 
                        options = ["Histogram", "Boxplot", "Correlatie Matrix", "Spreidingsdiagram", "Kaart"])
-
-#--------------------
