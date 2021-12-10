@@ -17,6 +17,10 @@ st.markdown("""
 Tekst\n
 """)
 
+with st.expander('Meer informatie:'):
+	st.subheader('Extra informatie')
+	st.markdown('''TEKST''')
+
 #Kies inspectie
 st.sidebar.title("Choose page")
 nav = st.sidebar.radio(label = "", 
@@ -31,7 +35,3 @@ if nav == "Passenger":
 elif nav == "Airports/Governments":
   y = st.radio(label = "Kies gewenste activiteit:", 
                options = ["Totaal aantal vluchten"])
-  
-  with st.expander('Meer informatie:'):
-		st.subheader('Extra informatie')
-		st.markdown('''TEKST''')
