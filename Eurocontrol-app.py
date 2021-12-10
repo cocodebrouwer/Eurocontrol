@@ -33,5 +33,5 @@ elif nav == "Airports/Governments":
                options = ["Totaal aantal vluchten"])
   
   with st.expander('Meer informatie:'):
-	st.subheader("Extra informatie")
-	st.markdown("TEKST")
+	st.subheader('Extra informatie')
+	st.markdown('''TEKST''')
