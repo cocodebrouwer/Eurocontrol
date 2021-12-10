@@ -21,3 +21,17 @@ Tekst\n
 st.sidebar.title("Choose page")
 nav = st.sidebar.radio(label = "", 
                        options = ["Passengers", "Airports/Governments"])
+
+if nav == "Passenger":
+  y = st.radio(label = "Kies gewenste activiteit:", 
+               options = ["Totaal aantal vluchten"])
+ 
+
+ 
+elif nav == "Airports/Governments":
+  y = st.radio(label = "Kies gewenste activiteit:", 
+               options = ["Totaal aantal vluchten"])
+  
+  with st.expander('Meer informatie:'):
+	st.subheader('Extra informatie')
+	st.markdown('''TEKST''')
