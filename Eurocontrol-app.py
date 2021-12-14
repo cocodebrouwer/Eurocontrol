@@ -1,3 +1,5 @@
+$ pip install --upgrade streamlit
+
 #Importeer streamlit
 import streamlit as st
 
