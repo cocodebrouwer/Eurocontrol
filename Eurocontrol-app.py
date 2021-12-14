@@ -9,24 +9,22 @@ import plotly.graph_objects as go
 # import statsmodels.api as sm
 # import seaborn as sns
 
+# Data inladen
+Data = pd.read_csv('FINAL.csv')
 
 #Titel toevoegen
 st.title("Eurocontrol Dashboard")
 
-Data = pd.read_csv('FINAL.csv')
-
 #Tekst toevoegen
 st.markdown("""
-Tekst\n
+Hier kan je je bestemming kiezen\n
 """)
 
 # From
-option = st.selectbox('From', Data['From'].unique())
-st.write('You selected:', option)
+From = st.selectbox('From', Data['From'].unique())
 
 # To
-option = st.selectbox('From', Data['To'].unique())
-st.write('You selected:', option)
+To = st.selectbox('From', Data['To'].unique())
 
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
