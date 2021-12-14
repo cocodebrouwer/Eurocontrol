@@ -33,7 +33,7 @@ To = col2.selectbox(label= 'From', options= Data['To'].unique())
 
 # Dagen
 dagen = Data[Data['To']==To]['Weekday'].unique()
-test = col3.date_input(label= 'Dagen', options= dagen)
+test = col3.selectbox(label= 'Dagen', options= dagen)
 
 
 # with st.expander('Meer informatie:'):
