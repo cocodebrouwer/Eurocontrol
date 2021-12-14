@@ -13,7 +13,7 @@ import plotly.graph_objects as go
 #Titel toevoegen
 st.title("Eurocontrol Dashboard")
 
-Data = pd.read_csv('/Users/timon/Documents/School cloud/Jaar 3/Minor/Track aviation/FINAL.csv')
+Data = pd.read_csv('FINAL.csv')
 
 #Tekst toevoegen
 st.markdown("""
