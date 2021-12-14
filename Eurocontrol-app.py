@@ -20,16 +20,16 @@ st.markdown("""
 Hier kan je je bestemming kiezen\n
 """)
 
-col1, col2 = st.columns(2)
+col1, col2 = st.beta_columns(2)
 
 
 
 # From
-From = col1.selectbox('From', Data['From'].unique())
+From = col1.selectbox(label= 'From', options= Data['From'].unique())
 
 
 # To
-To = col2.selectbox('From', Data['To'].unique())
+To = col2.selectbox(label= 'From', options= Data['To'].unique())
 
 
 # with st.expander('Meer informatie:'):
