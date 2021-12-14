@@ -35,3 +35,5 @@ if nav == "Passenger":
 elif nav == "Airports/Governments":
   y = st.radio(label = "Kies gewenste activiteit:", 
                options = ["Totaal aantal vluchten"])
+  
+  
