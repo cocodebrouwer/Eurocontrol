@@ -29,6 +29,10 @@ nav = st.sidebar.radio(label = "",
 if nav == "Passenger":
   y = st.radio(label = "Kies gewenste activiteit:", 
                options = ["Totaal aantal vluchten"])
+  
+  option = st.selectbox('How would you like to be contacted?',
+    ('Email', 'Home phone', 'Mobile phone'))
+  st.write('You selected:', option)
  
 
  
