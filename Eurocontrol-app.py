@@ -20,7 +20,12 @@ st.markdown("""
 Tekst\n
 """)
 
-option = st.selectbox('From', Data['From'])
+# From
+option = st.selectbox('From', Data['From'].unique())
+st.write('You selected:', option)
+
+# To
+option = st.selectbox('From', Data['To'].unique())
 st.write('You selected:', option)
 
 # with st.expander('Meer informatie:'):
