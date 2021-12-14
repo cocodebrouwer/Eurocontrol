@@ -20,7 +20,7 @@ st.markdown("""
 Hier kan je je bestemming kiezen\n
 """)
 
-col1, col2, col3 = st.columns([1, 1, 2])
+col1, col2 = st.columns([1, 2])
 
 # From
 From = col1.selectbox('From', Data['From'].unique())
