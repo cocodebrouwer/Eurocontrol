@@ -36,4 +36,6 @@ elif nav == "Airports/Governments":
   y = st.radio(label = "Kies gewenste activiteit:", 
                options = ["Totaal aantal vluchten"])
   
-  
+my_expander = st.beta_expander(
+        "Click here for description of models and their tasks"
+    )
