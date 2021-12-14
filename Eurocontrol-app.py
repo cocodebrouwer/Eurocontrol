@@ -17,6 +17,9 @@ st.markdown("""
 Tekst\n
 """)
 
+option = st.selectbox('How would you like to be contacted?', ('Email', 'Home phone', 'Mobile phone'))
+st.write('You selected:', option)
+
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
 # 	st.markdown('''TEKST''')
@@ -28,12 +31,7 @@ nav = st.sidebar.radio(label = "",
 
 if nav == "Passenger":
   y = st.radio(label = "Kies gewenste activiteit:", 
-               options = ["Totaal aantal vluchten"])
-  
-  option = st.selectbox('How would you like to be contacted?',
-    ('Email', 'Home phone', 'Mobile phone'))
-  st.write('You selected:', option)
- 
+               options = ["Totaal aantal vluchten"]) 
 
  
 elif nav == "Airports/Governments":
