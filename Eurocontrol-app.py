@@ -9,6 +9,7 @@ import plotly.graph_objects as go
 # import statsmodels.api as sm
 # import seaborn as sns
 
+st.set_page_config(layout='wide')
 
 # Data inladen
 Data = pd.read_csv('FINAL.csv')
