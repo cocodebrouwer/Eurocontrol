@@ -20,7 +20,7 @@ st.markdown("""
 Hier kan je je bestemming kiezen\n
 """)
 
-col1, col2 = st.columns([3, 1])
+col1, col2, col3, col4 = st.beta_columns((2,1,1,1))
 
 
 # From
