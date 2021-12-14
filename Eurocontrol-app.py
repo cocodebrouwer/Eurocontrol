@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 # import seaborn as sns
 
 
-st.beta_set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 # Data inladen
 Data = pd.read_csv('DATA.csv')
 
