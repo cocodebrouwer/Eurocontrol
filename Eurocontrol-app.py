@@ -20,13 +20,13 @@ st.markdown("""
 Hier kan je je bestemming kiezen\n
 """)
 
-col1, col2 = st.st.beta_columns([1, 1])
+col1, col2 = st.st.columns([1, 1])
 
-with col1:
+
 # From
 st.selectbox('From', Data['From'].unique())
 
-with col2:
+
 # To
 st.selectbox('From', Data['To'].unique())
 
