@@ -26,14 +26,14 @@ st.sidebar.title("Choose page")
 nav = st.sidebar.radio(label = "", 
                        options = ["Passengers", "Airports/Governments"])
 
-# if nav == "Passenger":
-#   y = st.radio(label = "Kies gewenste activiteit:", 
-#                options = ["Totaal aantal vluchten"])
+if nav == "Passenger":
+  y = st.radio(label = "Kies gewenste activiteit:", 
+               options = ["Totaal aantal vluchten"])
  
 
  
-# elif nav == "Airports/Governments":
-#   y = st.radio(label = "Kies gewenste activiteit:", 
-#                options = ["Totaal aantal vluchten"])
+elif nav == "Airports/Governments":
+  y = st.radio(label = "Kies gewenste activiteit:", 
+               options = ["Totaal aantal vluchten"])
   
   
