@@ -23,10 +23,10 @@ Hier kan je je bestemming kiezen\n
 col1, col2, col3 = st.columns([1, 1, 2])
 
 # From
-col1.From = st.selectbox('From', Data['From'].unique())
+col1.st.selectbox('From', Data['From'].unique())
 
 # To
-col2.To = st.selectbox('From', Data['To'].unique())
+col2.st.selectbox('From', Data['To'].unique())
 
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
