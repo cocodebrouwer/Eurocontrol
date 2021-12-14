@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 
 st.beta_set_page_config(layout="wide")
 # Data inladen
-Data = pd.read_csv('FINAL.csv')
+Data = pd.read_csv('DATA.csv')
 
 #Titel toevoegen
 st.title("Eurocontrol Dashboard")
@@ -32,7 +32,7 @@ From = col1.selectbox(label= 'From', options= Data['From'].unique())
 To = col2.selectbox(label= 'To', options= Data['To'].unique())
 
 # Dagen
-dagen = Data[Data['To']==To]['Weekday'].unique()
+dagen = Data[Data['To']==To]['Weekday'].sort_values('Weekday').unique()
 test = col3.radio(label= 'Dagen', options= dagen)
 
 
