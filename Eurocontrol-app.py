@@ -32,7 +32,8 @@ From = col1.selectbox(label= 'From', options= Data['From'].unique())
 To = col2.selectbox(label= 'To', options= Data['To'].unique())
 
 # Dagen
-dagen = Data[Data['To']==To]['Weekday'].sort_values('Weekday').unique()
+dagen = Data[Data['To']==To]['Weekday'].unique()
+dagen = pd.Categorical(dagen, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
 test = col3.radio(label= 'Dagen', options= dagen)
 
 
