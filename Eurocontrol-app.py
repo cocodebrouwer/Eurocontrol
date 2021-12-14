@@ -33,8 +33,9 @@ To = col2.selectbox(label= 'To', options= Data['To'].unique())
 
 # Dagen
 dagen = Data[Data['To']==To]['Weekday']
-dagen = dagen.apply(lambda x: {'Monday':0, 'Tuesday':1, 'Wednesday':2, 'Thursday':3, 'Friday':4, 'Saturday':5, 'Sunday':6}[x])
-test = col3.radio(label= 'Dagen', options= dagen)
+Weekdays = {'Monday':0, 'Tuesday':1, 'Wednesday':2, 'Thursday':3, 'Friday':4, 'Saturday':5, 'Sunday':6}
+dagen.sort_values(by=['Weekday'], key=lambda x: x.map(Weekdays))
+test = col3.radio(label= 'Dagen', options= dagen.unique())
 
 
 # with st.expander('Meer informatie:'):
