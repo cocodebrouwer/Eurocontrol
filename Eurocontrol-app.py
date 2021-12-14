@@ -33,7 +33,7 @@ To = col2.selectbox(label= 'To', options= Data['To'].unique())
 
 # Dagen
 dagen = Data[Data['To']==To]['Weekday']
-dagen = dagen.sort_values('Weekday number').unique()
+dagen = dagen.sort_values('Weekday number')
 test = col3.radio(label= 'Dagen', options= dagen)
 
 
