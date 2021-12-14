@@ -22,14 +22,14 @@ Hier kan je je bestemming kiezen\n
 
 col1, col2, col3= st.beta_columns((1,1,2))
 
-
+with col1:
 # From
 From = st.selectbox('From', Data['From'].unique())
+
+with col2:
 # To
 To = st.selectbox('From', Data['To'].unique())
 
-col1.From
-col2.To
 
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
