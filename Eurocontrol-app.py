@@ -33,9 +33,8 @@ To = col2.selectbox(label= 'To', options= Data['To'].unique())
 
 # Dagen
 dagen = Data[Data['To']==To]['Weekday']
-dagen['Weekday'] = pd.Categorical(dagen['Weekday'], ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
-dagen.sort_values('Weekday')
-test = col3.radio(label= 'Dagen', options= dagen.unique())
+dagen = dagen.sort_values('Weekday number').unique()
+test = col3.radio(label= 'Dagen', options= dagen)
 
 
 # with st.expander('Meer informatie:'):
