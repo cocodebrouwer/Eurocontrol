@@ -9,10 +9,11 @@ import plotly.graph_objects as go
 # import statsmodels.api as sm
 # import seaborn as sns
 
-Data = pd.read_csv('/Users/timon/Documents/School cloud/Jaar 3/Minor/Track aviation/FINAL.csv')
 
 #Titel toevoegen
 st.title("Eurocontrol Dashboard")
+
+Data = pd.read_csv('/Users/timon/Documents/School cloud/Jaar 3/Minor/Track aviation/FINAL.csv')
 
 #Tekst toevoegen
 st.markdown("""
