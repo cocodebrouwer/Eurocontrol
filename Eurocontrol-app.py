@@ -9,7 +9,6 @@ import plotly.graph_objects as go
 # import statsmodels.api as sm
 # import seaborn as sns
 
-st.set_page_config(page_title = 'Eurocontrol-app.py', layout= 'wide')
 
 # Data inladen
 Data = pd.read_csv('FINAL.csv')
