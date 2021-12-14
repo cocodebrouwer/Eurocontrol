@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 # import seaborn as sns
 
 
-st.beta_set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 # Data inladen
 Data = pd.read_csv('FINAL.csv')
 
@@ -22,7 +22,7 @@ st.markdown("""
 Hier kan je je bestemming kiezen\n
 """)
 
-col1, col2, col3 = st.beta_columns((2,2,1))
+col1, col2, col3 = st.columns((2,2,1))
 
 
 # From
