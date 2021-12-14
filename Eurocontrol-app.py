@@ -32,8 +32,8 @@ From = col1.selectbox(label= 'From', options= Data['From'].unique())
 To = col2.selectbox(label= 'From', options= Data['To'].unique())
 
 # Dagen
-dagen = Data[Data[
-test = col3.multiselect(label= 'Dagen', options= Data['To'].unique())
+dagen = Data[Data['To']==To]['Weekday'].unique()
+test = col3.multiselect(label= 'Dagen', options= dagen)
 
 
 # with st.expander('Meer informatie:'):
