@@ -22,14 +22,14 @@ st.markdown("""
 Hier kan je je bestemming kiezen\n
 """)
 
-col1, col2, col3 = st.beta_columns((1,1,2))
+col1, col2, col3 = st.beta_columns(3)
 
 
 # From
 From = col1.selectbox(label= 'From', options= Data['From'].unique())
 
 # To
-To = col2.selectbox(label= 'From', options= Data['To'].unique())
+To = col2.selectbox(label= 'To', options= Data['To'].unique())
 
 # Dagen
 dagen = Data[Data['To']==To]['Weekday'].unique()
