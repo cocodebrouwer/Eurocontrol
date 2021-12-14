@@ -25,13 +25,15 @@ Hier kan je je bestemming kiezen\n
 col1, col2, col3 = st.beta_columns((1,1,2))
 
 
-
 # From
 From = col1.selectbox(label= 'From', options= Data['From'].unique())
 
-
 # To
 To = col2.selectbox(label= 'From', options= Data['To'].unique())
+
+# Dagen
+dagen = Data[Data[
+test = col3.multiselect(label= 'Dagen', options= Data['To'].unique())
 
 
 # with st.expander('Meer informatie:'):
