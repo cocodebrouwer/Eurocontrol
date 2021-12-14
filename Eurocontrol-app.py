@@ -24,11 +24,11 @@ col1, col2 = st.columns([1, 2])
 
 with col1:
 # From
-From = st.selectbox('From', Data['From'].unique())
+st.selectbox('From', Data['From'].unique())
 
 with col2:
 # To
-To = st.selectbox('From', Data['To'].unique())
+st.selectbox('From', Data['To'].unique())
 
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
