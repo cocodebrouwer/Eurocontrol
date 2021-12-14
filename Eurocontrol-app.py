@@ -9,6 +9,8 @@ import plotly.graph_objects as go
 # import statsmodels.api as sm
 # import seaborn as sns
 
+Data = pd.read_csv('/Users/timon/Documents/School cloud/Jaar 3/Minor/Track aviation/FINAL.csv')
+
 #Titel toevoegen
 st.title("Eurocontrol Dashboard")
 
@@ -17,7 +19,7 @@ st.markdown("""
 Tekst\n
 """)
 
-option = st.selectbox('How would you like to be contacted?', ('Email', 'Home phone', 'Mobile phone'))
+option = st.selectbox('From', Data['From'])
 st.write('You selected:', option)
 
 # with st.expander('Meer informatie:'):
