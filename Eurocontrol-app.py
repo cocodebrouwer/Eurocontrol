@@ -59,15 +59,11 @@ Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
 Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 
 
-col1, col2 = st.columns((4,1))
+col1, col2, col3 = st.columns((12,2,1))
 
 col1.write('test1')
 col1.write('test2')
 col1.write('test3')
-
-
-
-col1, col2, col3 = st.columns((12,2,1))
 
 col2.write('From:')
 col2.write('To:')
