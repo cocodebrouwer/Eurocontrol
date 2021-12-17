@@ -93,8 +93,8 @@ DataDone.drop(columns = 'Unnamed: 0', inplace = True)
 x = To
 y = From
 
-# AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
-# AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
+AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
+AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
 
 m = folium.Map(location=[AvgLat, AvgLng], width=750, height=500, zoom_start=4)
 
@@ -114,7 +114,7 @@ points = ((DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[
 folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
                tooltip = 'Show the distance of the flight').add_to(m)
 
-folium_static(m)
+m
 
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
