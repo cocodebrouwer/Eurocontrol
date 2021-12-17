@@ -39,7 +39,7 @@ st.markdown("""
 Hier kan je je bestemming kiezen\n
 """)
 
-col1, col2, col3 = st.columns((4,4,3))
+col1, col2, col3 = st.columns((2,2,1))
 
 
 # From
