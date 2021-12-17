@@ -82,7 +82,7 @@ col3.write(str(int(vluchten_sorted['Flight time (min)'].mean())))
 
 # st.dataframe(Data)
 # st.dataframe(Dag_vluchten)
-# st.dataframe(vluchten_sorted)
+st.dataframe(vluchten_sorted)
 
 
 
