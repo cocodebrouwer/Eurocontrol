@@ -65,9 +65,9 @@ Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
 vluchten_sorted = Dag_vluchten.sort_values('CO2 per pax compensated for flight time (kg)')
 
 
-col1.write('1.     ' + vluchten_sorted.iloc[0,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[0,38]))
-col1.write('2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,38]))
-col1.write('3.     ' + vluchten_sorted.iloc[2,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[2,38]))
+col1.write('1.     ' + '1.     ' + vluchten_sorted.iloc[0,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[0,38]))
+col1.write('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,38]))
+col1.write('3.     ' + '3.     ' + vluchten_sorted.iloc[2,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[2,38]))
 
 col2.write('From:')
 col2.write('To:')
