@@ -85,36 +85,36 @@ st.dataframe(To_vluchten)
 
 
 
-# Begin Map
-DataDone = pd.read_csv('Datadone.csv', index_col = 'To')
-DataDone.drop(columns = 'Unnamed: 0', inplace = True)
+# # Begin Map
+# DataDone = pd.read_csv('Datadone.csv', index_col = 'To')
+# DataDone.drop(columns = 'Unnamed: 0', inplace = True)
 
-# Bepalen variabelen X en Y. 
-x = To
-y = From
+# # Bepalen variabelen X en Y. 
+# x = To
+# y = From
 
-AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
-AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
+# AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
+# AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
 
-m = folium.Map(location=[AvgLat, AvgLng], width=750, height=500, zoom_start=4)
+# m = folium.Map(location=[AvgLat, AvgLng], width=750, height=500, zoom_start=4)
 
-folium.Marker(location=[DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]],
-              popup= '<strong>' + y + '<strong>',
-              tooltip='Push to show airport code',
-              icon = folium.Icon(color = 'blue', icon = 'home', prefix = 'fa')).add_to(m)
+# folium.Marker(location=[DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]],
+#               popup= '<strong>' + y + '<strong>',
+#               tooltip='Push to show airport code',
+#               icon = folium.Icon(color = 'blue', icon = 'home', prefix = 'fa')).add_to(m)
 
-folium.Marker(location=[DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]],
-              popup= '<strong>' + x + '<strong>',
-              tooltip='Push to show airport code',
-              icon = folium.Icon(color = 'blue', icon = 'plane', prefix = 'fa')).add_to(m)
+# folium.Marker(location=[DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]],
+#               popup= '<strong>' + x + '<strong>',
+#               tooltip='Push to show airport code',
+#               icon = folium.Icon(color = 'blue', icon = 'plane', prefix = 'fa')).add_to(m)
 
-points = ((DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]), 
-          (DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]))
+# points = ((DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]), 
+#           (DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]))
 
-folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
-               tooltip = 'Show the distance of the flight').add_to(m)
+# folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
+#                tooltip = 'Show the distance of the flight').add_to(m)
 
-m
+# m
 
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
