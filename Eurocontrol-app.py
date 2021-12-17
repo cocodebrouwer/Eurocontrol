@@ -54,12 +54,15 @@ To = col2.selectbox(label= 'To', options= Data['To'].unique())
 #dagen = Data
 To_vluchten = Data[Data['To']==To]
 Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
-#st.dataframe(vluchten)
 
 Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 
 
 col1, col2, col3 = st.columns((12,2,1))
+
+#top 3 data
+Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
+
 
 col1.write('test1')
 col1.write('test2')
@@ -76,7 +79,7 @@ col3.write(str(int(To_vluchten['Mean distance (km)'].mean())))
 col3.write(str(int(To_vluchten['Flight time (min)'].mean())))
 
 
-st.dataframe(To_vluchten)
+st.dataframe(Dag_vluchten)
 
 
 
