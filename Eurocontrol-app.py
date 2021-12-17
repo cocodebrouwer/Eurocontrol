@@ -57,8 +57,6 @@ Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
 Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 
 
-st.dataframe(To_vluchten)
-
 
 col1, col2, col3 = st.columns((8,1,1))
 
@@ -69,7 +67,7 @@ col2.write('flight time:')
 
 col3.write(To_vluchten['From'][0])
 col3.write(To_vluchten['To'][0])
-col3.write(int(To_vluchten['Mean distance (km)'].mean()))
+col3.write(str(int(To_vluchten['Mean distance (km)'].mean())))
 col3.write(str(int(To_vluchten['Flight time (min)'].mean())))
 
 
