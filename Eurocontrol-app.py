@@ -39,7 +39,7 @@ st.markdown("""
 Hier kan je je bestemming kiezen\n
 """)
 
-col1, col2, col3 = st.columns((2,2,1))
+col1, col2, col3 = st.columns((4,4,3))
 
 
 # From
@@ -58,7 +58,7 @@ Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 
 
 
-col1, col2, col3 = st.columns((8,1,1))
+col1, col2, col3 = st.columns((7,2,1))
 
 col2.write('From:')
 col2.write('To:')
