@@ -60,7 +60,7 @@ Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 st.dataframe(To_vluchten)
 
 container = col3.container
-container.header('INFO flight')
+
 info1, info2 = container.columns(2)
 
 info1.write('From:' + '\t' + To_vluchten['From'][0])
