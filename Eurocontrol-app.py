@@ -65,7 +65,7 @@ Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
 vluchten_sorted = Dag_vluchten.sort_values('CO2 per pax compensated for flight time (kg)')
 
 
-col1.write(vluchten_sorted['Airline'][0] + 'keurmerk' + vluchten_sorted['CO2 per pax compensated for flight time (kg)'][0])
+col1.write(vluchten_sorted['Airline'][0] + 'keurmerk' + str(vluchten_sorted['CO2 per pax compensated for flight time (kg)'][0]))
 col1.write('test2')
 col1.write('test3')
 
