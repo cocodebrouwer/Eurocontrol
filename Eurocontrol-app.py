@@ -75,10 +75,10 @@ col2.write('To:')
 col2.write('flight distance:')
 col2.write('flight time:')
 
-# col3.write(To_vluchten['From'][0])
-# col3.write(To_vluchten['To'][0])
-# col3.write(str(int(To_vluchten['Mean distance (km)'].mean())))
-# col3.write(str(int(To_vluchten['Flight time (min)'].mean())))
+col3.write(vluchten_sorted['From'][0])
+col3.write(vluchten_sorted['To'][0])
+col3.write(str(int(vluchten_sorted['Mean distance (km)'].mean())))
+col3.write(str(int(vluchten_sorted['Flight time (min)'].mean())))
 
 
 st.dataframe(Data)
