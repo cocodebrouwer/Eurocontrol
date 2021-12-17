@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-#from streamlit_folium import folium_static
+# from streamlit_folium import folium_static
 import folium
 # import statsmodels.api as sm
 # import seaborn as sns
@@ -93,8 +93,8 @@ DataDone.drop(columns = 'Unnamed: 0', inplace = True)
 x = To
 y = From
 
-AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
-AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
+# AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
+# AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
 
 m = folium.Map(location=[AvgLat, AvgLng], width=750, height=500, zoom_start=4)
 
