@@ -65,10 +65,9 @@ Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
 vluchten_sorted = Dag_vluchten.sort_values('CO2 per pax compensated for flight time (kg)')
 
 
-#col1.write(vluchten_sorted['Airline'][0] + 'keurmerk' + str(vluchten_sorted['CO2 per pax compensated for flight time (kg)'][0]))
-col1.write()
-col1.write('test2')
-col1.write('test3')
+col1.write('1.' + vluchten_sorted.iloc[0,13] + '!keurmerk!' + str(vluchten_sorted.iloc[0,38]))
+col1.write('2.' + vluchten_sorted.iloc[1,13] + '!keurmerk!' + str(vluchten_sorted.iloc[1,38]))
+col1.write('3.' + vluchten_sorted.iloc[2,13] + '!keurmerk!' + str(vluchten_sorted.iloc[2,38]))
 
 col2.write('From:')
 col2.write('To:')
@@ -76,7 +75,7 @@ col2.write('flight distance:')
 col2.write('flight time:')
 
 col3.write(vluchten_sorted.iloc[0,2])
-col3.write(vluchten_sorted.iloc[0,2])
+col3.write(vluchten_sorted.iloc[0,3])
 col3.write(str(int(vluchten_sorted['Mean distance (km)'].mean())))
 col3.write(str(int(vluchten_sorted['Flight time (min)'].mean())))
 
