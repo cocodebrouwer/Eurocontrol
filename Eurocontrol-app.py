@@ -59,12 +59,14 @@ Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 
 st.dataframe(To_vluchten)
 
-container = col3.container()
+container = col3.container
 container.header('INFO flight')
-container.write('From:' + '\t' + To_vluchten['From'][0])
-container.write('To:' + '\t'  + To_vluchten['To'][0])
-container.write('flight distance:' + '\t'  + str(int(To_vluchten['Mean distance (km)'].mean())))
-container.write('flight time:' + '\t'  + str(int(To_vluchten['Flight time (min)'].mean())))
+info1, info2 = container.columns(2)
+
+info1.write('From:' + '\t' + To_vluchten['From'][0])
+info2.write('To:' + '\t'  + To_vluchten['To'][0])
+info1.write('flight distance:' + '\t'  + str(int(To_vluchten['Mean distance (km)'].mean())))
+info2.write('flight time:' + '\t'  + str(int(To_vluchten['Flight time (min)'].mean())))
 
 
 
