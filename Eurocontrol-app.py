@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-from streamlit_folium import folium_static
+#from streamlit_folium import folium_static
 import folium
 # import statsmodels.api as sm
 # import seaborn as sns
