@@ -30,7 +30,10 @@ elif nav == "Airports/Governments":
   y = st.radio(label = "Kies gewenste activiteit:", 
                options = ["Totaal aantal vluchten"])
 
+st.dataframe(Data)
 
+  
+  
 #Titel toevoegen
 st.title("Eurocontrol Dashboard")
 
