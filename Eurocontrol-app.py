@@ -57,7 +57,7 @@ Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
 Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 
 
-col3.st.header('Test')
+col3.header('Test')
 
 
 
