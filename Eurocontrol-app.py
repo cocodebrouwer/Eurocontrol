@@ -57,6 +57,13 @@ Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
 Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 
 
+col3.st.header('Test')
+
+
+
+
+
+
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
 # 	st.markdown('''TEKST''')
