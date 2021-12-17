@@ -65,7 +65,7 @@ Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
 vluchten_sorted = Dag_vluchten.sort_values('Mean CO2 per pax compensated for flight time (kg)')
 vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax compensated for flight time (kg)'])
 
-range = vluchten_sorted.count
+range = vluchten_sorted['From'].count
 
 # if 
 # col1.write('1.     ' + '1.     ' + vluchten_sorted.iloc[0,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[0,40]))
