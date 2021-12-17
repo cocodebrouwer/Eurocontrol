@@ -16,6 +16,21 @@ st.set_page_config(layout="wide")
 Data = pd.read_csv('DATA.csv')
 
 
+#Kies inspectie
+st.sidebar.title("Choose page")
+nav = st.sidebar.radio(label = "", 
+                       options = ["Passengers", "Airports/Governments"])
+
+if nav == "Passenger":
+  y = st.radio(label = "Kies gewenste activiteit:", 
+               options = ["Totaal aantal vluchten"]) 
+
+ 
+elif nav == "Airports/Governments":
+  y = st.radio(label = "Kies gewenste activiteit:", 
+               options = ["Totaal aantal vluchten"])
+
+
 #Titel toevoegen
 st.title("Eurocontrol Dashboard")
 
@@ -47,19 +62,6 @@ Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 # 	st.markdown('''TEKST''')
 
 
-#Kies inspectie
-st.sidebar.title("Choose page")
-nav = st.sidebar.radio(label = "", 
-                       options = ["Passengers", "Airports/Governments"])
-
-if nav == "Passenger":
-  y = st.radio(label = "Kies gewenste activiteit:", 
-               options = ["Totaal aantal vluchten"]) 
-
- 
-elif nav == "Airports/Governments":
-  y = st.radio(label = "Kies gewenste activiteit:", 
-               options = ["Totaal aantal vluchten"])
   
 my_expander = st.expander(
         "Click here for description of models and their tasks"
