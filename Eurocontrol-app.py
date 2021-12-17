@@ -61,8 +61,8 @@ st.dataframe(To_vluchten)
 
 container = col3.container()
 container.header('INFO flight')
-container.write('flight distance: ' + str(To_vluchten['Mean distance (km)'].mean()))
-container.write('flight time: ' + str(To_vluchten['Flight time (min)'].mean()))
+container.write('flight distance: ' + str(int(To_vluchten['Mean distance (km)'].mean())))
+container.write('flight time: ' + str(int(To_vluchten['Flight time (min)'].mean())))
 
 
 
