@@ -61,9 +61,9 @@ col1.header('TOP 3')
 
 col1, col2 = st.columns((4,1))
 
-# st.succes('test1')
-# col2.succes('test2')
-# col3.succes('test3')
+# col1.write('test1')
+# col2.write('test2')
+# col3.write('test3')
 
 
 
@@ -79,7 +79,6 @@ col3.write(To_vluchten['To'][0])
 col3.write(str(int(To_vluchten['Mean distance (km)'].mean())))
 col3.write(str(int(To_vluchten['Flight time (min)'].mean())))
 
-st.succes('test1')
 
 st.dataframe(To_vluchten)
 
