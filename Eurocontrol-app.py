@@ -57,9 +57,10 @@ Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
 Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 
 
-col3.header('Test')
-
 st.dataframe(To_vluchten)
+
+col3.container()
+col3.header('INFO vlucht')
 
 
 
