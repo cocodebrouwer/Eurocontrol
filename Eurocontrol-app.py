@@ -59,9 +59,9 @@ Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 
 st.dataframe(To_vluchten)
 
-container = col3.container
 
-info1, info2 = container.columns(2)
+
+info1, info2 = col3.columns(2)
 
 info1.write('From:' + '\t' + To_vluchten['From'][0])
 info2.write('To:' + '\t'  + To_vluchten['To'][0])
