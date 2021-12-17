@@ -34,10 +34,10 @@ elif nav == "Airports/Governments":
 #Titel toevoegen
 st.title("Eurocontrol Dashboard")
 
-#Tekst toevoegen
-st.markdown("""
-Hier kan je je bestemming kiezen\n
-""")
+# #Tekst toevoegen
+# st.markdown("""
+# Hier kan je je bestemming kiezen\n
+# """)
 
 col1, col2, col3 = st.columns((2,2,1))
 
@@ -55,6 +55,10 @@ Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
 #st.dataframe(vluchten)
 
 Dag = col3.radio(label= 'Dagen', options= Weekdagen)
+
+col1, col2 = st.columns((4,1))
+
+col1.header('TOP 3')
 
 
 
