@@ -76,7 +76,7 @@ col2.write('flight distance:')
 col2.write('flight time:')
 
 col3.write(vluchten_sorted.iloc[0,2])
-# col3.write(vluchten_sorted['To'][0])
+col3.write(vluchten_sorted.iloc[0,2])
 col3.write(str(int(vluchten_sorted['Mean distance (km)'].mean())))
 col3.write(str(int(vluchten_sorted['Flight time (min)'].mean())))
 
