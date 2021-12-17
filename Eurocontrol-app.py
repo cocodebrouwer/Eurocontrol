@@ -60,7 +60,8 @@ Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 st.dataframe(To_vluchten)
 
 container = col3.container()
-container.header('INFO vlucht')
+container.header('INFO flight')
+container.write('flight distance: ' + To_vluchten['Mean distance (km)'].mean())
 
 
 
