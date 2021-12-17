@@ -30,9 +30,6 @@ elif nav == "Airports/Governments":
   y = st.radio(label = "Kies gewenste activiteit:", 
                options = ["Totaal aantal vluchten"])
 
-st.dataframe(Data)
-
-  
   
 #Titel toevoegen
 st.title("Eurocontrol Dashboard")
@@ -61,6 +58,8 @@ Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 
 
 col3.header('Test')
+
+st.dataframe(To_vluchten)
 
 
 
