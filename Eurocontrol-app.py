@@ -62,13 +62,19 @@ st.dataframe(To_vluchten)
 
 col1, col2, col3 = st.columns((8,1,1))
 
-col2.write('From:' + '\t' + To_vluchten['From'][0])
-col2.write('To:' + '\t'  + To_vluchten['To'][0])
-col2.write('flight distance:' + '\t'  + str(int(To_vluchten['Mean distance (km)'].mean())))
-col2.write('flight time:' + '\t'  + str(int(To_vluchten['Flight time (min)'].mean())))
+col2.write('From:')
+col2.write('To:')
+col2.write('flight distance:')
+col2.write('flight time:')
+
+col3.write(To_vluchten['From'][0])
+col3.write(To_vluchten['To'][0])
+col3.write(int(To_vluchten['Mean distance (km)'].mean()))
+col3.write(str(int(To_vluchten['Flight time (min)'].mean())))
 
 
 
+st.dataframe(To_vluchten)
 
 
 
