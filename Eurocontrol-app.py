@@ -39,7 +39,7 @@ st.markdown("""
 Hier kan je je bestemming kiezen\n
 """)
 
-col1, col2, col3 = st.columns((4,4,2))
+col1, col2, col3 = st.columns((2,2,1))
 
 
 # From
@@ -60,13 +60,12 @@ Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 st.dataframe(To_vluchten)
 
 
+col1, col2, col3 = st.columns((8,1,1))
 
-info1, info2 = col3.columns(2)
-
-info1.write('From:' + '\t' + To_vluchten['From'][0])
-info2.write('To:' + '\t'  + To_vluchten['To'][0])
-info1.write('flight distance:' + '\t'  + str(int(To_vluchten['Mean distance (km)'].mean())))
-info2.write('flight time:' + '\t'  + str(int(To_vluchten['Flight time (min)'].mean())))
+col2.write('From:' + '\t' + To_vluchten['From'][0])
+col2.write('To:' + '\t'  + To_vluchten['To'][0])
+col2.write('flight distance:' + '\t'  + str(int(To_vluchten['Mean distance (km)'].mean())))
+col2.write('flight time:' + '\t'  + str(int(To_vluchten['Flight time (min)'].mean())))
 
 
 
