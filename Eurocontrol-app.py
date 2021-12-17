@@ -61,7 +61,7 @@ Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 col1, col2, col3 = st.columns((12,2,1))
 
 #top 3 data
-Dag_vluchten = Data[Data['Weekday']==Dag and Data['To']==To]
+Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
 vluchten_sorted = Dag_vluchten.sort_values('CO2 per pax compensated for flight time (kg)')
 
 
@@ -81,7 +81,9 @@ col3.write(str(int(To_vluchten['Mean distance (km)'].mean())))
 col3.write(str(int(To_vluchten['Flight time (min)'].mean())))
 
 
+st.dataframe(Data)
 st.dataframe(Dag_vluchten)
+st.dataframe(vluchten_sorted)
 
 
 
