@@ -58,7 +58,7 @@ Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 
 
 
-col1, col2, col3 = st.columns((7,2,1))
+col1, col2, col3 = st.columns((9,2,1))
 
 col2.write('From:')
 col2.write('To:')
