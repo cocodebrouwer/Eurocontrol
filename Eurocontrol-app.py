@@ -28,9 +28,6 @@ elif nav == "Airports/Governments":
   y = st.radio(label = "Kies gewenste activiteit:", 
                options = ["Totaal aantal vluchten"])
   
-my_expander = st.expander(
-        "Click here for description of models and their tasks"
-    )
 
 #Titel toevoegen
 st.title("Eurocontrol Dashboard")
@@ -61,3 +58,7 @@ Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
 # 	st.markdown('''TEKST''')
+
+my_expander = st.expander(
+        "Click here for description of models and their tasks"
+    )
