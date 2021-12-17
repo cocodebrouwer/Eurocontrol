@@ -59,8 +59,8 @@ Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 
 st.dataframe(To_vluchten)
 
-col3.container()
-col3.header('INFO vlucht')
+container = col3.container()
+container.header('INFO vlucht')
 
 
 
