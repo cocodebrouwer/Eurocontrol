@@ -34,10 +34,10 @@ To = col2.selectbox(label= 'To', options= Data['To'].unique())
 # Dagen
 #dagen = Data
 vluchten = Data[Data['To']==To]
-vluchten = vluchten.sort_values('Weekday number')
-st.dataframe(vluchten)
+vluchten = vluchten.sort_values('Weekday number')['Weekday'].unique()
+#st.dataframe(vluchten)
 
-#test = col3.radio(label= 'Dagen', options= vluchten['Weekday'].unique())
+test = col3.radio(label= 'Dagen', options= vluchten)
 
 
 # with st.expander('Meer informatie:'):
