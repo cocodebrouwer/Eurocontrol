@@ -61,9 +61,9 @@ col1.header('TOP 3')
 
 col1, col2 = st.columns((4,1))
 
-col1.succes('test1')
-col2.succes('test2')
-col3.succes('test3')
+st.succes('test1')
+# col2.succes('test2')
+# col3.succes('test3')
 
 
 
