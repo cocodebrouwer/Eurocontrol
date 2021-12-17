@@ -114,7 +114,7 @@ points = ((DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[
 folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
                tooltip = 'Show the distance of the flight').add_to(m)
 
-m
+folium_static(m)
 
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
