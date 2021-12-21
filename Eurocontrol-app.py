@@ -133,11 +133,11 @@ if nav == "Passengers":
   with col1:
     folium_static(m)
     
-  
+  st.dataframe(vluchten_sorted)
 
 
 
 elif nav == "Governments":
   st.title('test')
   
-  st.dataframe(vluchten_sorted)
+  
