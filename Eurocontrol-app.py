@@ -68,7 +68,7 @@ vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax comp
 
 range = len(vluchten_sorted.index)
 
-if range >= 1:
+# if range >= 1:
   col1.write('1.')
   col2.write(vluchten_sorted.iloc[0,13])
   col3.write('hier komt het keurmerk')
