@@ -25,7 +25,7 @@ nav = st.sidebar.radio(label = "",
 
 if nav == "Passengers": 
   #Titel toevoegen
-  st.title("Eurocontrol Dashboard")
+  st.title("Eurocontrol Dashboard for passengers")
   
   col1, col2, col3, col4 = st.columns((6,6,3,1))
   
@@ -142,6 +142,10 @@ if nav == "Passengers":
 
 
 elif nav == "Governments":
-  st.title('test')
+  st.title("Eurocontrol Dashboard for gevernments")
   
-  st.dataframe(Data['Mean CO2 per flight per airline (kg)'].unique())
+  col1, col2 = st.columns(2)
+  
+  #col1.multiselect(label='Airline', options=Data[
+  
+  st.dataframe(Data)
