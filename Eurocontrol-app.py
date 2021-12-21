@@ -137,5 +137,5 @@ if nav == "Passengers":
 elif nav == "Governments":
   st.title('test')
   
-  st.write(type(Weekdagen))
+  st.write(Weekdagen)
   st.dataframe(vluchten_sorted)
