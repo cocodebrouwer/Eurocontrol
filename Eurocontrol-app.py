@@ -139,8 +139,6 @@ if nav == "Passengers":
 
   with col1:
     folium_static(m)
-    
-  # st.dataframe(vluchten_sorted)
 
 
 
@@ -167,8 +165,8 @@ elif nav == "Governments":
                               
   Merged = Airlines.merge(Keurmerken, on='Airline', how='inner', suffixes=('', 'delete'))
   Merged = Merged[[c for c in Merged.columns if not c.endswith('delete')]]
-  #Merged = Merged.sort_values('Mean CO2 per flight per airline (kg)')
-  st.write(Merged)
+  Merged = Merged.sort_values('Mean CO2 per flight per airline (kg)')
+  
   
   col1, col2, col3, col4 = st.columns(4)
   
