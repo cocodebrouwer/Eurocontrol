@@ -151,7 +151,7 @@ elif nav == "Governments":
   
   Airline = col1.multiselect(label='Airline', options=Airlines_compact['Airline'])
                    
-  Keurmerk = col2.multiselect(label='Qualitymark', options=Airlines_compact['Keurmerk'].unique())
+  Keurmerk = col2.multiselect(label='Qualitymark', options=Airlines_compact['Keurmerk'].unique().sort_values('Keurmerk'))
   
   if Airline == []:
     Airlines = Airlines_compact
