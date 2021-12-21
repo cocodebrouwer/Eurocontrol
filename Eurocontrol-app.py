@@ -62,6 +62,7 @@ if nav == "Passengers":
   col3.write('**Quality mark**')
   col4.write('**CO2 (kg)**')
   col5.write('**Number of trees**')
+  col6.write('**Weekday**')
   
   range = len(vluchten_sorted.index)
   
