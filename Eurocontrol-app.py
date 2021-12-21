@@ -68,27 +68,23 @@ vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax comp
 
 range = len(vluchten_sorted.index)
 
-if range >= 1:
+if range == 1:
   col1.write('1.')
   col2.write(vluchten_sorted.iloc[0,13])
   col3.write('hier komt het keurmerk')
   col4.write(str(vluchten_sorted.iloc[0,40])
          
-elif:
-  col1.write()
-             
-
-# if range >= 2: 
-#              col1.write('2.')
-#              col2.write(vluchten_sorted.iloc[1,13])
-#              col3.write('hier komt het keurmerk')
-#              col4.write(str(vluchten_sorted.iloc[1,40])
+if range == 2: 
+  col1.write('2.')
+  col2.write(vluchten_sorted.iloc[1,13])
+  col3.write('hier komt het keurmerk')
+  col4.write(str(vluchten_sorted.iloc[1,40])
   
-# if range >= 3::
-#   col1.write('3.')
-#   col2.write(vluchten_sorted.iloc[2,13])
-#   col3.write('hier komt het keurmerk')
-#   col4.write(str(vluchten_sorted.iloc[2,40])
+if range == 3::
+  col1.write('3.')
+  col2.write(vluchten_sorted.iloc[2,13])
+  col3.write('hier komt het keurmerk')
+  col4.write(str(vluchten_sorted.iloc[2,40])
 
 # if range == 1:
 #   col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
