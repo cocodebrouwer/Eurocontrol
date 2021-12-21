@@ -171,3 +171,14 @@ elif nav == "Governments":
   col2.write('**Airline**')
   col3.write('**Quality mark**')
   col4.write('**CO2 (kg)**')
+
+  
+  range = len(Merged.index)
+  
+  if range >= 1:
+    col1.write('1.')
+    col2.write(vluchten_sorted.iloc[0,13])
+    col3.write(vluchten_sorted.iloc[0,-1])
+    col4.write(str(round(vluchten_sorted.iloc[0,-2],2)))
+  
+  
