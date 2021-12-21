@@ -44,7 +44,7 @@ if nav == "Passengers":
   col4.caption('All')
   Alldays = col4.checkbox(label='', value=True)
   
-  st.write(Weekdagen)
+  st.write(type(Weekdagen))
   
   col1, col2, col3, col4, col5, col6, col7, col8 = st.columns((2,2,2,2,2,2,2,2))
   
