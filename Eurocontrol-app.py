@@ -66,10 +66,10 @@ vluchten_sorted = Dag_vluchten.sort_values('Mean CO2 per pax compensated for fli
 vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax compensated for flight time (kg)'])
 
 col1.write('**Ranking**')
-col2.write('Airline')
-col3.write('Quality mark')
-col4.write('C02 (kg) ')
-col5.write('Amount of trees')
+col2.write('**Airline**')
+col3.write('**Quality mark**')
+col4.write('**C02 (kg)**')
+col5.write('**Amount of trees**')
 
 range = len(vluchten_sorted.index)
 
