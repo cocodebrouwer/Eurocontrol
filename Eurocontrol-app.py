@@ -149,7 +149,9 @@ elif nav == "Governments":
   Airline = col1.multiselect(label='Airline', options=Data['Airline'].unique())
                    
   Keurmerk = col2.multiselect(label='Qualitymark', options=Data['Keurmerk'].unique())
+  
+  Airlines = Data[Data['Airline']==Airline]
                               
   
   
-  st.dataframe(Data)
+  st.dataframe(Airlines)
