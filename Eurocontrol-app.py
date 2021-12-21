@@ -39,10 +39,10 @@ if nav == "Passengers":
   #dagen = Data
   To_vluchten = Data[Data['To']==To]
   Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
-
+  Weekdagen.append('')
   # Dag = col3.selectbox(label= 'Days', options= Weekdagen)
   # Dag = col3.selectbox(label= 'Days', options= ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
-  Dag = col3.selectbox(label= 'Days', options= [''])
+  Dag = col3.selectbox(label= 'Days', options= Weekdagen)
   
   col4.caption('Week')
   Alldays = col4.checkbox(label='', value=True)
@@ -137,5 +137,4 @@ if nav == "Passengers":
 elif nav == "Governments":
   st.title('test')
   
-  st.write(Weekdagen)
-  st.dataframe(vluchten_sorted)
+  
