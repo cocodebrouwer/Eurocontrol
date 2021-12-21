@@ -151,7 +151,3 @@ if range == 1:
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
 # 	st.markdown('''TEKST''')
-
-
-  
-#my_expander = st.expander("Click here for description of models and their tasks")
