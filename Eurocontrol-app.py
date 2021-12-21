@@ -92,9 +92,11 @@ if nav == "Passengers":
 
   # Begin Map
   DataDone = pd.read_csv('Datadone.csv', index_col='To')
-  
-  DataDone.columns
-#   DataDone.drop(columns = 'Unnamed: 0', inplace = True)
+  DataDone['Unnamed: 0']
+  DataDonetest = pd.read_csv('Datadone.csv')
+  DataDonetest['To']
+
+  #   DataDone.drop(columns = 'Unnamed: 0', inplace = True)
 
 #   # Bepalen variabelen X en Y. 
 #   x = '(ACE)'
