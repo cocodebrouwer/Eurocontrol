@@ -90,13 +90,6 @@ if nav == "Passengers":
   col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + ' min')
 
 
-# st.dataframe(Data)
-# st.dataframe(Dag_vluchten)
-# st.dataframe(vluchten_sorted)
-# st.write(range)
-
-
-
 # # Begin Map
 # DataDone = pd.read_csv('Datadone.csv', index_col = 'To')
 # DataDone.drop(columns = 'Unnamed: 0', inplace = True)
@@ -128,7 +121,7 @@ if nav == "Passengers":
 
 # m
 
-# with st.expander('Meer informatie:'):
-# 	st.subheader('Extra informatie')
-# 	st.markdown('''TEKST''')
-# elif nav == "Airports/Governments":
+
+
+elif nav == "Governments":
+  st.title('test')
