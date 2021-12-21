@@ -49,6 +49,7 @@ if nav == "Passengers":
   #top 3 data
   if Alldays == True:
     Dag_vluchten = To_vluchten
+    Dag = ''
   else:
     Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
   
