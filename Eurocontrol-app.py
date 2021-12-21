@@ -76,7 +76,7 @@ range = len(vluchten_sorted.index)
 if range >= 1:
   col1.write('1.')
   col2.write(vluchten_sorted.iloc[0,13])
-  col3.write('keurmerk')
+  col3.write(vluchten_sorted.iloc[0,-1])
   col4.write(str(round(vluchten_sorted.iloc[0,40],2)))
   col5.write('bomen')
   
@@ -84,7 +84,7 @@ if range >= 1:
 if range >= 2:
   col1.write('2.')
   col2.write(vluchten_sorted.iloc[1,13])
-  col3.write('keurmerk')
+  col3.write(vluchten_sorted.iloc[1,-1])
   col4.write(str(round(vluchten_sorted.iloc[1,40],2)))
   col5.write('bomen')
   
@@ -92,22 +92,9 @@ if range >= 2:
 if range >= 3:
   col1.write('3.')
   col2.write(vluchten_sorted.iloc[2,13])
-  col3.write('keurmerk')
+  col3.write(vluchten_sorted.iloc[2,-1])
   col4.write(str(round(vluchten_sorted.iloc[2,40],2)))
   col5.write('bomen')
-
-
-# if range == 1:
-#   col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
-
-# elif range == 2:
-#   col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
-#   col1.expander('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
-
-# else:
-#   col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
-#   col1.expander('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
-#   col1.expander('3.     ' + '3.     ' + vluchten_sorted.iloc[2,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[2,40]))
 
 
 col7.write('From:')
