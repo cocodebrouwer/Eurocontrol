@@ -157,7 +157,7 @@ elif nav == "Governments":
   Keurmerken = Data.loc[Data.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
                               
   
-  st.write(Airlines_compact)
+  st.write(Airlines)
   st.write(Keurmerken)
   
   Merged = pd.merge(Airlines, Keurmerken, how='inner')
