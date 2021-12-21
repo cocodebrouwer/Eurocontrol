@@ -69,7 +69,7 @@ col1.write('**Ranking**')
 col2.write('**Airline**')
 col3.write('**Quality mark**')
 col4.write('**CO2 (kg)**')
-col5.write('**Amount of trees**')
+col5.write('**Number of trees**')
 
 range = len(vluchten_sorted.index)
 
@@ -78,7 +78,7 @@ if range >= 1:
   col2.write(vluchten_sorted.iloc[0,13])
   col3.write(vluchten_sorted.iloc[0,-1])
   col4.write(str(round(vluchten_sorted.iloc[0,40],2)))
-  col5.write('bomen')
+  col5.write(vluchten_sorted.iloc[0,-5])
   
   
 if range >= 2:
@@ -86,7 +86,7 @@ if range >= 2:
   col2.write(vluchten_sorted.iloc[1,13])
   col3.write(vluchten_sorted.iloc[1,-1])
   col4.write(str(round(vluchten_sorted.iloc[1,40],2)))
-  col5.write('bomen')
+  col5.write(vluchten_sorted.iloc[1,-5])
   
   
 if range >= 3:
@@ -94,7 +94,7 @@ if range >= 3:
   col2.write(vluchten_sorted.iloc[2,13])
   col3.write(vluchten_sorted.iloc[2,-1])
   col4.write(str(round(vluchten_sorted.iloc[2,40],2)))
-  col5.write('bomen')
+  col5.write(vluchten_sorted.iloc[2,-5])
 
 
 col7.write('From:')
