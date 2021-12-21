@@ -42,55 +42,52 @@ if nav == "Passenger":
 
   # Dag = col3.radio(label= 'Dagen', options= Weekdagen)
   Dag = col3.selectbox(label= 'Days', options= Weekdagen)
-
-col1, col2, col3, col4, col5, col6, col7, col8 = st.columns((2,2,2,2,2,2,2,2))
-
-#top 3 data
-Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
-vluchten_sorted = Dag_vluchten.sort_values('Mean CO2 per pax compensated for flight time (kg)')
-vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax compensated for flight time (kg)'])
-
-col1.write('**Ranking**')
-col2.write('**Airline**')
-col3.write('**Quality mark**')
-col4.write('**CO2 (kg)**')
-col5.write('**Number of trees**')
-
-range = len(vluchten_sorted.index)
-
-if range >= 1:
-  col1.write('1.')
-  col2.write(vluchten_sorted.iloc[0,13])
-  col3.write(vluchten_sorted.iloc[0,-1])
-  col4.write(str(round(vluchten_sorted.iloc[0,40],2)))
-  col5.write(str(round(vluchten_sorted.iloc[0,-5],2)))
   
+  col1, col2, col3, col4, col5, col6, col7, col8 = st.columns((2,2,2,2,2,2,2,2))
   
-if range >= 2:
-  col1.write('2.')
-  col2.write(vluchten_sorted.iloc[1,13])
-  col3.write(vluchten_sorted.iloc[1,-1])
-  col4.write(str(round(vluchten_sorted.iloc[1,40],2)))
-  col5.write(str(round(vluchten_sorted.iloc[1,-5],2)))
+  #top 3 data
+  Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
+  vluchten_sorted = Dag_vluchten.sort_values('Mean CO2 per pax compensated for flight time (kg)')
+  vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax compensated for flight time (kg)'])
   
+  col1.write('**Ranking**')
+  col2.write('**Airline**')
+  col3.write('**Quality mark**')
+  col4.write('**CO2 (kg)**')
+  col5.write('**Number of trees**')
   
-if range >= 3:
-  col1.write('3.')
-  col2.write(vluchten_sorted.iloc[2,13])
-  col3.write(vluchten_sorted.iloc[2,-1])
-  col4.write(str(round(vluchten_sorted.iloc[2,40],2)))
-  col5.write(str(round(vluchten_sorted.iloc[2,-5],2)))
-
-
-col7.write('**From:**')
-col7.write('**To:**')
-col7.write('**Flight distance:**')
-col7.write('**Flight time:**')
-
-col8.write(vluchten_sorted.iloc[0,2])
-col8.write(vluchten_sorted.iloc[0,3])
-col8.write(str(int(vluchten_sorted['Mean distance (km)'].mean())) + ' km')
-col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + ' min')
+  range = len(vluchten_sorted.index)
+  
+  if range >= 1:
+    col1.write('1.')
+    col2.write(vluchten_sorted.iloc[0,13])
+    col3.write(vluchten_sorted.iloc[0,-1])
+    col4.write(str(round(vluchten_sorted.iloc[0,40],2)))
+    col5.write(str(round(vluchten_sorted.iloc[0,-5],2)))
+    
+  if range >= 2:
+    col1.write('2.')
+    col2.write(vluchten_sorted.iloc[1,13])
+    col3.write(vluchten_sorted.iloc[1,-1])
+    col4.write(str(round(vluchten_sorted.iloc[1,40],2)))
+    col5.write(str(round(vluchten_sorted.iloc[1,-5],2)))
+  
+  if range >= 3:
+    col1.write('3.')
+    col2.write(vluchten_sorted.iloc[2,13])
+    col3.write(vluchten_sorted.iloc[2,-1])
+    col4.write(str(round(vluchten_sorted.iloc[2,40],2)))
+    col5.write(str(round(vluchten_sorted.iloc[2,-5],2)))
+    
+  col7.write('**From:**')
+  col7.write('**To:**')
+  col7.write('**Flight distance:**')
+  col7.write('**Flight time:**')
+  
+  col8.write(vluchten_sorted.iloc[0,2])
+  col8.write(vluchten_sorted.iloc[0,3])
+  col8.write(str(int(vluchten_sorted['Mean distance (km)'].mean())) + ' km')
+  col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + ' min')
 
 
 # st.dataframe(Data)
