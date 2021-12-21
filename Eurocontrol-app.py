@@ -102,7 +102,7 @@ if nav == "Passengers":
 
   col1, col2, col3 = st.columns((6,1,1))
   
-  col1.expander(lebel='INFO')
+  col1.expander(label='INFO')
   
   # Begin Map
   DataDone = pd.read_csv('Datadone.csv', index_col='To')
