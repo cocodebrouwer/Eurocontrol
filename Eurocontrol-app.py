@@ -144,4 +144,4 @@ if nav == "Passengers":
 elif nav == "Governments":
   st.title('test')
   
-  st.dataframe(Data)
+  st.dataframe(Data['Mean CO2 per flight per airline (kg)'].unique())
