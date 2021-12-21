@@ -38,7 +38,7 @@ if nav == "Passengers":
   # Dagen
   To_vluchten = Data[Data['To']==To]
   
-  col4.caption('All')
+  col4.caption('All days')
   Alldays = col4.checkbox(label='', value=True)
   
   if Alldays == True:
