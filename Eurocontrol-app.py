@@ -58,10 +58,16 @@ if nav == "Passengers":
   vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax compensated for flight time (kg)'])
   
   col1.expander(label='Ranking')
-  col2.write('**Airline**')
-  col3.write('**Quality mark**')
-  col4.write('**CO2 (kg)**')
-  col5.write('**Number of trees**')
+  col2.expander(label='Airline')
+  col3.expander(label='Quality mark')
+  col4.expander(label='CO2 (kg)')
+  col5.expander(label='Number of trees')
+  
+#   col1.expander(label='Ranking')
+#   col2.write('**Airline**')
+#   col3.write('**Quality mark**')
+#   col4.write('**CO2 (kg)**')
+#   col5.write('**Number of trees**')
   
   range = len(vluchten_sorted.index)
   
