@@ -74,11 +74,11 @@ if range >= 1:
   col3.write('hier komt het keurmerk')
   col4.write(str(vluchten_sorted.iloc[0,40])
 
-if range >= 2:
-  col1.write('2.')
-  col2.write(vluchten_sorted.iloc[1,13])
-  col3.write('hier komt het keurmerk')
-  col4.write(str(vluchten_sorted.iloc[1,40])
+if range >= 2: 
+             col1.write('2.')
+             col2.write(vluchten_sorted.iloc[1,13])
+             col3.write('hier komt het keurmerk')
+             col4.write(str(vluchten_sorted.iloc[1,40])
   
 if range >= 3::
   col1.write('3.')
