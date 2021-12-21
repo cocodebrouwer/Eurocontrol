@@ -175,7 +175,7 @@ elif nav == "Governments":
   
   range = len(Merged.index)
   
-  for i in range:
+  for i in range(10):
     col1.write('1.')
     col2.write(Merged.iloc[0,13])
     col3.write(Merged.iloc[0,-1])
