@@ -150,8 +150,14 @@ elif nav == "Governments":
                    
   Keurmerk = col2.multiselect(label='Qualitymark', options=Data['Keurmerk'].unique())
   
-  #Airlines = Data[Data['Airline'] isin(Airline)]
   Airlines = Data.loc[Data.apply(lambda x: x.Airline in Airline, axis=1)]
+  
+  Keurmerken = Data.loc[Data.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
                               
   
   st.write(Airlines)
+  st.write(Keurmerken)
+  
+  Merged = pd.merge(Airlines, Keurmerken, how='inner')
+  
+  st.write(Merged)
