@@ -42,7 +42,7 @@ if nav == "Passengers":
 
   # Dag = col3.selectbox(label= 'Days', options= Weekdagen)
   # Dag = col3.selectbox(label= 'Days', options= ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
-  Dag = col3.selectbox(label= 'Days', options= ['', Data['From'].unique()])
+  Dag = col3.selectbox(label= 'Days', options= [''])
   
   col4.caption('Week')
   Alldays = col4.checkbox(label='', value=True)
@@ -131,7 +131,7 @@ if nav == "Passengers":
   with col1:
     folium_static(m)
     
-    
+  st.dataframe(Weekdays)  
   st.dataframe(vluchten_sorted)
 
 
