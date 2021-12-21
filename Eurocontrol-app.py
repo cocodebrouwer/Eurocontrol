@@ -43,7 +43,7 @@ if nav == "Passengers":
   # Dag = col3.selectbox(label= 'Days', options= ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
   
   
-  col4.caption('Week')
+  col4.caption('All')
   Alldays = col4.checkbox(label='', value=True)
   
   col1, col2, col3, col4, col5, col6, col7, col8 = st.columns((2,2,2,2,2,2,2,2))
@@ -71,6 +71,7 @@ if nav == "Passengers":
     col3.write(vluchten_sorted.iloc[0,-1])
     col4.write(str(round(vluchten_sorted.iloc[0,40],2)))
     col5.write(str(round(vluchten_sorted.iloc[0,-3],2))+ '🌳', help = 'extra info')
+    col6.write(str(round(vluchten_sorted.iloc[0,40],2)))
     
   if range >= 2:
     col1.write('2.')
@@ -78,6 +79,7 @@ if nav == "Passengers":
     col3.write(vluchten_sorted.iloc[1,-1])
     col4.write(str(round(vluchten_sorted.iloc[1,40],2)))
     col5.write(str(round(vluchten_sorted.iloc[1,-3],2))+ '🌳', help = 'extra info')
+    
   
   if range >= 3:
     col1.write('3.')
@@ -85,6 +87,7 @@ if nav == "Passengers":
     col3.write(vluchten_sorted.iloc[2,-1])
     col4.write(str(round(vluchten_sorted.iloc[2,40],2)))
     col5.write(str(round(vluchten_sorted.iloc[2,-3],2))+ '🌳', help = 'extra info')
+    
     
   col7.write('**From:**')
   col7.write('**To:**')
@@ -137,4 +140,4 @@ if nav == "Passengers":
 elif nav == "Governments":
   st.title('test')
   
-  
+  st.dataframe(sorted_vluchten)
