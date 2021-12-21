@@ -154,4 +154,4 @@ elif nav == "Governments":
                               
   
   
-  st.write(type(Airline))
+  st.write(Airline)
