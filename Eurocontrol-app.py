@@ -112,8 +112,8 @@ if range >= 1:
 
 # st.dataframe(Data)
 # st.dataframe(Dag_vluchten)
-st.dataframe(vluchten_sorted)
-st.write(range)
+# st.dataframe(vluchten_sorted)
+# st.write(range)
 
 
 
