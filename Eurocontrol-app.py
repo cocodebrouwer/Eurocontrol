@@ -24,30 +24,24 @@ nav = st.sidebar.radio(label = "",
                        options = ["Passengers", "Airports/Governments"])
 
 if nav == "Passenger": 
+  #Titel toevoegen
+  st.title("Eurocontrol Dashboard")
+  
+  col1, col2, col3 = st.columns((3,3,2))
+  
+  # From
+  From = col1.selectbox(label= 'From', options= Data['From'].unique())
+  
+  # To
+  To = col2.selectbox(label= 'To', options= Data['To'].unique())
+  
+  # Dagen
+  #dagen = Data
+  To_vluchten = Data[Data['To']==To]
+  Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
 
-#Titel toevoegen
-st.title("Eurocontrol Dashboard")
-
-# #Tekst toevoegen
-# st.markdown("""
-# Hier kan je je bestemming kiezen\n
-# """)
-
-col1, col2, col3 = st.columns((3,3,2))
-
-# From
-From = col1.selectbox(label= 'From', options= Data['From'].unique())
-
-# To
-To = col2.selectbox(label= 'To', options= Data['To'].unique())
-
-# Dagen
-#dagen = Data
-To_vluchten = Data[Data['To']==To]
-Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
-
-# Dag = col3.radio(label= 'Dagen', options= Weekdagen)
-Dag = col3.selectbox(label= 'Days', options= Weekdagen)
+  # Dag = col3.radio(label= 'Dagen', options= Weekdagen)
+  Dag = col3.selectbox(label= 'Days', options= Weekdagen)
 
 col1, col2, col3, col4, col5, col6, col7, col8 = st.columns((2,2,2,2,2,2,2,2))
 
