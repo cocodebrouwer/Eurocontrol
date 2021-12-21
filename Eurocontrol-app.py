@@ -162,10 +162,12 @@ elif nav == "Governments":
   else:
     Keurmerken = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
                               
-  
-  st.write(Airlines)
-  st.write(Keurmerken)
-  
   Merged = Airlines.merge(Keurmerken, on='Airline', how='inner')
   
-  st.write(Merged)
+  
+  col1, col2, col3, col4 = st.columns(4)
+  
+  col1.write('**Ranking**')
+  col2.write('**Airline**')
+  col3.write('**Quality mark**')
+  col4.write('**CO2 (kg)**')
