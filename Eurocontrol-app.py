@@ -44,12 +44,16 @@ if nav == "Passengers":
   Dag = col3.selectbox(label= 'Days', options= Weekdagen)
   
   col4.caption('All days')
-  col4.checkbox(label='', value=True)
+  Alldays = col4.checkbox(label='', value=True)
   
   col1, col2, col3, col4, col5, col6, col7, col8 = st.columns((2,2,2,2,2,2,2,2))
   
   #top 3 data
-  Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
+  if Alldays == True:
+    Dag_vluchten = To_vluchten
+  else:
+    Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
+  
   vluchten_sorted = Dag_vluchten.sort_values('Mean CO2 per pax compensated for flight time (kg)')
   vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax compensated for flight time (kg)'])
   
