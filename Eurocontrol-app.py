@@ -179,11 +179,6 @@ elif nav == "Governments":
     col3.write(Merged.iloc[i,-1])
     col4.write(str(round(Merged.iloc[i,-2],2)))
     
-
-#   for i in range(10):
-#     col1.write('1.')
-#     col2.write(Merged.iloc[0,13])
-#     col3.write(Merged.iloc[0,-1])
-#     col4.write(str(round(Merged.iloc[0,-2],2)))
+  with col1.expander(label='INFO'):
+    st.write('hier komt de uitleg voor de kolommen')   
   
-  st.write(Merged)
