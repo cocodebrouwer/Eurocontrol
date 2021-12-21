@@ -153,37 +153,37 @@ elif nav == "Governments":
   Airline = col1.multiselect(label='Airline', options=Airline['Airline'])
   
   Keurmerk = Airlines_compact.sort_value('Keurmerk')
-  Keurmerk = col2.multiselect(label='Qualitymark', options=Keurmerk['Keurmerk'].unique())
+#   Keurmerk = col2.multiselect(label='Qualitymark', options=Keurmerk['Keurmerk'].unique())
   
-  if Airline == []:
-    Airlines = Airlines_compact
-  else:
-    Airlines = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Airline in Airline, axis=1)]
+#   if Airline == []:
+#     Airlines = Airlines_compact
+#   else:
+#     Airlines = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Airline in Airline, axis=1)]
   
-  if Keurmerk == []:
-    Keurmerken = Airlines_compact
-  else:
-    Keurmerken = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
+#   if Keurmerk == []:
+#     Keurmerken = Airlines_compact
+#   else:
+#     Keurmerken = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
                               
-  Merged = Airlines.merge(Keurmerken, on='Airline', how='inner', suffixes=('', 'delete'))
-  Merged = Merged[[c for c in Merged.columns if not c.endswith('delete')]]
-  #Merged = Merged.sort_values('Mean CO2 per flight per airline (kg)')
+#   Merged = Airlines.merge(Keurmerken, on='Airline', how='inner', suffixes=('', 'delete'))
+#   Merged = Merged[[c for c in Merged.columns if not c.endswith('delete')]]
+#   #Merged = Merged.sort_values('Mean CO2 per flight per airline (kg)')
   
   
-  col1, col2, col3, col4 = st.columns(4)
+#   col1, col2, col3, col4 = st.columns(4)
   
-  col1.write('**Ranking**')
-  col2.write('**Airline**')
-  col3.write('**Quality mark**')
-  col4.write('**CO2 (kg)**')
+#   col1.write('**Ranking**')
+#   col2.write('**Airline**')
+#   col3.write('**Quality mark**')
+#   col4.write('**CO2 (kg)**')
 
   
-  for i in range(len(Merged.index)):
-    col1.write(str(i+1) + '.')
-    col2.write(Merged.iloc[i,13])
-    col3.write(Merged.iloc[i,-1])
-    col4.write(str(round(Merged.iloc[i,-2],2)))
+#   for i in range(len(Merged.index)):
+#     col1.write(str(i+1) + '.')
+#     col2.write(Merged.iloc[i,13])
+#     col3.write(Merged.iloc[i,-1])
+#     col4.write(str(round(Merged.iloc[i,-2],2)))
     
-  with st.expander(label='INFO'):
-    st.write('hier komt de uitleg voor de kolommen')   
+#   with st.expander(label='INFO'):
+#     st.write('hier komt de uitleg voor de kolommen')   
   
