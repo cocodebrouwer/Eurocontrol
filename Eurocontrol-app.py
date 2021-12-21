@@ -67,9 +67,9 @@ vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax comp
 
 col1.write('')
 col2.write('Airline')
-col3.write('Keurmerk')
+col3.write('Quality mark')
 col4.write('Uitstoot CO2 per ')
-col5.write('Aantal bomen')
+col5.write('Amount of trees')
 
 range = len(vluchten_sorted.index)
 
