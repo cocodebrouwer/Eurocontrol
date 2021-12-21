@@ -71,7 +71,7 @@ if range >= 1:
   col1.write('1.')
   col2.write(vluchten_sorted.iloc[0,13])
   col3.write('keurmerk')
-  col4.write(str(vluchten_sorted.iloc[0,40])
+  # col4.write(str(vluchten_sorted.iloc[0,40])
   
   
 if range >= 2:
