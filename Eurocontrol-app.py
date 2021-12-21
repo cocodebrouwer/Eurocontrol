@@ -173,9 +173,7 @@ elif nav == "Governments":
   col4.write('**CO2 (kg)**')
 
   
-  range = len(Merged.index)
-  
-  for i in range:
+  for i in range(len(Merged.index)):
     col1.write(str(i+1) + '.')
     
 
