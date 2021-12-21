@@ -66,31 +66,48 @@ vluchten_sorted = Dag_vluchten.sort_values('Mean CO2 per pax compensated for fli
 vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax compensated for flight time (kg)'])
 
 
-
 range = len(vluchten_sorted.index)
 
-if range == 1:
-  col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
+if range >= 1:
+  col1.write('1.')
+  col2.write(vluchten_sorted.iloc[0,13])
+  col3.write('hier komt het keurmerk')
+  col4.write(str(vluchten_sorted.iloc[0,40])
 
-elif range == 2:
-  col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
-  col1.expander('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
+if range >= 2:
+  col1.write('2.')
+  col2.write(vluchten_sorted.iloc[1,13])
+  col3.write('hier komt het keurmerk')
+  col4.write(str(vluchten_sorted.iloc[1,40])
+  
+if range >= 3::
+  col1.write('3.')
+  col2.write(vluchten_sorted.iloc[2,13])
+  col3.write('hier komt het keurmerk')
+  col4.write(str(vluchten_sorted.iloc[2,40])
 
-else:
-  col1.write('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
-  col1.expander('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
-  col1.expander('3.     ' + '3.     ' + vluchten_sorted.iloc[2,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[2,40]))
+# if range == 1:
+#   col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
+
+# elif range == 2:
+#   col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
+#   col1.expander('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
+
+# else:
+#   col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
+#   col1.expander('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
+#   col1.expander('3.     ' + '3.     ' + vluchten_sorted.iloc[2,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[2,40]))
 
 
-col2.write('From:')
-col2.write('To:')
-col2.write('flight distance:')
-col2.write('flight time:')
+col6.write('From:')
+col6.write('To:')
+col6.write('flight distance:')
+col6.write('flight time:')
 
-col3.write(vluchten_sorted.iloc[0,2])
-col3.write(vluchten_sorted.iloc[0,3])
-col3.write(str(int(vluchten_sorted['Mean distance (km)'].mean())))
-col3.write(str(int(vluchten_sorted['Flight time (min)'].mean())))
+col7.write(vluchten_sorted.iloc[0,2])
+col7.write(vluchten_sorted.iloc[0,3])
+col7.write(str(int(vluchten_sorted['Mean distance (km)'].mean())))
+col7.write(str(int(vluchten_sorted['Flight time (min)'].mean())))
 
 
 # st.dataframe(Data)
