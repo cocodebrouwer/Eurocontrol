@@ -160,6 +160,6 @@ elif nav == "Governments":
   st.write(Airlines)
   st.write(Keurmerken)
   
-  Merged = pd.merge(Airlines, Keurmerken, how='inner')
+  Merged = Airlines.merge(Keurmerken, on='Airline', how='inner')
   
   st.write(Merged)
