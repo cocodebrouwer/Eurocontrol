@@ -70,7 +70,7 @@ if nav == "Passengers":
     col2.write(vluchten_sorted.iloc[0,13])
     col3.write(vluchten_sorted.iloc[0,-1])
     col4.write(str(round(vluchten_sorted.iloc[0,40],2)))
-    col5.write(str(round(vluchten_sorted.iloc[0,-3],2)))
+    col5.write(str(round(vluchten_sorted.iloc[0,-3],2))+ '🌳')
     
   if range >= 2:
     col1.write('2.')
