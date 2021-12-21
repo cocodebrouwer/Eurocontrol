@@ -104,12 +104,12 @@ if nav == "Passengers":
   m = folium.Map(location=[AvgLat, AvgLng], width=750, height=500, zoom_start=4)
 
   folium.Marker(location=[DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]],
-                popup= '<strong>' + y + '<strong>',
+                popup= '<strong>' + From + '<strong>',
                 tooltip='Push to show airport code',
                 icon = folium.Icon(color = 'blue', icon = 'home', prefix = 'fa')).add_to(m)
 
   folium.Marker(location=[DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]],
-                popup= '<strong>' + x + '<strong>',
+                popup= '<strong>' + To + '<strong>',
                 tooltip='Push to show airport code',
                 icon = folium.Icon(color = 'blue', icon = 'plane', prefix = 'fa')).add_to(m)
 
