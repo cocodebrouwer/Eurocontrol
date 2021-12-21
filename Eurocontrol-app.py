@@ -99,15 +99,15 @@ if range >= 1:
 #   col1.expander('3.     ' + '3.     ' + vluchten_sorted.iloc[2,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[2,40]))
 
 
-col6.write('From:')
-col6.write('To:')
-col6.write('flight distance:')
-col6.write('flight time:')
+# col6.write('From:')
+# col6.write('To:')
+# col6.write('flight distance:')
+# col6.write('flight time:')
 
-col7.write(vluchten_sorted.iloc[0,2])
-col7.write(vluchten_sorted.iloc[0,3])
-col7.write(str(int(vluchten_sorted['Mean distance (km)'].mean())))
-col7.write(str(int(vluchten_sorted['Flight time (min)'].mean())))
+# col7.write(vluchten_sorted.iloc[0,2])
+# col7.write(vluchten_sorted.iloc[0,3])
+# col7.write(str(int(vluchten_sorted['Mean distance (km)'].mean())))
+# col7.write(str(int(vluchten_sorted['Flight time (min)'].mean())))
 
 
 # st.dataframe(Data)
