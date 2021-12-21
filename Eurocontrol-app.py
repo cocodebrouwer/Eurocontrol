@@ -27,12 +27,6 @@ if nav == "Passenger":
   y = st.radio(label = "Kies gewenste activiteit:", 
                options = ["Totaal aantal vluchten"]) 
 
- 
-elif nav == "Airports/Governments":
-  y = st.radio(label = "Kies gewenste activiteit:", 
-               options = ["Totaal aantal vluchten"])
-
-  
 #Titel toevoegen
 st.title("Eurocontrol Dashboard")
 
@@ -148,3 +142,4 @@ col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + ' min')
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
 # 	st.markdown('''TEKST''')
+elif nav == "Airports/Governments":
