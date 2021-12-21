@@ -92,6 +92,7 @@ if nav == "Passengers":
 
   # Begin Map
   DataDone = pd.read_csv('Datadone.csv')
+  DataDone.set_index('To')
   DataDone.columns
 #   DataDone.drop(columns = 'Unnamed: 0', inplace = True)
 
