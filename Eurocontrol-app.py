@@ -41,7 +41,7 @@ if nav == "Passengers":
   col4.caption('All')
   Alldays = col4.checkbox(label='', value=True)
   
-  if Alldays = True:
+  if Alldays == True:
     Weekdagen = []
   else:
     Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
