@@ -58,12 +58,14 @@ Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
 # Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 Dag = col3.selectbox(label= 'Dagen', options= Weekdagen)
 
-col1, col2, col3 = st.columns((12,2,1))
+col1, col2, col3, col4, col5, col6, col7 = st.columns((2,2,2,2,2,2,1))
 
 #top 3 data
 Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
 vluchten_sorted = Dag_vluchten.sort_values('Mean CO2 per pax compensated for flight time (kg)')
 vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax compensated for flight time (kg)'])
+
+
 
 range = len(vluchten_sorted.index)
 
