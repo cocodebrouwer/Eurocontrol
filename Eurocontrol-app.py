@@ -95,8 +95,8 @@ if nav == "Passengers":
   DataDone.drop(columns = 'Unnamed: 0', inplace = True)
 
   # Bepalen variabelen X en Y. 
-  x = 'ACE'
-  y = 'AMS'
+  x = To.str[-5:]
+  y = From.str[-5:]
 
   AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
   AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
