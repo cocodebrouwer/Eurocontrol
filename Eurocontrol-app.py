@@ -94,7 +94,7 @@ if nav == "Passengers":
   DataDone = pd.read_csv('Datadone.csv', index_col='To')
   DataDone.drop(columns = 'Unnamed: 0', inplace = True)
   
-  typ(To)
+  type(To)
 
   # Bepalen variabelen X en Y. 
 #   x = To.str[-5:]
