@@ -177,8 +177,8 @@ elif nav == "Governments":
   
   if range >= 1:
     col1.write('1.')
-    col2.write(vluchten_sorted.iloc[0,13])
-    col3.write(vluchten_sorted.iloc[0,-1])
-    col4.write(str(round(vluchten_sorted.iloc[0,-2],2)))
+    col2.write(Merged.iloc[0,13])
+    col3.write(Merged.iloc[0,-1])
+    col4.write(str(round(Merged.iloc[0,-2],2)))
   
   
