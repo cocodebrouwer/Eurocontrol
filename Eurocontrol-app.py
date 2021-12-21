@@ -65,6 +65,8 @@ Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
 vluchten_sorted = Dag_vluchten.sort_values('Mean CO2 per pax compensated for flight time (kg)')
 vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax compensated for flight time (kg)'])
 
+col1.write('1.')
+
 
 range = len(vluchten_sorted.index)
 
@@ -86,17 +88,17 @@ range = len(vluchten_sorted.index)
 #   col3.write('hier komt het keurmerk')
 #   col4.write(str(vluchten_sorted.iloc[2,40])
 
-if range == 1:
-  col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
+# if range == 1:
+#   col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
 
-elif range == 2:
-  col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
-  col1.expander('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
+# elif range == 2:
+#   col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
+#   col1.expander('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
 
-else:
-  col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
-  col1.expander('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
-  col1.expander('3.     ' + '3.     ' + vluchten_sorted.iloc[2,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[2,40]))
+# else:
+#   col1.expander('1.     ' + '1.' + "\t" + vluchten_sorted.iloc[0,13] + '"\t"hier komt het keurmerk' + "\t" + str(vluchten_sorted.iloc[0,40]))
+#   col1.expander('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
+#   col1.expander('3.     ' + '3.     ' + vluchten_sorted.iloc[2,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[2,40]))
 
 
 # col6.write('From:')
