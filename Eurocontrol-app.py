@@ -21,9 +21,9 @@ Data = pd.read_csv('DATA1.csv')
 #Kies inspectie
 st.sidebar.title("Choose page")
 nav = st.sidebar.radio(label = "", 
-                       options = ["Passengers", "Airports/Governments"])
+                       options = ["Passengers", "Governments"])
 
-if nav == "Passenger": 
+if nav == "Passengers": 
   #Titel toevoegen
   st.title("Eurocontrol Dashboard")
   
