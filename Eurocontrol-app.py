@@ -154,4 +154,4 @@ elif nav == "Governments":
                               
   
   
-  st.dataframe(Airlines)
+  st.dataframe(Data)
