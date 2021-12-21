@@ -70,6 +70,16 @@ range = len(vluchten_sorted.index)
 if range >= 1:
   col1.write('1.')
   col2.write(vluchten_sorted.iloc[0,13])
+  
+  
+if range >= 2:
+  col1.write('2.')
+  col2.write(vluchten_sorted.iloc[1,13])
+  
+  
+if range >= 3:
+  col1.write('3.')
+  col2.write(vluchten_sorted.iloc[2,13])
 
 
 
