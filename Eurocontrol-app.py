@@ -58,7 +58,7 @@ Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
 # Dag = col3.radio(label= 'Dagen', options= Weekdagen)
 Dag = col3.selectbox(label= 'Dagen', options= Weekdagen)
 
-col1, col2, col3, col4, col5, col6, col7 = st.columns(7)
+col1, col2, col3, col4, col5, col6, col7, col8= st.columns(2,2,2,2,2,2,2,1)
 
 #top 3 data
 Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
@@ -104,15 +104,15 @@ if range >= 3:
 #   col1.expander('3.     ' + '3.     ' + vluchten_sorted.iloc[2,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[2,40]))
 
 
-col6.write('From:')
-col6.write('To:')
-col6.write('flight distance:')
-col6.write('flight time:')
+col7.write('From:')
+col7.write('To:')
+col7.write('flight distance:')
+col7.write('flight time:')
 
-col7.write(vluchten_sorted.iloc[0,2])
-col7.write(vluchten_sorted.iloc[0,3])
-col7.write(str(int(vluchten_sorted['Mean distance (km)'].mean())))
-col7.write(str(int(vluchten_sorted['Flight time (min)'].mean())))
+col8.write(vluchten_sorted.iloc[0,2])
+col8.write(vluchten_sorted.iloc[0,3])
+col8.write(str(int(vluchten_sorted['Mean distance (km)'].mean())))
+col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())))
 
 
 # st.dataframe(Data)
