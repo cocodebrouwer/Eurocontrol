@@ -43,13 +43,11 @@ st.title("Eurocontrol Dashboard")
 
 col1, col2, col3 = st.columns((3,3,2))
 
-From = st.write('**From**')
-
 # From
-From = col1.selectbox(label= From, options= Data['From'].unique())
+From = col1.selectbox(label= 'From', options= Data['From'].unique())
 
 # To
-To = col2.selectbox(label= '**To**', options= Data['To'].unique())
+To = col2.selectbox(label= 'To', options= Data['To'].unique())
 
 # Dagen
 #dagen = Data
