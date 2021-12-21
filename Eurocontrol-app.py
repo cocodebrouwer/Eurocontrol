@@ -55,8 +55,8 @@ To = col2.selectbox(label= 'To', options= Data['To'].unique())
 To_vluchten = Data[Data['To']==To]
 Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
 
-Dag = col3.radio(label= 'Dagen', options= Weekdagen)
-
+# Dag = col3.radio(label= 'Dagen', options= Weekdagen)
+Dag = col3.selectbox(label= 'Dagen', options= Weekdagen)
 
 col1, col2, col3 = st.columns((12,2,1))
 
