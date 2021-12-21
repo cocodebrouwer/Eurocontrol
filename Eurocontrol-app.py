@@ -152,6 +152,7 @@ elif nav == "Governments":
   Airline = Airlines_compact.sort_values('Airline')
   Airline = col1.multiselect(label='Airline', options=Airline['Airline'])
   
+  st.write(Airlines_compact)
   #Keurmerk = Airlines_compact.sort_value('Keurmerk')
 #   Keurmerk = col2.multiselect(label='Qualitymark', options=Keurmerk['Keurmerk'].unique())
   
