@@ -144,7 +144,7 @@ if nav == "Passengers":
 elif nav == "Governments":
   st.title("Eurocontrol Dashboard for gevernments")
   
-  Airlines_compact = Data.drop_duplicates(subset=['Airline', 'Keurmerk'])
+  Airlines_compact = Data.drop_duplicates(subset=['Airline', 'Keurmerk']).sort_values('Mean CO2 per flight per airline (kg)')
   
   col1, col2 = st.columns(2)
   
