@@ -85,7 +85,7 @@ if range >= 2:
   col1.write('2.')
   col2.write(vluchten_sorted.iloc[1,13])
   col3.write('keurmerk')
-  col4.write(str(vluchten_sorted.iloc[1,40]))
+  col4.write(str(round(vluchten_sorted.iloc[1,40],2)))
   col5.write('bomen')
   
   
@@ -93,7 +93,7 @@ if range >= 3:
   col1.write('3.')
   col2.write(vluchten_sorted.iloc[2,13])
   col3.write('keurmerk')
-  col4.write(str(vluchten_sorted.iloc[2,40]))
+  col4.write(str(round(vluchten_sorted.iloc[2,40],2)))
   col5.write('bomen')
 
 
