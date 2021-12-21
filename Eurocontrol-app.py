@@ -144,4 +144,4 @@ if nav == "Passengers":
 elif nav == "Governments":
   st.title('test')
   
-  
+  st.dataframe(Data)
