@@ -75,6 +75,7 @@ if range >= 1:
   col4.write(str(vluchten_sorted.iloc[0,40])
          
 else:
+  col1.write()
              
 
 # if range >= 2: 
