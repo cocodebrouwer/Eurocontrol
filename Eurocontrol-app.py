@@ -147,7 +147,7 @@ if nav == "Passengers":
 elif nav == "Governments":
   st.title("Eurocontrol Dashboard for gevernments")
   
-  Airlines_compact = Data.drop_duplicates(subset=['Airline', 'Keurmerk']).sort_values('Mean CO2 per flight per airline (kg)')
+  Airlines_compact = Data.drop_duplicates(subset=['Airline', 'Keurmerk'])
   
   col1, col2 = st.columns(2)
   
@@ -165,7 +165,7 @@ elif nav == "Governments":
   else:
     Keurmerken = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
                               
-  Merged = Airlines.merge(Keurmerken, on='Airline', how='inner')
+  Merged = Airlines.merge(Keurmerken, on='Airline', how='inner').sort_values('Mean CO2 per flight per airline (kg)')
   
   
   col1, col2, col3, col4 = st.columns(4)
