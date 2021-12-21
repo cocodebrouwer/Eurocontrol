@@ -137,7 +137,7 @@ if nav == "Passengers":
   with col1:
     folium_static(m)
     
-  st.dataframe(vluchten_sorted)
+  # st.dataframe(vluchten_sorted)
 
 
 
