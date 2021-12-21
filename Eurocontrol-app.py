@@ -150,7 +150,8 @@ elif nav == "Governments":
                    
   Keurmerk = col2.multiselect(label='Qualitymark', options=Data['Keurmerk'].unique())
   
-  Airlines = Data[Data['Airline'] isin(Airline)]
+  #Airlines = Data[Data['Airline'] isin(Airline)]
+  Airlines = Data.loc[Data.apply(lambda x: x.Airline in Airline, axis=1)]
                               
   
   st.write(Airlines)
