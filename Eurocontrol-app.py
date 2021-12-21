@@ -120,7 +120,10 @@ if nav == "Passengers":
                   tooltip = 'Show the distance of the flight').add_to(m)
 
   # folium_static(m)
-  st.html(m._repr_html_())
+  
+  f = folium.Figure(height=1500)
+  f.add_child(m)
+  st.html(f._repr_html_(), height=500)
 
 
 
