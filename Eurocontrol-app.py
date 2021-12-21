@@ -27,7 +27,7 @@ if nav == "Passengers":
   #Titel toevoegen
   st.title("Eurocontrol Dashboard")
   
-  col1, col2, col3, col4 = st.columns((6,6,3,1))
+  col1, col2, col3, col4, col5 = st.columns((12,12,6,1,1))
   
   # From
   From = col1.selectbox(label= 'From', options= Data['From'].unique())
@@ -43,7 +43,9 @@ if nav == "Passengers":
   # Dag = col3.radio(label= 'Dagen', options= Weekdagen)
   Dag = col3.selectbox(label= 'Days', options= Weekdagen)
   
-  col4.checkbox(label='All days', value=True)
+  col4.checkbox(label='', value=True)
+  
+  col5.write('All days')
   
   col1, col2, col3, col4, col5, col6, col7, col8 = st.columns((2,2,2,2,2,2,2,2))
   
