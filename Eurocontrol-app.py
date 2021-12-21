@@ -40,6 +40,7 @@ if nav == "Passengers":
   To_vluchten = Data[Data['To']==To]
   Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
   Weekdagen.append('')
+  st.write(Weekdagen)
   Dag = col3.selectbox(label= 'Days', options= Weekdagen)
   # Dag = col3.selectbox(label= 'Days', options= ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
   
@@ -131,6 +132,7 @@ if nav == "Passengers":
   with col1:
     folium_static(m)
     
+  
 
 
 
