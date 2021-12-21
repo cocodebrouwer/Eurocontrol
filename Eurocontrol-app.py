@@ -166,8 +166,8 @@ elif nav == "Governments":
     Keurmerken = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
                               
   Merged = Airlines.merge(Keurmerken, on='Airline', how='inner')
-  Merged = Merged.sort_values('Mean CO2 per flight per airline (kg)')
-  
+  #Merged = Merged.sort_values('Mean CO2 per flight per airline (kg)')
+  st.write(Merged)
   
   col1, col2, col3, col4 = st.columns(4)
   
