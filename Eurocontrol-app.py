@@ -111,8 +111,8 @@ col7.write('flight time:')
 
 col8.write(vluchten_sorted.iloc[0,2])
 col8.write(vluchten_sorted.iloc[0,3])
-col8.write(str(int(vluchten_sorted['Mean distance (km)'].mean())) + 'km')
-col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + 'min')
+col8.write(str(int(vluchten_sorted['Mean distance (km)'].mean())) + ' km')
+col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + ' min')
 
 
 # st.dataframe(Data)
