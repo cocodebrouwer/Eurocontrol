@@ -148,9 +148,9 @@ elif nav == "Governments":
   
   col1, col2 = st.columns(2)
   
-  Airline = col1.multiselect(label='Airline', options=Data['Airline'].unique())
+  Airline = col1.multiselect(label='Airline', options=Airlines_compact['Airline'])
                    
-  Keurmerk = col2.multiselect(label='Qualitymark', options=Data['Keurmerk'].unique())
+  Keurmerk = col2.multiselect(label='Qualitymark', options=Airlines_compact['Keurmerk'].unique())
   
   Airlines = Data.loc[Data.apply(lambda x: x.Airline in Airline, axis=1)]
   
