@@ -140,4 +140,4 @@ if nav == "Passengers":
 elif nav == "Governments":
   st.title('test')
   
-  st.dataframe(sorted_vluchten)
+  st.dataframe(vluchten_sorted)
