@@ -144,6 +144,8 @@ if nav == "Passengers":
 elif nav == "Governments":
   st.title("Eurocontrol Dashboard for gevernments")
   
+  Airlines_compact = Data.drop_duplicates(subset=['Airline', 'Keurmerk'])
+  
   col1, col2 = st.columns(2)
   
   Airline = col1.multiselect(label='Airline', options=Data['Airline'].unique())
@@ -155,7 +157,7 @@ elif nav == "Governments":
   Keurmerken = Data.loc[Data.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
                               
   
-  st.write(Airlines)
+  st.write(Airlines_compact)
   st.write(Keurmerken)
   
   Merged = pd.merge(Airlines, Keurmerken, how='inner')
