@@ -152,9 +152,15 @@ elif nav == "Governments":
                    
   Keurmerk = col2.multiselect(label='Qualitymark', options=Airlines_compact['Keurmerk'].unique())
   
-  Airlines = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Airline in Airline, axis=1)]
+  if Airline == []:
+    Airlines = Airlines_compact
+  else:
+    Airlines = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Airline in Airline, axis=1)]
   
-  Keurmerken = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
+  if Keurmerk == []:
+    Keurmerken = Airlines_compact
+  else:
+    Keurmerken = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
                               
   
   st.write(Airlines)
