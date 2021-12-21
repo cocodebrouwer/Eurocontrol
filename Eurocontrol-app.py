@@ -45,10 +45,10 @@ col1, col2, col3 = st.columns((3,3,2))
 
 
 # From
-From = col1.selectbox(label= 'From', options= Data['From'].unique())
+From = col1.selectbox(label= 'From', options= Data['**From**'].unique())
 
 # To
-To = col2.selectbox(label= 'To', options= Data['To'].unique())
+To = col2.selectbox(label= 'To', options= Data['**To**'].unique())
 
 # Dagen
 #dagen = Data
@@ -56,7 +56,7 @@ To_vluchten = Data[Data['To']==To]
 Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
 
 # Dag = col3.radio(label= 'Dagen', options= Weekdagen)
-Dag = col3.selectbox(label= 'Dagen', options= Weekdagen)
+Dag = col3.selectbox(label= '**Days**', options= Weekdagen)
 
 col1, col2, col3, col4, col5, col6, col7, col8 = st.columns((2,2,2,2,2,2,2,2))
 
@@ -97,10 +97,10 @@ if range >= 3:
   col5.write(str(round(vluchten_sorted.iloc[2,-5],2)))
 
 
-col7.write('From:')
-col7.write('To:')
-col7.write('flight distance:')
-col7.write('flight time:')
+col7.write('**From:**')
+col7.write('**To:**')
+col7.write('**Flight distance:**')
+col7.write('**Flight time:**')
 
 col8.write(vluchten_sorted.iloc[0,2])
 col8.write(vluchten_sorted.iloc[0,3])
@@ -110,8 +110,8 @@ col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + ' min')
 
 # st.dataframe(Data)
 # st.dataframe(Dag_vluchten)
-st.dataframe(vluchten_sorted)
-st.write(range)
+# st.dataframe(vluchten_sorted)
+# st.write(range)
 
 
 
