@@ -146,7 +146,7 @@ elif nav == "Governments":
   
   col1, col2 = st.columns(2)
   
-  Airline = col1.selectbox(label='Airline', options=Data['Airline'].unique())
+  Airline = col1.multiselect(label='Airline', options=Data['Airline'].unique())
                    
   Keurmerk = col2.multiselect(label='Qualitymark', options=Data['Keurmerk'].unique())
   
