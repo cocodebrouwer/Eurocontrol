@@ -68,16 +68,16 @@ vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax comp
 range = len(vluchten_sorted.index)
 
 if range == 1:
-  col1.write('1.     ' + '1.     ' + vluchten_sorted.iloc[0,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[0,40]))
+  col1.expander('1.     ' + '1.     ' + vluchten_sorted.iloc[0,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[0,40]))
 
 elif range == 2:
-  col1.write('1.     ' + '1.     ' + vluchten_sorted.iloc[0,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[0,40]))
-  col1.write('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
+  col1.expander('1.     ' + '1.     ' + vluchten_sorted.iloc[0,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[0,40]))
+  col1.expander('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
 
 else:
-  col1.write('1.     ' + '1.     ' + vluchten_sorted.iloc[0,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[0,40]))
-  col1.write('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
-  col1.write('3.     ' + '3.     ' + vluchten_sorted.iloc[2,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[2,40]))
+  col1.expander('1.     ' + '1.     ' + vluchten_sorted.iloc[0,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[0,40]))
+  col1.expander('2.     ' + '2.     ' + vluchten_sorted.iloc[1,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[1,40]))
+  col1.expander('3.     ' + '3.     ' + vluchten_sorted.iloc[2,13] + '        hier komt het keurmerk        ' + str(vluchten_sorted.iloc[2,40]))
 
 
 col2.write('From:')
