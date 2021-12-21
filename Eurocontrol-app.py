@@ -119,11 +119,7 @@ if nav == "Passengers":
   folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
                   tooltip = 'Show the distance of the flight').add_to(m)
 
-  # folium_static(m)
-  
-  f = folium.Figure(height=1500)
-  f.add_child(m)
-  st.html(f._repr_html_(), height=500)
+  folium_static(m)
 
 
 
