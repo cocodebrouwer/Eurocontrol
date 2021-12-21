@@ -36,13 +36,15 @@ if nav == "Passengers":
   To = col2.selectbox(label= 'To', options= Data['To'].unique())
   
   # Dagen
-  #dagen = Data
   To_vluchten = Data[Data['To']==To]
-  #Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
-  Weekdagen = []
   
   col4.caption('All')
   Alldays = col4.checkbox(label='', value=True)
+  
+  if Alldays = True:
+    Weekdagen = []
+  else:
+    Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
   
   Dag = col3.selectbox(label= 'Days', options= Weekdagen)
   
