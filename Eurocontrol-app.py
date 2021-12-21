@@ -74,7 +74,7 @@ if range >= 1:
   col3.write('hier komt het keurmerk')
   col4.write(str(vluchten_sorted.iloc[0,40])
          
-else:
+elif:
   col1.write()
              
 
