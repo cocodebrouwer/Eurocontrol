@@ -67,21 +67,21 @@ if nav == "Passengers":
     col2.write(vluchten_sorted.iloc[0,13])
     col3.write(vluchten_sorted.iloc[0,-1])
     col4.write(str(round(vluchten_sorted.iloc[0,40],2)))
-    col5.write(str(round(vluchten_sorted.iloc[0,-5],2)))
+    col5.write(str(round(vluchten_sorted.iloc[0,-3],2)))
     
   if range >= 2:
     col1.write('2.')
     col2.write(vluchten_sorted.iloc[1,13])
     col3.write(vluchten_sorted.iloc[1,-1])
     col4.write(str(round(vluchten_sorted.iloc[1,40],2)))
-    col5.write(str(round(vluchten_sorted.iloc[1,-5],2)))
+    col5.write(str(round(vluchten_sorted.iloc[1,-3],2)))
   
   if range >= 3:
     col1.write('3.')
     col2.write(vluchten_sorted.iloc[2,13])
     col3.write(vluchten_sorted.iloc[2,-1])
     col4.write(str(round(vluchten_sorted.iloc[2,40],2)))
-    col5.write(str(round(vluchten_sorted.iloc[2,-5],2)))
+    col5.write(str(round(vluchten_sorted.iloc[2,-3],2)))
     
   col7.write('**From:**')
   col7.write('**To:**')
