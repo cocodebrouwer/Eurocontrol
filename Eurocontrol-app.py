@@ -43,7 +43,7 @@ if nav == "Passengers":
   # Dag = col3.radio(label= 'Dagen', options= Weekdagen)
   Dag = col3.selectbox(label= 'Days', options= Weekdagen)
   
-  col4.write('All days')
+  col4.caption('All days')
   col4.checkbox(label='', value=True)
   
   col1, col2, col3, col4, col5, col6, col7, col8 = st.columns((2,2,2,2,2,2,2,2))
