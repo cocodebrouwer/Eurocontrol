@@ -134,4 +134,4 @@ col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + ' min')
 # with st.expander('Meer informatie:'):
 # 	st.subheader('Extra informatie')
 # 	st.markdown('''TEKST''')
-elif nav == "Airports/Governments":
+# elif nav == "Airports/Governments":
