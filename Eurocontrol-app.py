@@ -181,4 +181,4 @@ elif nav == "Governments":
     col3.write(Merged.iloc[0,-1])
     col4.write(str(round(Merged.iloc[0,-2],2)))
   
-  
+  st.write(Merged)
