@@ -196,5 +196,8 @@ elif nav == "Airlines":
   col1, col2 = st.columns(2)
   
   Airline = Airlines_compact.sort_values('Airline')
-  Airline1 = col1.selectbox(label='Airline1', options=Airline['Airline'])
-  Airline2 = col2.selectbox(label='Airline2', options=Airline['Airline'])
+  Airline1 = col1.selectbox(label='Airline 1', options=Airline['Airline'])
+  Airline2 = col2.selectbox(label='Airline 2', options=Airline['Airline'])
+  
+  loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0, max_value=1)
+  loadfactor2 = col1.slider(label='Loadfactor 2', min_value=0, max_value=1)
