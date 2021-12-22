@@ -19,7 +19,7 @@ Data = pd.read_csv('DATA1.csv')
 
 
 #Kies inspectie
-st.sidebar.title("Choose page")
+st.sidebar.title("Which user are you?")
 nav = st.sidebar.radio(label = "", 
                        options = ["Passengers", "Governments", "Airlines"])
 
