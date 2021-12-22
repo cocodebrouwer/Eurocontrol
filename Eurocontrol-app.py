@@ -143,7 +143,7 @@ if nav == "Passengers":
 
 
 elif nav == "Governments":
-  st.title("Eurocontrol Dashboard for gevernments")
+  st.title("Eurocontrol Dashboard for governments")
   
   Airlines_compact = Data.drop_duplicates(subset=['Airline', 'Keurmerk'])
   
