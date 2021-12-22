@@ -200,4 +200,4 @@ elif nav == "Airlines":
   Airline2 = col2.selectbox(label='Airline 2', options=Airline['Airline'])
   
   loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0, max_value=1)
-  loadfactor2 = col1.slider(label='Loadfactor 2', min_value=0, max_value=1)
+  loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0, max_value=1)
