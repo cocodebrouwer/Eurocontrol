@@ -16,6 +16,7 @@ st.set_page_config(layout="wide")
 
 # Data inladen
 Data = pd.read_csv('DATA1.csv')
+Data2 = pd.read_csv('PAGE2.csv')
 
 
 #Kies inspectie
@@ -145,25 +146,23 @@ if nav == "Passengers":
 elif nav == "Governments":
   st.title("Eurocontrol Dashboard for governments")
   
-  Airlines_compact = Data.drop_duplicates(subset=['Airline', 'Keurmerk'])
-  
   col1, col2 = st.columns(2)
   
-  Airline = Airlines_compact.sort_values('Airline')
+  Airline = Data2.sort_values('Airline')
   Airline = col1.multiselect(label='Airline', options=Airline['Airline'])
   
-  Keurmerk = Airlines_compact.sort_values('Keurmerk')
+  Keurmerk = Data2.sort_values('Keurmerk')
   Keurmerk = col2.multiselect(label='Qualitymark', options=Keurmerk['Keurmerk'].unique())
   
   if Airline == []:
-    Airlines = Airlines_compact
+    Airlines = Data2
   else:
-    Airlines = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Airline in Airline, axis=1)]
+    Airlines = Data2.loc[Data2.apply(lambda x: x.Airline in Airline, axis=1)]
   
   if Keurmerk == []:
-    Keurmerken = Airlines_compact
+    Keurmerken = Data2
   else:
-    Keurmerken = Airlines_compact.loc[Airlines_compact.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
+    Keurmerken = Data2.loc[Data2.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
                               
   Merged = Airlines.merge(Keurmerken, on='Airline', how='inner', suffixes=('', 'delete'))
   Merged = Merged[[c for c in Merged.columns if not c.endswith('delete')]]
@@ -180,9 +179,9 @@ elif nav == "Governments":
   
   for i in range(len(Merged.index)):
     col1.write(str(i+1) + '.')
-    col2.write(Merged.iloc[i,13])
-    col3.write(Merged.iloc[i,-1])
-    col4.write(str(round(Merged.iloc[i,-2],2)))
+    col2.write(Merged.iloc[i,1])
+    col3.write(Merged.iloc[i,3])
+    col4.write(str(round(Merged.iloc[i,2],2)))
     
   with st.expander(label='INFO'):
     st.write('hier komt de uitleg voor de kolommen')   
