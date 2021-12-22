@@ -146,6 +146,8 @@ if nav == "Passengers":
 elif nav == "Governments":
   st.title("Eurocontrol Dashboard for governments")
   
+  Data2 = Data2.sort_values('Mean CO2 per seat per airline (kg/km)')
+  
   col1, col2 = st.columns(2)
   
   Airline = Data2.sort_values('Airline')
