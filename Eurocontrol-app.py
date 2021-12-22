@@ -196,5 +196,5 @@ elif nav == "Airlines":
   col1, col2 = st.columns(2)
   
   Airline = Airlines_compact.sort_values('Airline')
-  Airline1 = col1.multiselect(label='Airline1', options=Airline['Airline'])
-  Airline2 = col2.multiselect(label='Airline2', options=Airline['Airline'])
+  Airline1 = col1.selectbox(label='Airline1', options=Airline['Airline'])
+  Airline2 = col2.selectbox(label='Airline2', options=Airline['Airline'])
