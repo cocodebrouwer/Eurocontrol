@@ -15,7 +15,7 @@ import folium
 st.set_page_config(layout="wide")
 
 # Data inladen
-Data = pd.read_csv('DATA1.csv')
+Data = pd.read_csv('PAGE1.csv')
 Data2 = pd.read_csv('PAGE2.csv')
 Data3 = pd.read_csv('PAGE3.csv')
 
