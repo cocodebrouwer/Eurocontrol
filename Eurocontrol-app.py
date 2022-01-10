@@ -216,7 +216,7 @@ elif nav == "Airlines":
   col1.write('**CO2 met ingestelde loadfactor**')
   
   col2.write(Airline1.iloc[0,4])
-  col2.write(str(Airline1.iloc[0,2]))
+  col2.write(str(round(Airline1.iloc[0,2],4)))
   col2.write('test')
   col2.write('test')
   
@@ -226,7 +226,7 @@ elif nav == "Airlines":
   col3.write('**CO2 met ingestelde loadfactor**')
   
   col4.write(Airline1.iloc[0,4])
-  col4.write(str(Airline1.iloc[0,2]))
+  col4.write(str(round(Airline1.iloc[0,2],4)))
   col4.write('test')
   col4.write('test')
   
