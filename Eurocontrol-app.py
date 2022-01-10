@@ -17,6 +17,7 @@ st.set_page_config(layout="wide")
 # Data inladen
 Data = pd.read_csv('DATA1.csv')
 Data2 = pd.read_csv('PAGE2.csv')
+Data3 = pd.read_csv('PAGE3.csv')
 
 
 #Kies inspectie
@@ -192,15 +193,15 @@ elif nav == "Governments":
 elif nav == "Airlines":
   st.title("Eurocontrol Dashboard for airlines")
   
-  Airlines_compact = Data.drop_duplicates(subset=['Airline', 'Keurmerk'])
+#   Airlines_compact = Data.drop_duplicates(subset=['Airline', 'Keurmerk'])
   
   col1, col2 = st.columns(2)
   
-  Airline = Airlines_compact.sort_values('Airline')
+  Airline = Data3.sort_values('Airline')
   Airline1 = col1.selectbox(label='Airline 1', options=Airline['Airline'])
   Airline2 = col2.selectbox(label='Airline 2', options=Airline['Airline'])
   
-  st.write(Data)
-  
   loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0, max_value=1)
   loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0, max_value=1)
+  
+  st.write(Data3)
