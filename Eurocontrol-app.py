@@ -199,14 +199,14 @@ elif nav == "Airlines":
   Airline = Data3.sort_values('Airline')
   Airline1 = col1.selectbox(label='Airline 1', options=Airline['Airline'])
   Airline1 = Data3[Data3['Airline']==Airline1]
-  loadfactor1 = Airline1.iloc[0,3]
+  loadfactor1 = float(Airline1.iloc[0,3])
   
   Airline2 = col2.selectbox(label='Airline 2', options=Airline['Airline'])
   Airline2 = Data3[Data3['Airline']==Airline2]
-  loadfactor2 = Airline2.iloc[0,3]
+  loadfactor2 = float(Airline2.iloc[0,3])
   
-  loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0.0, max_value=1.0, value=0.8, step=0.01)
-  loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0.0, max_value=1.0, value=0.7, step=0.01)
+  loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0.0, max_value=1.0, value=loadfactor1, step=0.01)
+  loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0.0, max_value=1.0, value=loadfactor2, step=0.01)
   
   col1, col2, col3, col4 = st.columns(4)
   
