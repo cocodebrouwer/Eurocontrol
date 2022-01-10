@@ -183,7 +183,7 @@ elif nav == "Governments":
     col1.write(str(i+1) + '.')
     col2.write(Merged.iloc[i,1])
     col3.write(Merged.iloc[i,3])
-    col4.write(str(round(Merged.iloc[i,2],2)))
+    col4.write(str(round(Merged.iloc[i,2],4)))
     
   with st.expander(label='INFO'):
     st.write('hier komt de uitleg voor de kolommen')   
