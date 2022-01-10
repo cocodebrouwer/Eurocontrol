@@ -205,8 +205,8 @@ elif nav == "Airlines":
   Airline2 = Data3[Data3['Airline']==Airline2]
   loadfactor2 = Airline2.iloc[0,3]
   
-  loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0.0, max_value=1.0, value=1, step=0.01)
-  loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0.0, max_value=1.0, value=1, step=0.01)
+  loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0.0, max_value=1.0, value=0.8, step=0.01)
+  loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0.0, max_value=1.0, value=0.7, step=0.01)
   
   col1, col2, col3, col4 = st.columns(4)
   
