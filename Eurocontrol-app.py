@@ -16,7 +16,7 @@ st.set_page_config(layout="wide")
 
 # Data inladen
 Data = pd.read_csv('DATA1.csv')
-Data2 = pd.read_csv('PAGE2.csv')
+#Data2 = pd.read_csv('PAGE2.csv')
 
 
 #Kies inspectie
@@ -68,78 +68,78 @@ if nav == "Passengers":
   col5.write('**Number of trees**')
   col6.write('**Weekday**')
   
-#   range = len(vluchten_sorted.index)
+  range = len(vluchten_sorted.index)
   
-#   if range >= 1:
-#     col1.write('1.')
-#     col2.write(vluchten_sorted.iloc[0,13])
-#     col3.write(vluchten_sorted.iloc[0,-1])
-#     col4.write(str(round(vluchten_sorted.iloc[0,40],2)))
-#     col5.write(str(round(vluchten_sorted.iloc[0,-3],2))+ '🌳', help = 'extra info')
-#     col6.write(str(vluchten_sorted.iloc[0,-22]))
+  if range >= 1:
+    col1.write('1.')
+    col2.write(vluchten_sorted.iloc[0,13])
+    col3.write(vluchten_sorted.iloc[0,-1])
+    col4.write(str(round(vluchten_sorted.iloc[0,40],2)))
+    col5.write(str(round(vluchten_sorted.iloc[0,-3],2))+ '🌳', help = 'extra info')
+    col6.write(str(vluchten_sorted.iloc[0,-22]))
     
-#   if range >= 2:
-#     col1.write('2.')
-#     col2.write(vluchten_sorted.iloc[1,13])
-#     col3.write(vluchten_sorted.iloc[1,-1])
-#     col4.write(str(round(vluchten_sorted.iloc[1,40],2)))
-#     col5.write(str(round(vluchten_sorted.iloc[1,-3],2))+ '🌳', help = 'extra info')
-#     col6.write(str(vluchten_sorted.iloc[1,-22]))
+  if range >= 2:
+    col1.write('2.')
+    col2.write(vluchten_sorted.iloc[1,13])
+    col3.write(vluchten_sorted.iloc[1,-1])
+    col4.write(str(round(vluchten_sorted.iloc[1,40],2)))
+    col5.write(str(round(vluchten_sorted.iloc[1,-3],2))+ '🌳', help = 'extra info')
+    col6.write(str(vluchten_sorted.iloc[1,-22]))
   
-#   if range >= 3:
-#     col1.write('3.')
-#     col2.write(vluchten_sorted.iloc[2,13])
-#     col3.write(vluchten_sorted.iloc[2,-1])
-#     col4.write(str(round(vluchten_sorted.iloc[2,40],2)))
-#     col5.write(str(round(vluchten_sorted.iloc[2,-3],2))+ '🌳', help = 'extra info')
-#     col6.write(str(vluchten_sorted.iloc[1,-22]))
+  if range >= 3:
+    col1.write('3.')
+    col2.write(vluchten_sorted.iloc[2,13])
+    col3.write(vluchten_sorted.iloc[2,-1])
+    col4.write(str(round(vluchten_sorted.iloc[2,40],2)))
+    col5.write(str(round(vluchten_sorted.iloc[2,-3],2))+ '🌳', help = 'extra info')
+    col6.write(str(vluchten_sorted.iloc[1,-22]))
     
-#   col7.write('**From:**')
-#   col7.write('**To:**')
-#   col7.write('**Flight distance:**')
-#   col7.write('**Flight time:**')
+  col7.write('**From:**')
+  col7.write('**To:**')
+  col7.write('**Flight distance:**')
+  col7.write('**Flight time:**')
   
-#   col8.write(vluchten_sorted.iloc[0,2])
-#   col8.write(vluchten_sorted.iloc[0,3])
-#   col8.write(str(int(vluchten_sorted['Mean distance (km)'].mean())) + ' km')
-#   col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + ' min')
+  col8.write(vluchten_sorted.iloc[0,2])
+  col8.write(vluchten_sorted.iloc[0,3])
+  col8.write(str(int(vluchten_sorted['Mean distance (km)'].mean())) + ' km')
+  col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + ' min')
 
-#   col1, col2, col3 = st.columns((6,1,1))
+  col1, col2, col3 = st.columns((6,1,1))
   
-#   with col1.expander(label='INFO'):
-#     st.write('hier komt de uitleg voor de kolommen')
+  with col1.expander(label='INFO'):
+    st.write('hier komt de uitleg voor de kolommen')
   
-#   # Begin Map
-#   DataDone = pd.read_csv('Datadone.csv', index_col='To')
-#   DataDone.drop(columns = 'Unnamed: 0', inplace = True)
+  # Begin Map
+  DataDone = pd.read_csv('Datadone.csv', index_col='To')
+  DataDone.drop(columns = 'Unnamed: 0', inplace = True)
 
-#   # Bepalen variabelen X en Y. 
-#   x = To[-4:-1]
-#   y = From[-4:-1]
+  # Bepalen variabelen X en Y. 
+  x = To[-4:-1]
+  y = From[-4:-1]
 
-#   AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
-#   AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
+  AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
+  AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
 
-#   m = folium.Map(location=[AvgLat, AvgLng], width=750, height=500, zoom_start=4, control_scale=True)
+  m = folium.Map(location=[AvgLat, AvgLng], width=750, height=500, zoom_start=4, control_scale=True)
 
-#   folium.Marker(location=[DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]],
-#                 popup= '<strong>' + From + '<strong>',
-#                 tooltip='Push to show airport code',
-#                 icon = folium.Icon(color = 'blue', icon = 'home', prefix = 'fa')).add_to(m)
+  folium.Marker(location=[DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]],
+                popup= '<strong>' + From + '<strong>',
+                tooltip='Push to show airport code',
+                icon = folium.Icon(color = 'blue', icon = 'home', prefix = 'fa')).add_to(m)
 
-#   folium.Marker(location=[DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]],
-#                 popup= '<strong>' + To + '<strong>',
-#                 tooltip='Push to show airport code',
-#                 icon = folium.Icon(color = 'blue', icon = 'plane', prefix = 'fa')).add_to(m)
+  folium.Marker(location=[DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]],
+                popup= '<strong>' + To + '<strong>',
+                tooltip='Push to show airport code',
+                icon = folium.Icon(color = 'blue', icon = 'plane', prefix = 'fa')).add_to(m)
 
-#   points = ((DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]), 
-#             (DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]))
+  points = ((DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]), 
+            (DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]))
 
-#   folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
-#                   tooltip = 'Show the distance of the flight').add_to(m)
+  folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
+                  tooltip = 'Show the distance of the flight').add_to(m)
 
-#   with col1:
-#     folium_static(m)
+  with col1:
+    folium_static(m)
 
 
 
