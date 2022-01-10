@@ -231,3 +231,5 @@ elif nav == "Airlines":
   col4.write('test')
   
   st.write(Data3)
+  
+  st.write(loadfactor1)
