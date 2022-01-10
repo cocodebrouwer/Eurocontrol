@@ -200,9 +200,10 @@ elif nav == "Airlines":
   Airline1 = col1.selectbox(label='Airline 1', options=Airline['Airline'])
   Airline1 = Data3[Data3['Airline']==Airline1]
   Airline2 = col2.selectbox(label='Airline 2', options=Airline['Airline'])
+  Airline2 = Data3[Data3['Airline']==Airline2]
   
-  loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0.0, max_value=1.0, value=1.0, step=0.01)
-  loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0.0, max_value=1.0, value=1.0, step=0.01)
+  loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0.0, max_value=1.0, value=Airline1.iloc[0,3], step=0.01)
+  loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0.0, max_value=1.0, value=Airline2.iloc[0,3], step=0.01)
   
   col1, col2, col3, col4 = st.columns(4)
   
@@ -212,7 +213,7 @@ elif nav == "Airlines":
   col1.write('**CO2 met ingestelde loadfactor**')
   
   col2.write(Airline1.iloc[0,4])
-  col2.write(Airline1['CO2 per seat per airline (kg/km)'])
+  col2.write(Airline1.iloc[0,2])
   col2.write('test')
   col2.write('test')
   
@@ -221,11 +222,9 @@ elif nav == "Airlines":
   col3.write('**Keurmerk met ingestelde loadfactor**')
   col3.write('**CO2 met ingestelde loadfactor**')
   
-  col4.write(Airline2[2])
-  col4.write(Airline2[1])
+  col4.write(Airline1.iloc[0,4])
+  col4.write(Airline1.iloc[0,2])
   col4.write('test')
   col4.write('test')
-  
-  st.write(Airline1)
   
   st.write(Data3)
