@@ -198,6 +198,7 @@ elif nav == "Airlines":
   
   Airline = Data3.sort_values('Airline')
   Airline1 = col1.selectbox(label='Airline 1', options=Airline['Airline'])
+  Airline1 = Data3[Data3['Airline']==Airline1]
   Airline2 = col2.selectbox(label='Airline 2', options=Airline['Airline'])
   
   loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0.0, max_value=1.0, value=1.0, step=0.01)
