@@ -166,12 +166,12 @@ elif nav == "Governments":
   else:
     Keurmerken = Data2.loc[Data2.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
                               
-  Merged = Airlines.merge(Keurmerken, on='Airline', how='inner', suffixes=('', 'delete'))
-  Merged = Merged[[c for c in Merged.columns if not c.endswith('delete')]]
-  Merged = Merged.sort_values('Mean CO2 per flight per airline (kg)')
+#   Merged = Airlines.merge(Keurmerken, on='Airline', how='inner', suffixes=('', 'delete'))
+#   Merged = Merged[[c for c in Merged.columns if not c.endswith('delete')]]
+#   Merged = Merged.sort_values('Mean CO2 per flight per airline (kg)')
   
   
-  col1, col2, col3, col4 = st.columns(4)
+#   col1, col2, col3, col4 = st.columns(4)
   
 #   col1.write('**Ranking**')
 #   col2.write('**Airline**')
