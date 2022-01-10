@@ -143,50 +143,50 @@ if nav == "Passengers":
 
 
 
-# elif nav == "Governments":
-#   st.title("Eurocontrol Dashboard for governments")
+elif nav == "Governments":
+  st.title("Eurocontrol Dashboard for governments")
   
-#   Data2 = Data2.sort_values('Mean CO2 per seat per airline (kg/km)')
+  Data2 = Data2.sort_values('Mean CO2 per seat per airline (kg/km)')
   
-#   col1, col2 = st.columns(2)
+  col1, col2 = st.columns(2)
   
-#   Airline = Data2.sort_values('Airline')
-#   Airline = col1.multiselect(label='Airline', options=Airline['Airline'])
+  Airline = Data2.sort_values('Airline')
+  Airline = col1.multiselect(label='Airline', options=Airline['Airline'])
   
-#   Keurmerk = Data2.sort_values('Keurmerk')
-#   Keurmerk = col2.multiselect(label='Qualitymark', options=Keurmerk['Keurmerk'].unique())
+  Keurmerk = Data2.sort_values('Keurmerk')
+  Keurmerk = col2.multiselect(label='Qualitymark', options=Keurmerk['Keurmerk'].unique())
   
-#   if Airline == []:
-#     Airlines = Data2
-#   else:
-#     Airlines = Data2.loc[Data2.apply(lambda x: x.Airline in Airline, axis=1)]
+  if Airline == []:
+    Airlines = Data2
+  else:
+    Airlines = Data2.loc[Data2.apply(lambda x: x.Airline in Airline, axis=1)]
   
-#   if Keurmerk == []:
-#     Keurmerken = Data2
-#   else:
-#     Keurmerken = Data2.loc[Data2.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
+  if Keurmerk == []:
+    Keurmerken = Data2
+  else:
+    Keurmerken = Data2.loc[Data2.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
                               
-#   Merged = Airlines.merge(Keurmerken, on='Airline', how='inner', suffixes=('', 'delete'))
-#   Merged = Merged[[c for c in Merged.columns if not c.endswith('delete')]]
-#   Merged = Merged.sort_values('Mean CO2 per flight per airline (kg)')
+  Merged = Airlines.merge(Keurmerken, on='Airline', how='inner', suffixes=('', 'delete'))
+  Merged = Merged[[c for c in Merged.columns if not c.endswith('delete')]]
+  Merged = Merged.sort_values('Mean CO2 per flight per airline (kg)')
   
   
-#   col1, col2, col3, col4 = st.columns(4)
+  col1, col2, col3, col4 = st.columns(4)
   
-#   col1.write('**Ranking**')
-#   col2.write('**Airline**')
-#   col3.write('**Quality mark**')
-#   col4.write('**CO2 (kg)**')
+  col1.write('**Ranking**')
+  col2.write('**Airline**')
+  col3.write('**Quality mark**')
+  col4.write('**CO2 (kg)**')
 
   
-#   for i in range(len(Merged.index)):
-#     col1.write(str(i+1) + '.')
-#     col2.write(Merged.iloc[i,1])
-#     col3.write(Merged.iloc[i,3])
-#     col4.write(str(round(Merged.iloc[i,2],2)))
+  for i in range(len(Merged.index)):
+    col1.write(str(i+1) + '.')
+    col2.write(Merged.iloc[i,1])
+    col3.write(Merged.iloc[i,3])
+    col4.write(str(round(Merged.iloc[i,2],2)))
     
-#   with st.expander(label='INFO'):
-#     st.write('hier komt de uitleg voor de kolommen')   
+  with st.expander(label='INFO'):
+    st.write('hier komt de uitleg voor de kolommen')   
   
   
 # elif nav == "Airlines":
