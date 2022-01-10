@@ -232,4 +232,4 @@ elif nav == "Airlines":
   
   st.write(Data3)
   
-  st.write(loadfactor1)
+  st.write(float(loadfactor1))
