@@ -141,6 +141,8 @@ if nav == "Passengers":
 
   with col1:
     folium_static(m)
+    
+  st.write(Data)
 
 
 
