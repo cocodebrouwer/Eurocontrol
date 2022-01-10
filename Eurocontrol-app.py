@@ -173,20 +173,20 @@ elif nav == "Governments":
   
   col1, col2, col3, col4 = st.columns(4)
   
-  col1.write('**Ranking**')
-  col2.write('**Airline**')
-  col3.write('**Quality mark**')
-  col4.write('**CO2 (kg)**')
+#   col1.write('**Ranking**')
+#   col2.write('**Airline**')
+#   col3.write('**Quality mark**')
+#   col4.write('**CO2 (kg)**')
 
   
-  for i in range(len(Merged.index)):
-    col1.write(str(i+1) + '.')
-    col2.write(Merged.iloc[i,1])
-    col3.write(Merged.iloc[i,3])
-    col4.write(str(round(Merged.iloc[i,2],2)))
+#   for i in range(len(Merged.index)):
+#     col1.write(str(i+1) + '.')
+#     col2.write(Merged.iloc[i,1])
+#     col3.write(Merged.iloc[i,3])
+#     col4.write(str(round(Merged.iloc[i,2],2)))
     
-  with st.expander(label='INFO'):
-    st.write('hier komt de uitleg voor de kolommen')   
+#   with st.expander(label='INFO'):
+#     st.write('hier komt de uitleg voor de kolommen')   
   
   
 # elif nav == "Airlines":
