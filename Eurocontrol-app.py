@@ -204,4 +204,26 @@ elif nav == "Airlines":
   loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0, max_value=1)
   loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0, max_value=1)
   
+  col1, col2, col3, col4 = st.columns(4)
+  
+  col1.write('**Keurmerk met loadfactor 1**')
+  col1.write('**CO2 met loadfactor 1**')
+  col1.write('**Keurmerk met ingestelde loadfactor**')
+  col1.write('**CO2 met ingestelde loadfactor**')
+  
+  col2.write('test')
+  col2.write('test')
+  col2.write('test')
+  col2.write('test')
+  
+  col3.write('**Keurmerk met loadfactor 1**')
+  col3.write('**CO2 met loadfactor 1**')
+  col3.write('**Keurmerk met ingestelde loadfactor**')
+  col3.write('**CO2 met ingestelde loadfactor**')
+  
+  col4.write('test')
+  col4.write('test')
+  col4.write('test')
+  col4.write('test')
+  
   st.write(Data3)
