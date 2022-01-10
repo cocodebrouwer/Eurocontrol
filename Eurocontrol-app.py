@@ -68,7 +68,7 @@ if nav == "Passengers":
   col5.write('**Number of trees**')
   col6.write('**Weekday**')
   
-  range = len(vluchten_sorted.index)
+#   range = len(vluchten_sorted.index)
   
 #   if range >= 1:
 #     col1.write('1.')
@@ -94,99 +94,99 @@ if nav == "Passengers":
 #     col5.write(str(round(vluchten_sorted.iloc[2,-3],2))+ '🌳', help = 'extra info')
 #     col6.write(str(vluchten_sorted.iloc[1,-22]))
     
-  col7.write('**From:**')
-  col7.write('**To:**')
-  col7.write('**Flight distance:**')
-  col7.write('**Flight time:**')
+#   col7.write('**From:**')
+#   col7.write('**To:**')
+#   col7.write('**Flight distance:**')
+#   col7.write('**Flight time:**')
   
-  col8.write(vluchten_sorted.iloc[0,2])
-  col8.write(vluchten_sorted.iloc[0,3])
-  col8.write(str(int(vluchten_sorted['Mean distance (km)'].mean())) + ' km')
-  col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + ' min')
+#   col8.write(vluchten_sorted.iloc[0,2])
+#   col8.write(vluchten_sorted.iloc[0,3])
+#   col8.write(str(int(vluchten_sorted['Mean distance (km)'].mean())) + ' km')
+#   col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + ' min')
 
-  col1, col2, col3 = st.columns((6,1,1))
+#   col1, col2, col3 = st.columns((6,1,1))
   
-  with col1.expander(label='INFO'):
-    st.write('hier komt de uitleg voor de kolommen')
+#   with col1.expander(label='INFO'):
+#     st.write('hier komt de uitleg voor de kolommen')
   
-  # Begin Map
-  DataDone = pd.read_csv('Datadone.csv', index_col='To')
-  DataDone.drop(columns = 'Unnamed: 0', inplace = True)
+#   # Begin Map
+#   DataDone = pd.read_csv('Datadone.csv', index_col='To')
+#   DataDone.drop(columns = 'Unnamed: 0', inplace = True)
 
-  # Bepalen variabelen X en Y. 
-  x = To[-4:-1]
-  y = From[-4:-1]
+#   # Bepalen variabelen X en Y. 
+#   x = To[-4:-1]
+#   y = From[-4:-1]
 
-  AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
-  AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
+#   AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
+#   AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
 
-  m = folium.Map(location=[AvgLat, AvgLng], width=750, height=500, zoom_start=4, control_scale=True)
+#   m = folium.Map(location=[AvgLat, AvgLng], width=750, height=500, zoom_start=4, control_scale=True)
 
-  folium.Marker(location=[DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]],
-                popup= '<strong>' + From + '<strong>',
-                tooltip='Push to show airport code',
-                icon = folium.Icon(color = 'blue', icon = 'home', prefix = 'fa')).add_to(m)
+#   folium.Marker(location=[DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]],
+#                 popup= '<strong>' + From + '<strong>',
+#                 tooltip='Push to show airport code',
+#                 icon = folium.Icon(color = 'blue', icon = 'home', prefix = 'fa')).add_to(m)
 
-  folium.Marker(location=[DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]],
-                popup= '<strong>' + To + '<strong>',
-                tooltip='Push to show airport code',
-                icon = folium.Icon(color = 'blue', icon = 'plane', prefix = 'fa')).add_to(m)
+#   folium.Marker(location=[DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]],
+#                 popup= '<strong>' + To + '<strong>',
+#                 tooltip='Push to show airport code',
+#                 icon = folium.Icon(color = 'blue', icon = 'plane', prefix = 'fa')).add_to(m)
 
-  points = ((DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]), 
-            (DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]))
+#   points = ((DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]), 
+#             (DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]))
 
-  folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
-                  tooltip = 'Show the distance of the flight').add_to(m)
+#   folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
+#                   tooltip = 'Show the distance of the flight').add_to(m)
 
-  with col1:
-    folium_static(m)
+#   with col1:
+#     folium_static(m)
 
 
 
-elif nav == "Governments":
-  st.title("Eurocontrol Dashboard for governments")
+# elif nav == "Governments":
+#   st.title("Eurocontrol Dashboard for governments")
   
-  Data2 = Data2.sort_values('Mean CO2 per seat per airline (kg/km)')
+#   Data2 = Data2.sort_values('Mean CO2 per seat per airline (kg/km)')
   
-  col1, col2 = st.columns(2)
+#   col1, col2 = st.columns(2)
   
-  Airline = Data2.sort_values('Airline')
-  Airline = col1.multiselect(label='Airline', options=Airline['Airline'])
+#   Airline = Data2.sort_values('Airline')
+#   Airline = col1.multiselect(label='Airline', options=Airline['Airline'])
   
-  Keurmerk = Data2.sort_values('Keurmerk')
-  Keurmerk = col2.multiselect(label='Qualitymark', options=Keurmerk['Keurmerk'].unique())
+#   Keurmerk = Data2.sort_values('Keurmerk')
+#   Keurmerk = col2.multiselect(label='Qualitymark', options=Keurmerk['Keurmerk'].unique())
   
-  if Airline == []:
-    Airlines = Data2
-  else:
-    Airlines = Data2.loc[Data2.apply(lambda x: x.Airline in Airline, axis=1)]
+#   if Airline == []:
+#     Airlines = Data2
+#   else:
+#     Airlines = Data2.loc[Data2.apply(lambda x: x.Airline in Airline, axis=1)]
   
-  if Keurmerk == []:
-    Keurmerken = Data2
-  else:
-    Keurmerken = Data2.loc[Data2.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
+#   if Keurmerk == []:
+#     Keurmerken = Data2
+#   else:
+#     Keurmerken = Data2.loc[Data2.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
                               
-  Merged = Airlines.merge(Keurmerken, on='Airline', how='inner', suffixes=('', 'delete'))
-  Merged = Merged[[c for c in Merged.columns if not c.endswith('delete')]]
-  Merged = Merged.sort_values('Mean CO2 per flight per airline (kg)')
+#   Merged = Airlines.merge(Keurmerken, on='Airline', how='inner', suffixes=('', 'delete'))
+#   Merged = Merged[[c for c in Merged.columns if not c.endswith('delete')]]
+#   Merged = Merged.sort_values('Mean CO2 per flight per airline (kg)')
   
   
-  col1, col2, col3, col4 = st.columns(4)
+#   col1, col2, col3, col4 = st.columns(4)
   
-  col1.write('**Ranking**')
-  col2.write('**Airline**')
-  col3.write('**Quality mark**')
-  col4.write('**CO2 (kg)**')
+#   col1.write('**Ranking**')
+#   col2.write('**Airline**')
+#   col3.write('**Quality mark**')
+#   col4.write('**CO2 (kg)**')
 
   
-  for i in range(len(Merged.index)):
-    col1.write(str(i+1) + '.')
-    col2.write(Merged.iloc[i,1])
-    col3.write(Merged.iloc[i,3])
-    col4.write(str(round(Merged.iloc[i,2],2)))
+#   for i in range(len(Merged.index)):
+#     col1.write(str(i+1) + '.')
+#     col2.write(Merged.iloc[i,1])
+#     col3.write(Merged.iloc[i,3])
+#     col4.write(str(round(Merged.iloc[i,2],2)))
     
-  with st.expander(label='INFO'):
-    st.write('hier komt de uitleg voor de kolommen')   
+#   with st.expander(label='INFO'):
+#     st.write('hier komt de uitleg voor de kolommen')   
   
   
 # elif nav == "Airlines":
