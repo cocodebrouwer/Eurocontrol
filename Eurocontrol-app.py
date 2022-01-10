@@ -192,8 +192,6 @@ elif nav == "Governments":
 elif nav == "Airlines":
   st.title("Eurocontrol Dashboard for airlines")
   
-#   Airlines_compact = Data.drop_duplicates(subset=['Airline', 'Keurmerk'])
-  
   col1, col2 = st.columns(2)
   
   Airline = Data3.sort_values('Airline')
@@ -207,6 +205,13 @@ elif nav == "Airlines":
   
   loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0.0, max_value=1.0, value=loadfactor1, step=0.01)
   loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0.0, max_value=1.0, value=loadfactor2, step=0.01)
+  
+  st.write(Data3)
+  
+  Data3['CO2 loadfactor'] = Data3['CO2 per seat per airline (kg/km)'] / Data3['Loadfactor']
+  
+  st.write(Data3)
+  
   
   col1, col2, col3, col4 = st.columns(4)
   
@@ -229,7 +234,3 @@ elif nav == "Airlines":
   col4.write(str(round(Airline1.iloc[0,2],4)))
   col4.write('test')
   col4.write('test')
-  
-  st.write(Data3)
-  
-  st.write(type(float(loadfactor1)))
