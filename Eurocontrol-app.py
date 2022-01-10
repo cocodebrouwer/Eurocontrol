@@ -189,18 +189,18 @@ elif nav == "Governments":
     st.write('hier komt de uitleg voor de kolommen')   
   
   
-elif nav == "Airlines":
-  st.title("Eurocontrol Dashboard for airlines")
+# elif nav == "Airlines":
+#   st.title("Eurocontrol Dashboard for airlines")
   
-  Airlines_compact = Data.drop_duplicates(subset=['Airline', 'Keurmerk'])
+#   Airlines_compact = Data.drop_duplicates(subset=['Airline', 'Keurmerk'])
   
-  col1, col2 = st.columns(2)
+#   col1, col2 = st.columns(2)
   
-  Airline = Airlines_compact.sort_values('Airline')
-  Airline1 = col1.selectbox(label='Airline 1', options=Airline['Airline'])
-  Airline2 = col2.selectbox(label='Airline 2', options=Airline['Airline'])
+#   Airline = Airlines_compact.sort_values('Airline')
+#   Airline1 = col1.selectbox(label='Airline 1', options=Airline['Airline'])
+#   Airline2 = col2.selectbox(label='Airline 2', options=Airline['Airline'])
   
-  st.write(Data)
+#   st.write(Data)
   
-  loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0, max_value=1)
-  loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0, max_value=1)
+#   loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0, max_value=1)
+#   loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0, max_value=1)
