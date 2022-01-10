@@ -225,4 +225,6 @@ elif nav == "Airlines":
   col4.write('test')
   col4.write('test')
   
+  st.write(Airline1)
+  
   st.write(Data3)
