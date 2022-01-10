@@ -1,3 +1,5 @@
+pip3 install --upgrade pip
+
 #Importeer streamlit
 import streamlit as st
 
