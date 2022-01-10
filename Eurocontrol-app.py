@@ -211,7 +211,7 @@ elif nav == "Airlines":
   col1.write('**CO2 met ingestelde loadfactor**')
   
   col2.write(Airline1[2])
-  col2.write('test')
+  col2.write(Airline1[1])
   col2.write('test')
   col2.write('test')
   
@@ -220,8 +220,8 @@ elif nav == "Airlines":
   col3.write('**Keurmerk met ingestelde loadfactor**')
   col3.write('**CO2 met ingestelde loadfactor**')
   
-  col4.write('test')
-  col4.write('test')
+  col4.write(Airline2[2])
+  col4.write(Airline2[1])
   col4.write('test')
   col4.write('test')
   
