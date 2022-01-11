@@ -249,5 +249,5 @@ elif nav == "Airlines":
   
   col4.write(AirlineB.iloc[0,4])
   col4.write(str(round(AirlineB.iloc[0,2],4)))
-  col4.write(AirlineA.iloc[0,8])
-  col4.write(str(round(AirlineA.iloc[0,7],4)))
+  col4.write(AirlineB.iloc[0,8])
+  col4.write(str(round(AirlineB.iloc[0,7],4)))
