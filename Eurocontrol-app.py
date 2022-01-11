@@ -231,23 +231,23 @@ elif nav == "Airlines":
   
   col1, col2, col3, col4 = st.columns(4)
   
-  col1.write('**Keurmerk met loadfactor A**')
-  col1.write('**CO2 met loadfactor A**')
+  col1.write('**Keurmerk met gemiddelde loadfactor**')
+  col1.write('**CO2 met gemiddelde loadfactor**')
   col1.write('**Keurmerk met ingestelde loadfactor**')
   col1.write('**CO2 met ingestelde loadfactor**')
   
   col2.write(AirlineA.iloc[0,4])
   col2.write(str(round(AirlineA.iloc[0,2],4)))
-  col2.write()
-  col2.write('test')
+  col2.write(AirlineA.iloc[0,6])
+  col2.write(str(round(AirlineA.iloc[0,5],4)))
   
   
-  col3.write('**Keurmerk met loadfactor B**')
-  col3.write('**CO2 met loadfactor B**')
+  col3.write('**Keurmerk met gemiddelde loadfactor**')
+  col3.write('**CO2 met gemiddelde loadfactor**')
   col3.write('**Keurmerk met ingestelde loadfactor**')
   col3.write('**CO2 met ingestelde loadfactor**')
   
   col4.write(AirlineB.iloc[0,4])
   col4.write(str(round(AirlineB.iloc[0,2],4)))
-  col4.write('test')
-  col4.write('test')
+  col4.write(AirlineA.iloc[0,8])
+  col4.write(str(round(AirlineA.iloc[0,7],4)))
