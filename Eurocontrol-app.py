@@ -149,8 +149,7 @@ if nav == "Passengers":
   folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
                   tooltip = 'Show the distance of the flight').add_to(m)
 
-  with st:
-    folium_static(m)
+  folium_static(m)
 
 elif nav == "Governments":
   st.title('Sustainability of airlines on the AMS-network')
