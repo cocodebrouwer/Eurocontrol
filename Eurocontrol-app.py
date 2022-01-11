@@ -22,8 +22,7 @@ Data3 = pd.read_csv('PAGE3.csv')
 
 #Kies inspectie
 st.sidebar.title("Which user are you?")
-nav = st.sidebar.radio(label = "", 
-                       options = ["Passengers", "Governments", "Airlines"])
+nav = st.sidebar.radio(options = ["Passengers", "Governments", "Airlines"])
 
 if nav == "Passengers": 
   #Titel toevoegen
