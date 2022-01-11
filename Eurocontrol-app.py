@@ -25,8 +25,6 @@ st.sidebar.title("Which user are you?")
 nav = st.sidebar.radio(label = "", 
                        options = ["Passengers", "Governments", "Airlines"])
 
-st.title('Test')
-
 if nav == "Passengers": 
   #Titel toevoegen
   st.title("Eurocontrol Dashboard for passengers")
