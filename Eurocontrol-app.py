@@ -153,7 +153,6 @@ if nav == "Passengers":
   
   #Add black line
   st.markdown('***')
-  st.markdown("<h3 style='text-align: center; color: black;'>Number of passengers (arriving/departing) versus weather factors</h3>", unsafe_allow_html = True)
   st.markdown('***')
   
   st.write('***© EUROCONTROL***')
