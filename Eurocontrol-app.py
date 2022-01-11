@@ -210,7 +210,7 @@ elif nav == "Airlines":
   
   st.write(Data3)
   
-  st.write(type(Data3.iloc[0,3]))
+  st.write(type(loadfactorA))
   
 #   Data3['CO2 loadfactorA'] = Data3['Mean CO2 per seat per airline (kg/km)'] / loadfactor1
 #   Data3.loc[Data3['CO2 loadfactorA'] <= 0.065, 'KeurmerkA'] = 'A'
