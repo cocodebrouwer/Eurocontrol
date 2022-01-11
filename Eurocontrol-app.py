@@ -197,11 +197,11 @@ elif nav == "Airlines":
   col1, col2 = st.columns(2)
   
   Airline = Data3.sort_values('Airline')
-  AirlineA = col1.selectbox(label='Airline A', options=Airline['Airline'])
+  selectboxA = col1.selectbox(label='Airline A', options=Airline['Airline'])
   AirlineA = Data3[Data3['Airline']==AirlineA]
   loadfactorA = float(AirlineA.iloc[0,3])
   
-  AirlineB = col2.selectbox(label='Airline B', options=Airline['Airline'])
+  selectboxB = col2.selectbox(label='Airline B', options=Airline['Airline'])
   AirlineB = Data3[Data3['Airline']==AirlineB]
   loadfactorB = float(AirlineB.iloc[0,3])
   
@@ -222,8 +222,8 @@ elif nav == "Airlines":
   Data3.loc[((Data3['CO2 loadfactorB'] > 0.085) & (Data3['CO2 loadfactorB'] <= 0.095)), 'KeurmerkB'] = 'D'
   Data3.loc[Data3['CO2 loadfactorB'] > 0.095, 'KeurmerkB'] = 'E'
   
-  AirlineA = Data3[Data3['Airline']==AirlineA]
-  AirlineB = Data3[Data3['Airline']==AirlineB]
+  AirlineA = Data3[Data3['Airline']==selectboxA]
+  AirlineB = Data3[Data3['Airline']==selectboxB]
   
   st.write(AirlineA)
   st.write(AirlineB)
