@@ -84,7 +84,7 @@ if nav == "Passengers":
     col2.write(vluchten_sorted.iloc[1,13])
     col3.write(vluchten_sorted.iloc[1,-1])
     col4.write(str(round(vluchten_sorted.iloc[1,40],2)))
-    col5.write(str(round(vluchten_sorted.iloc[1,-3],2))+ '🌳', help = 'extra info')
+    col5.write(str(round(vluchten_sorted.iloc[1,-3],2))+ '🌳')
     col6.write(str(vluchten_sorted.iloc[1,-22]))
   
   if range >= 3:
@@ -92,7 +92,7 @@ if nav == "Passengers":
     col2.write(vluchten_sorted.iloc[2,13])
     col3.write(vluchten_sorted.iloc[2,-1])
     col4.write(str(round(vluchten_sorted.iloc[2,40],2)))
-    col5.write(str(round(vluchten_sorted.iloc[2,-3],2))+ '🌳', help = 'extra info')
+    col5.write(str(round(vluchten_sorted.iloc[2,-3],2))+ '🌳')
     col6.write(str(vluchten_sorted.iloc[1,-22]))
     
   col7.write('**From:**')
