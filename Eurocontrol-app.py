@@ -199,25 +199,34 @@ elif nav == "Governments":
   with st.expander(label='INFO'):
     st.write('hier komt de uitleg voor de kolommen')   
   
+  with col1.expander('More information:'):
+        st.markdown("""**Airline:** This includes 34 airlines flying on the AMS-network.\n
+  **Quality mark:** This provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into five categories, shown below.\n
+  A. ≤ 0.065 CO2 per seat (kg/km)\n
+  B. 0.065 - 0.075 CO2 per seat (kg/km)\n
+  C. 0.075 - 0.085 CO2 per seat (kg/km)\n
+  D. 0.085 - 0.095 CO2 per seat (kg/km)\n
+  E. > 0.095 CO2 per seat (kg/km)\n
+  **CO2 (kg/km):** This provides information about the average CO2 emissions per seat (in kg/km) of an airline.""")
   
 elif nav == "Airlines":
   st.title('Airline comparison tool')
-  st.subheader('How to improve your sustainability based on your loadfactor.')
-  st.write("Select the two airlines you want to compare or choose the same airline twice so that you can immediately see the effect of changing the load factor. First, the quality mark and the average CO2 emissions per seat (in kg/km) of the airline(s) are given when the load factor is the average of 2019. This load factor can be changed with the slider; load factor 0.00 means an empty aircraft and load factor 1.00 means a full aircraft. Changing the load factor changes the quality mark and the average CO2 emissions per seat (in kg/km) of the airline(s) accordingly. With this tool, you can see the impact of your load factor on your sustainability and perhaps find out how to become a more sustainable airline :)")
+  st.subheader('How to improve your sustainability based on your load factor.')
+  st.write("Select the two airlines you want to compare or choose the same airline twice so that you can immediately see the effect of changing the load factor. First, the quality mark and the average CO2 emissions per passenger (in kg/km) of the airline(s) are given when the load factor is the average of 2019. This load factor can be changed with the slider; load factor 0.00 means an empty aircraft and load factor 1.00 means a full aircraft. Changing the load factor changes the quality mark and the average CO2 emissions per passenger (in kg/km) of the airline(s) accordingly. With this tool, you can see the impact of your load factor on your sustainability and perhaps find out how to become a more sustainable airline :)")
   
   col1, col2 = st.columns(2)
   
   Airline = Data3.sort_values('Airline')
-  selectboxA = col1.selectbox(label='Airline A', options=Airline['Airline'])
+  selectboxA = col1.selectbox(label='Airline X', options=Airline['Airline'])
   AirlineA = Data3[Data3['Airline']==selectboxA]
   loadfactorA = float(AirlineA.iloc[0,3])
   
-  selectboxB = col2.selectbox(label='Airline B', options=Airline['Airline'])
+  selectboxB = col2.selectbox(label='Airline Y', options=Airline['Airline'])
   AirlineB = Data3[Data3['Airline']==selectboxB]
   loadfactorB = float(AirlineB.iloc[0,3])
   
-  loadfactorA = col1.slider(label='Loadfactor A', min_value=0.0, max_value=1.0, value=loadfactorA, step=0.01)
-  loadfactorB = col2.slider(label='Loadfactor B', min_value=0.0, max_value=1.0, value=loadfactorB, step=0.01)
+  loadfactorA = col1.slider(label='Load factor X', min_value=0.0, max_value=1.0, value=loadfactorA, step=0.01)
+  loadfactorB = col2.slider(label='Load factor Y', min_value=0.0, max_value=1.0, value=loadfactorB, step=0.01)
   
   Data3['CO2 gem loadfactor'] = Data3['Mean CO2 per seat per airline (kg/km)'] / Data3['Loadfactor']
   Data3.loc[Data3['CO2 gem loadfactor'] <= 0.065, 'Keurmerkgem'] = 'A'
@@ -246,10 +255,10 @@ elif nav == "Airlines":
   
   col1, col2, col3, col4 = st.columns(4)
   
-  col1.write('**Keurmerk met gemiddelde loadfactor**')
-  col1.write('**CO2 met gemiddelde loadfactor**')
-  col1.write('**Keurmerk met ingestelde loadfactor**')
-  col1.write('**CO2 met ingestelde loadfactor**')
+  col1.write('**Quality mark with average load factor**')
+  col1.write('**CO2 (kg/km) with average load factor**')
+  col1.write('**Quality mark with set load factor**')
+  col1.write('**CO2 (kg/km) with set load factor**')
   
   col2.write(AirlineA.iloc[0,6])
   col2.write(str(round(AirlineA.iloc[0,5],4)))
@@ -257,10 +266,10 @@ elif nav == "Airlines":
   col2.write(str(round(AirlineA.iloc[0,7],4)))
   
   
-  col3.write('**Keurmerk met gemiddelde loadfactor**')
-  col3.write('**CO2 met gemiddelde loadfactor**')
-  col3.write('**Keurmerk met ingestelde loadfactor**')
-  col3.write('**CO2 met ingestelde loadfactor**')
+  col3.write('**Quality mark with average load factor**')
+  col3.write('**CO2 (kg/km) with average load factor**')
+  col3.write('**Quality mark with set load factor**')
+  col3.write('**CO2 (kg/km) with set load factor**')
   
   col4.write(AirlineB.iloc[0,6])
   col4.write(str(round(AirlineB.iloc[0,5],4)))
