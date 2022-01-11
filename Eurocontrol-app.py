@@ -27,7 +27,8 @@ nav = st.sidebar.radio(label='', options = ["Passengers", "Governments", "Airlin
 if nav == "Passengers": 
   #Titel toevoegen
   st.title('Your sustainability tool')
-  st.write('How to fly sustainable from AMS to your destination.')
+  st.header('How to fly sustainable from AMS to your destination.')
+  st.subheader("Select the desired destination in the selectbox. Choose the preferred day of travel in the days selectbox. In case the travel day doesn't matter, click on the all days button, this will show the entire flight schedule from Amsterdam to the desired destination. When everything is selected, the top three results will be displayed.")
   
   col1, col2, col3, col4 = st.columns((6,6,3,1))
   
@@ -109,7 +110,7 @@ if nav == "Passengers":
   
   with col1.expander('More information:'):
         st.markdown("""**Airline:** This includes 34 airlines flying on the AMS-network.\n
-  **Quality mark:** This provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into 5 categories, shown below.\n
+  **Quality mark:** This provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into five categories, shown below.\n
   A. ≤ 0.065 CO2 per seat (kg/km)\n
   B. 0.065 - 0.075 CO2 per seat (kg/km)\n
   C. 0.075 - 0.085 CO2 per seat (kg/km)\n
