@@ -145,6 +145,7 @@ if nav == "Passengers":
 
 elif nav == "Governments":
   st.title('Sustainability of airlines on the AMS network')
+  st.write('Which airline is the most sustainable on the AMS-network?')
   
   Data2 = Data2.sort_values('Mean CO2 per seat per airline (kg/km)')
   
@@ -191,6 +192,7 @@ elif nav == "Governments":
   
 elif nav == "Airlines":
   st.title('Airline comparison tool')
+  st.write('How to improve your sustainability based on your loadfactor.')
   
   col1, col2 = st.columns(2)
   
