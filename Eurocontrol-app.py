@@ -226,28 +226,31 @@ elif nav == "Airlines":
   Data3.loc[((Data3['CO2 loadfactorB'] > 0.085) & (Data3['CO2 loadfactorB'] <= 0.095)), 'KeurmerkB'] = 'D'
   Data3.loc[Data3['CO2 loadfactorB'] > 0.095, 'KeurmerkB'] = 'E'
   
+  AirlineA = Data3[Data3['Airline']==AirlineA]
+  AirlineB = Data3[Data3['Airline']==AirlineB]
+  
   st.write(Data3)
   
   
   col1, col2, col3, col4 = st.columns(4)
   
-  col1.write('**Keurmerk met loadfactor 1**')
-  col1.write('**CO2 met loadfactor 1**')
+  col1.write('**Keurmerk met loadfactor A**')
+  col1.write('**CO2 met loadfactor A**')
   col1.write('**Keurmerk met ingestelde loadfactor**')
   col1.write('**CO2 met ingestelde loadfactor**')
   
-  col2.write(Airline1.iloc[0,4])
-  col2.write(str(round(Airline1.iloc[0,2],4)))
+  col2.write(AirlineA.iloc[0,4])
+  col2.write(str(round(AirlineA.iloc[0,2],4)))
   col2.write()
   col2.write('test')
   
   
-  col3.write('**Keurmerk met loadfactor 1**')
-  col3.write('**CO2 met loadfactor 1**')
+  col3.write('**Keurmerk met loadfactor B**')
+  col3.write('**CO2 met loadfactor B**')
   col3.write('**Keurmerk met ingestelde loadfactor**')
   col3.write('**CO2 met ingestelde loadfactor**')
   
-  col4.write(Airline1.iloc[0,4])
-  col4.write(str(round(Airline2.iloc[0,2],4)))
+  col4.write(AirlineB.iloc[0,4])
+  col4.write(str(round(AirlineB.iloc[0,2],4)))
   col4.write('test')
   col4.write('test')
