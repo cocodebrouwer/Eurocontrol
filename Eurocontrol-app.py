@@ -108,6 +108,7 @@ if nav == "Passengers":
 
   col1, col2, col3 = st.columns((6,1,1))
   
+  # More information
   with st.expander('More information:'):
         st.markdown("""**Airline:** This includes 34 airlines flying on the AMS-network.\n
   **Quality mark:** This provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into five categories, shown below.\n
@@ -148,7 +149,7 @@ if nav == "Passengers":
   folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
                   tooltip = 'Show the distance of the flight').add_to(m)
 
-  with col1:
+  with st:
     folium_static(m)
 
 elif nav == "Governments":
