@@ -218,7 +218,7 @@ elif nav == "Governments":
 elif nav == "Airlines":
   st.title('Airline comparison tool')
   st.subheader('How to improve your sustainability based on your load factor.')
-  st.write("Select the two airlines you want to compare or choose the same airline twice so that you can immediately see the effect of changing the load factor. First, the quality mark and the average CO2 emissions per passenger (in kg/km) of the airline(s) are given when the load factor is the average of 2019. This load factor can be changed with the slider; load factor 0.00 means an empty aircraft and load factor 1.00 means a full aircraft. Changing the load factor changes the quality mark and the average CO2 emissions per passenger (in kg/km) of the airline(s) accordingly. With this tool, you can see the impact of your load factor on your sustainability and perhaps find out how to become a more sustainable airline :)")
+  st.write("Select two airlines to compare or choose the same airline twice, to see immediately effect of the load factor. First, the quality mark and the average CO2 emissions per passenger (in kg/km), based on the average load factor in 2019, of the airlines are given. This load factor can be changed with the slider; load factor 0 means an empty aircraft and load factor 1 means a full aircraft. Changing the load factor changes the quality mark and the CO2 emissions of the airlines accordingly. This tool can be used to show the impact of the load factor on your sustainability and perhaps explore how your airline can become more sustainable.")
   
   col1, col2 = st.columns(2)
   
