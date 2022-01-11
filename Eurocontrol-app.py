@@ -232,6 +232,7 @@ elif nav == "Airlines":
   col2.write('test')
   col2.write('test')
   
+  
   col3.write('**Keurmerk met loadfactor 1**')
   col3.write('**CO2 met loadfactor 1**')
   col3.write('**Keurmerk met ingestelde loadfactor**')
