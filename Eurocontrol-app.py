@@ -209,10 +209,10 @@ elif nav == "Airlines":
   
   Data3['CO2 loadfactor'] = Data3['CO2 per seat per airline (kg/km)'] / Data3['Loadfactor']
   Data3.loc[Data3['CO2 loadfactor'] <= 0.065, 'Keurmerk2'] = 'A'
-#   flights_seats_distance_fuel_range.loc[((flights_seats_distance_fuel_range['Mean CO2 per seat per airline (kg/km)'] > 0.065) & (flights_seats_distance_fuel_range['Mean CO2 per seat per airline (kg/km)'] <= 0.075)), 'Keurmerk'] = 'B'
-#   flights_seats_distance_fuel_range.loc[((flights_seats_distance_fuel_range['Mean CO2 per seat per airline (kg/km)'] > 0.075) & (flights_seats_distance_fuel_range['Mean CO2 per seat per airline (kg/km)'] <= 0.085)), 'Keurmerk'] = 'C'
-#   flights_seats_distance_fuel_range.loc[((flights_seats_distance_fuel_range['Mean CO2 per seat per airline (kg/km)'] > 0.085) & (flights_seats_distance_fuel_range['Mean CO2 per seat per airline (kg/km)'] <= 0.095)), 'Keurmerk'] = 'D'
-#   flights_seats_distance_fuel_range.loc[flights_seats_distance_fuel_range['Mean CO2 per seat per airline (kg/km)'] > 0.095, 'Keurmerk'] = 'E'
+  Data3.loc[((Data3['CO2 loadfactor'] > 0.065) & (Data3['CO2 loadfactor'] <= 0.075)), 'Keurmerk2'] = 'B'
+  Data3.loc[((Data3['CO2 loadfactor'] > 0.075) & (Data3['CO2 loadfactor'] <= 0.085)), 'Keurmerk2'] = 'C'
+  Data3.loc[((Data3['CO2 loadfactor'] > 0.085) & (Data3['CO2 loadfactor'] <= 0.095)), 'Keurmerk2'] = 'D'
+  Data3.loc[Data3['CO2 loadfactor'] > 0.095, 'Keurmerk2'] = 'E'
   
   st.write(Data3)
   
