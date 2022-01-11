@@ -108,7 +108,21 @@ if nav == "Passengers":
   col1, col2, col3 = st.columns((6,1,1))
   
   with col1.expander(label='INFO'):
-    st.write('hier komt de uitleg voor de kolommen')
+    st.write("""Airline:\n
+             This includes 34 airlines flying on the AMS-network.\n\n
+             Quality mark:\n
+             this provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into 5 categories, shown below.\n\n
+             A. <= 0.065 kg CO2 per seat km\n
+             B. 0.065 - 0.075 kg CO2 per seat km\n
+             C. 0.075 - 0.085 kg CO2 per seat km\n
+             D. 0.085 - 0.095 kg CO2 per seat km\n
+             E. > 0.095 kg CO2 per seat km\n\n
+             
+             CO2 per seat of the flight (kg):\n
+             This provides the CO2 emissions per seat (in kg) for the entire flight.\n
+             
+             Number of trees:\n
+             This indicates how much trees need to be planted in order to compensate the CO2 emissions for the flight.""")
   
   # Begin Map
   DataDone = pd.read_csv('Datadone.csv', index_col='To')
