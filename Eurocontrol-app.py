@@ -110,11 +110,11 @@ if nav == "Passengers":
   with col1.expander('More information:'):
         st.markdown("""**Airline:** This includes 34 airlines flying on the AMS-network.\n
   **Quality mark:** This provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into 5 categories, shown below.\n
-    A. ≤ 0.065 kg CO2 per seat km\n
-    B. 0.065 - 0.075 kg CO2 per seat km\n
-    C. 0.075 - 0.085 kg CO2 per seat km\n
-    D. 0.085 - 0.095 kg CO2 per seat km\n
-    E. > 0.095 kg CO2 per seat km\n
+   - A. ≤ 0.065 kg CO2 per seat km\n
+   - B. 0.065 - 0.075 kg CO2 per seat km\n
+   - C. 0.075 - 0.085 kg CO2 per seat km\n
+   - D. 0.085 - 0.095 kg CO2 per seat km\n
+   - E. > 0.095 kg CO2 per seat km\n
   **CO2 (kg):** This provides the CO2 emissions per seat (in kg) for the entire flight.\n
   **Number of trees:** This indicates how much trees need to be planted in order to compensate the CO2 emissions for the flight.""")
   
