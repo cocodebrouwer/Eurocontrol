@@ -151,9 +151,9 @@ if nav == "Passengers":
 
   folium_static(m)
   
-  st.write('***\n
-  \n
-  \n
+  st.write('*** \n
+   \n
+   \n
   © EUROCONTROL***')
 
 elif nav == "Governments":
@@ -210,9 +210,9 @@ elif nav == "Governments":
   E. > 0.095 CO2 per seat (kg/km)\n
   **CO2 (kg/km):** This provides information about the average CO2 emissions per seat (in kg/km) of an airline.""")
   
-  st.write('***\n
-  \n
-  \n
+  st.write('*** \n
+   \n
+   \n
   © EUROCONTROL***')
   
 elif nav == "Airlines":
@@ -282,7 +282,7 @@ elif nav == "Airlines":
   col4.write(AirlineB.iloc[0,10])
   col4.write(str(round(AirlineB.iloc[0,9],4)))
   
-  st.write('***\n
-  \n
-  \n
+  st.write('*** \n
+   \n
+   \n
   © EUROCONTROL***')
