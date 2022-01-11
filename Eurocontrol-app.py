@@ -151,7 +151,7 @@ if nav == "Passengers":
 
   folium_static(m)
   
-  st.write('***@EUROCONTROL***')
+  st.write('***©EUROCONTROL***')
 
 elif nav == "Governments":
   st.title('Sustainability of airlines on the AMS-network')
@@ -206,6 +206,8 @@ elif nav == "Governments":
   D. 0.085 - 0.095 CO2 per seat (kg/km)\n
   E. > 0.095 CO2 per seat (kg/km)\n
   **CO2 (kg/km):** This provides information about the average CO2 emissions per seat (in kg/km) of an airline.""")
+  
+  st.write('***©EUROCONTROL***')
   
 elif nav == "Airlines":
   st.title('Airline comparison tool')
@@ -273,3 +275,5 @@ elif nav == "Airlines":
   col4.write(str(round(AirlineB.iloc[0,5],4)))
   col4.write(AirlineB.iloc[0,10])
   col4.write(str(round(AirlineB.iloc[0,9],4)))
+  
+  st.write('***©EUROCONTROL***')
