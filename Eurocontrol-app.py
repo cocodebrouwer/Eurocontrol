@@ -120,7 +120,7 @@ if nav == "Passengers":
   AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
   AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
 
-  m = folium.Map(location=[AvgLat, AvgLng], zoom_start=4, control_scale=True)
+  m = folium.Map(location=[AvgLat, AvgLng], width=750, hight=500, zoom_start=4, control_scale=True)
 
   folium.Marker(location=[DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]],
                 popup= '<strong>' + From + '<strong>',
@@ -138,8 +138,8 @@ if nav == "Passengers":
   folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
                   tooltip = 'Show the distance of the flight').add_to(m)
 
- 
-  folium_static(m)
+ with col1:
+    folium_static(m)
 
 
 elif nav == "Governments":
