@@ -110,7 +110,7 @@ if nav == "Passengers":
   
   # More information
   with st.expander('More information:'):
-        st.markdown("""**Airline:** This includes 34 airlines flying on the AMS-network.\n
+        st.markdown("""**Airline:** This includes 33 airlines flying on the AMS-network.\n
   **Quality mark:** This provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into five categories, shown below.\n
   A. ≤ 0.065 CO2 per seat (kg/km)\n
   B. 0.065 - 0.075 CO2 per seat (kg/km)\n
@@ -150,6 +150,8 @@ if nav == "Passengers":
                   tooltip = 'Show the distance of the flight').add_to(m)
 
   folium_static(m)
+  
+  st.write('***@EUROCONTROL***')
 
 elif nav == "Governments":
   st.title('Sustainability of airlines on the AMS-network')
@@ -196,7 +198,7 @@ elif nav == "Governments":
     col4.write(str(round(Merged.iloc[i,2],4))) 
   
   with st.expander('More information:'):
-        st.markdown("""**Airline:** This includes 34 airlines flying on the AMS-network.\n
+        st.markdown("""**Airline:** This includes 33 airlines flying on the AMS-network.\n
   **Quality mark:** This provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into five categories, shown below.\n
   A. ≤ 0.065 CO2 per seat (kg/km)\n
   B. 0.065 - 0.075 CO2 per seat (kg/km)\n
