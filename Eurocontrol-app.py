@@ -150,10 +150,6 @@ if nav == "Passengers":
 
   with col1:
     folium_static(m)
-  
-  with col1: 
-    st.write('@EUROCONTROL')
-
 
 elif nav == "Governments":
   st.title('Sustainability of airlines on the AMS-network')
