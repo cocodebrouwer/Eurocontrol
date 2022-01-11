@@ -27,8 +27,8 @@ nav = st.sidebar.radio(label='', options = ["Passengers", "Governments", "Airlin
 if nav == "Passengers": 
   #Titel toevoegen
   st.title('Your sustainability tool')
-  st.header('How to fly sustainable from AMS to your destination.')
-  st.subheader("Select the desired destination in the selectbox. Choose the preferred day of travel in the days selectbox. In case the travel day doesn't matter, click on the all days button, this will show the entire flight schedule from Amsterdam to the desired destination. When everything is selected, the top three results will be displayed.")
+  st.subheader('How to fly sustainable from AMS to your destination.')
+  st.write("Select the desired destination in the selectbox. Choose the preferred day of travel in the days selectbox. In case the travel day doesn't matter, click on the all days button, this will show the entire flight schedule from Amsterdam to the desired destination. When everything is selected, the top three results will be displayed.")
   
   col1, col2, col3, col4 = st.columns((6,6,3,1))
   
