@@ -26,7 +26,7 @@ nav = st.sidebar.radio(label='', options = ["Passengers", "Governments", "Airlin
 
 if nav == "Passengers": 
   #Titel toevoegen
-  st.title("Eurocontrol Dashboard for passengers")
+  st.title('Your sustainability tool')
   
   col1, col2, col3, col4 = st.columns((6,6,3,1))
   
@@ -143,7 +143,7 @@ if nav == "Passengers":
 
 
 elif nav == "Governments":
-  st.title("Eurocontrol Dashboard for governments")
+  st.title('Sustainability of airlines on the AMS network')
   
   Data2 = Data2.sort_values('Mean CO2 per seat per airline (kg/km)')
   
@@ -189,7 +189,7 @@ elif nav == "Governments":
   
   
 elif nav == "Airlines":
-  st.title("Eurocontrol Dashboard for airlines")
+  st.title('Airline comparison tool')
   
   col1, col2 = st.columns(2)
   
