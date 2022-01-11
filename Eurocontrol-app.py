@@ -153,7 +153,6 @@ if nav == "Passengers":
   
   #Add black line
   st.markdown('***')
-  st.markdown('***')
   
   st.write('***© EUROCONTROL***')
 
@@ -212,8 +211,6 @@ elif nav == "Governments":
   **CO2 (kg/km):** This provides information about the average CO2 emissions per seat (in kg/km) of an airline.""")
   
   #Add black line
-  st.markdown('***')
-  st.markdown("<h3 style='text-align: center; color: black;'>Number of passengers (arriving/departing) versus weather factors</h3>", unsafe_allow_html = True)
   st.markdown('***')
   
   st.write('***© EUROCONTROL***')
@@ -286,8 +283,6 @@ elif nav == "Airlines":
   col4.write(str(round(AirlineB.iloc[0,9],4)))
   
   #Add black line
-  st.markdown('***')
-  st.markdown("<h3 style='text-align: center; color: black;'>Number of passengers (arriving/departing) versus weather factors</h3>", unsafe_allow_html = True)
   st.markdown('***')
   
   st.write('***© EUROCONTROL***')
