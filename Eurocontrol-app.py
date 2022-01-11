@@ -144,7 +144,7 @@ if nav == "Passengers":
 
 
 elif nav == "Governments":
-  st.title('Sustainability of airlines on the AMS network')
+  st.title('Sustainability of airlines on the AMS-network')
   st.write('Which airline is the most sustainable on the AMS-network?')
   
   Data2 = Data2.sort_values('Mean CO2 per seat per airline (kg/km)')
@@ -197,25 +197,32 @@ elif nav == "Airlines":
   col1, col2 = st.columns(2)
   
   Airline = Data3.sort_values('Airline')
-  Airline1 = col1.selectbox(label='Airline 1', options=Airline['Airline'])
-  Airline1 = Data3[Data3['Airline']==Airline1]
-  loadfactor1 = float(Airline1.iloc[0,3])
+  AirlineA = col1.selectbox(label='Airline A', options=Airline['Airline'])
+  AirlineA = Data3[Data3['Airline']==AirlineA]
+  loadfactorA = float(AirlineA.iloc[0,3])
   
-  Airline2 = col2.selectbox(label='Airline 2', options=Airline['Airline'])
-  Airline2 = Data3[Data3['Airline']==Airline2]
-  loadfactor2 = float(Airline2.iloc[0,3])
+  AirlineB = col2.selectbox(label='Airline B', options=Airline['Airline'])
+  AirlineB = Data3[Data3['Airline']==AirlineB]
+  loadfactorB = float(AirlineB.iloc[0,3])
   
-  loadfactor1 = col1.slider(label='Loadfactor 1', min_value=0.0, max_value=1.0, value=loadfactor1, step=0.01)
-  loadfactor2 = col2.slider(label='Loadfactor 2', min_value=0.0, max_value=1.0, value=loadfactor2, step=0.01)
+  loadfactorA = col1.slider(label='Loadfactor A', min_value=0.0, max_value=1.0, value=loadfactorA, step=0.01)
+  loadfactorB = col2.slider(label='Loadfactor B', min_value=0.0, max_value=1.0, value=loadfactorB, step=0.01)
   
   st.write(Data3)
   
-  Data3['CO2 loadfactor'] = Data3['Mean CO2 per seat per airline (kg/km)'] / Data3['Loadfactor']
-  Data3.loc[Data3['CO2 loadfactor'] <= 0.065, 'Keurmerk2'] = 'A'
-  Data3.loc[((Data3['CO2 loadfactor'] > 0.065) & (Data3['CO2 loadfactor'] <= 0.075)), 'Keurmerk2'] = 'B'
-  Data3.loc[((Data3['CO2 loadfactor'] > 0.075) & (Data3['CO2 loadfactor'] <= 0.085)), 'Keurmerk2'] = 'C'
-  Data3.loc[((Data3['CO2 loadfactor'] > 0.085) & (Data3['CO2 loadfactor'] <= 0.095)), 'Keurmerk2'] = 'D'
-  Data3.loc[Data3['CO2 loadfactor'] > 0.095, 'Keurmerk2'] = 'E'
+  Data3['CO2 loadfactorA'] = Data3['Mean CO2 per seat per airline (kg/km)'] / loadfactor1
+  Data3.loc[Data3['CO2 loadfactorA'] <= 0.065, 'KeurmerkA'] = 'A'
+  Data3.loc[((Data3['CO2 loadfactorA'] > 0.065) & (Data3['CO2 loadfactorA'] <= 0.075)), 'KeurmerkA'] = 'B'
+  Data3.loc[((Data3['CO2 loadfactorA'] > 0.075) & (Data3['CO2 loadfactorA'] <= 0.085)), 'KeurmerkA'] = 'C'
+  Data3.loc[((Data3['CO2 loadfactorA'] > 0.085) & (Data3['CO2 loadfactorA'] <= 0.095)), 'KeurmerkA'] = 'D'
+  Data3.loc[Data3['CO2 loadfactorA'] > 0.095, 'KeurmerkA'] = 'E'
+  
+  Data3['CO2 loadfactorB'] = Data3['Mean CO2 per seat per airline (kg/km)'] / loadfactor1
+  Data3.loc[Data3['CO2 loadfactorB'] <= 0.065, 'KeurmerkB'] = 'A'
+  Data3.loc[((Data3['CO2 loadfactorB'] > 0.065) & (Data3['CO2 loadfactorB'] <= 0.075)), 'KeurmerkB'] = 'B'
+  Data3.loc[((Data3['CO2 loadfactorB'] > 0.075) & (Data3['CO2 loadfactorB'] <= 0.085)), 'KeurmerkB'] = 'C'
+  Data3.loc[((Data3['CO2 loadfactorB'] > 0.085) & (Data3['CO2 loadfactorB'] <= 0.095)), 'KeurmerkB'] = 'D'
+  Data3.loc[Data3['CO2 loadfactorB'] > 0.095, 'KeurmerkB'] = 'E'
   
   st.write(Data3)
   
@@ -229,7 +236,7 @@ elif nav == "Airlines":
   
   col2.write(Airline1.iloc[0,4])
   col2.write(str(round(Airline1.iloc[0,2],4)))
-  col2.write('test')
+  col2.write()
   col2.write('test')
   
   
