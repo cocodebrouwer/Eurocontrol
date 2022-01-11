@@ -165,7 +165,7 @@ elif nav == "Governments":
   Airline = col1.multiselect(label='Airline', options=Airline['Airline'])
   
   Keurmerk = Data2.sort_values('Keurmerk')
-  Keurmerk = col2.multiselect(label='Qualitymark', options=Keurmerk['Keurmerk'].unique())
+  Keurmerk = col2.multiselect(label='Quality mark', options=Keurmerk['Keurmerk'].unique())
   
   if Airline == []:
     Airlines = Data2
@@ -194,12 +194,9 @@ elif nav == "Governments":
     col1.write(str(i+1) + '.')
     col2.write(Merged.iloc[i,1])
     col3.write(Merged.iloc[i,3])
-    col4.write(str(round(Merged.iloc[i,2],4)))
-    
-  with st.expander(label='INFO'):
-    st.write('hier komt de uitleg voor de kolommen')   
+    col4.write(str(round(Merged.iloc[i,2],4))) 
   
-  with col1.expander('More information:'):
+  with st.expander('More information:'):
         st.markdown("""**Airline:** This includes 34 airlines flying on the AMS-network.\n
   **Quality mark:** This provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into five categories, shown below.\n
   A. ≤ 0.065 CO2 per seat (kg/km)\n
