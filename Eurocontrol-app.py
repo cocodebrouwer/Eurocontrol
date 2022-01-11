@@ -208,6 +208,7 @@ elif nav == "Airlines":
   loadfactorA = col1.slider(label='Loadfactor A', min_value=0.0, max_value=1.0, value=loadfactorA, step=0.01)
   loadfactorB = col2.slider(label='Loadfactor B', min_value=0.0, max_value=1.0, value=loadfactorB, step=0.01)
   
+  
   Data3['CO2 loadfactorA'] = Data3['Mean CO2 per seat per airline (kg/km)'] / loadfactorA
   Data3.loc[Data3['CO2 loadfactorA'] <= 0.065, 'KeurmerkA'] = 'A'
   Data3.loc[((Data3['CO2 loadfactorA'] > 0.065) & (Data3['CO2 loadfactorA'] <= 0.075)), 'KeurmerkA'] = 'B'
@@ -248,3 +249,6 @@ elif nav == "Airlines":
   col4.write(str(round(AirlineB.iloc[0,2],4)))
   col4.write(AirlineB.iloc[0,8])
   col4.write(str(round(AirlineB.iloc[0,7],4)))
+  
+  st.write(AirlineA)
+  st.write(AirlineB)
