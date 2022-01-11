@@ -208,6 +208,7 @@ elif nav == "Airlines":
   loadfactorA = col1.slider(label='Loadfactor A', min_value=0.0, max_value=1.0, value=loadfactorA, step=0.01)
   loadfactorB = col2.slider(label='Loadfactor B', min_value=0.0, max_value=1.0, value=loadfactorB, step=0.01)
   
+  Data3['CO2 gem loadfactor'] = Data3['Mean CO2 per seat per airline (kg/km)'] / Data3['Loadfactor']
   
   Data3['CO2 loadfactorA'] = Data3['Mean CO2 per seat per airline (kg/km)'] / loadfactorA
   Data3.loc[Data3['CO2 loadfactorA'] <= 0.065, 'KeurmerkA'] = 'A'
@@ -229,8 +230,8 @@ elif nav == "Airlines":
   
   col1, col2, col3, col4 = st.columns(4)
   
-  col1.write('**Keurmerk met loadfactor 1**')
-  col1.write('**CO2 met loadfactor 1**')
+  col1.write('**Keurmerk met gemiddelde loadfactor**')
+  col1.write('**CO2 met gemiddelde loadfactor**')
   col1.write('**Keurmerk met ingestelde loadfactor**')
   col1.write('**CO2 met ingestelde loadfactor**')
   
@@ -240,8 +241,8 @@ elif nav == "Airlines":
   col2.write(str(round(AirlineA.iloc[0,5],4)))
   
   
-  col3.write('**Keurmerk met loadfactor 1**')
-  col3.write('**CO2 met loadfactor 1**')
+  col3.write('**Keurmerk met gemiddelde loadfactor**')
+  col3.write('**CO2 met gemiddelde loadfactor**')
   col3.write('**Keurmerk met ingestelde loadfactor**')
   col3.write('**CO2 met ingestelde loadfactor**')
   
