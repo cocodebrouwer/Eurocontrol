@@ -107,7 +107,7 @@ if nav == "Passengers":
 
   col1, col2, col3 = st.columns((6,1,1))
   
-  with col1.st.expander('More information:'):
+  with col1.expander('More information:'):
     st.markdown("""Airline:\n
                  This includes 34 airlines flying on the AMS-network.\n\n
                  
