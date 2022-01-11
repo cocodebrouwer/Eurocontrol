@@ -242,10 +242,10 @@ elif nav == "Airlines":
   col1.write('**Keurmerk met ingestelde loadfactor**')
   col1.write('**CO2 met ingestelde loadfactor**')
   
-  col2.write(AirlineA.iloc[0,4])
-  col2.write(str(round(AirlineA.iloc[0,2],4)))
   col2.write(AirlineA.iloc[0,6])
   col2.write(str(round(AirlineA.iloc[0,5],4)))
+  col2.write(AirlineA.iloc[0,8])
+  col2.write(str(round(AirlineA.iloc[0,7],4)))
   
   
   col3.write('**Keurmerk met gemiddelde loadfactor**')
@@ -253,7 +253,7 @@ elif nav == "Airlines":
   col3.write('**Keurmerk met ingestelde loadfactor**')
   col3.write('**CO2 met ingestelde loadfactor**')
   
-  col4.write(AirlineB.iloc[0,4])
-  col4.write(str(round(AirlineB.iloc[0,2],4)))
-  col4.write(AirlineB.iloc[0,8])
-  col4.write(str(round(AirlineB.iloc[0,7],4)))
+  col4.write(AirlineB.iloc[0,6])
+  col4.write(str(round(AirlineB.iloc[0,5],4)))
+  col4.write(AirlineB.iloc[0,10])
+  col4.write(str(round(AirlineB.iloc[0,9],4)))
