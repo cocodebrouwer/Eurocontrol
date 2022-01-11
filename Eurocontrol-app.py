@@ -27,7 +27,7 @@ nav = st.sidebar.radio(label='', options = ["Passengers", "Governments", "Airlin
 if nav == "Passengers": 
   #Titel toevoegen
   st.title('Your sustainability tool')
-  st.subheader('How to fly sustainable from AMS to your destination.')
+  st.write('How to fly sustainable from AMS to your destination.')
   
   col1, col2, col3, col4 = st.columns((6,6,3,1))
   
