@@ -107,8 +107,8 @@ if nav == "Passengers":
 
   col1, col2, col3 = st.columns((6,1,1))
   
-  with col1.expander(label='INFO'):
-    st.info("""Airline:\n
+  with col1.expander(label='More information'):
+    st.markdown("""Airline:\n
              This includes 34 airlines flying on the AMS-network.\n\n
              Quality mark:\n
              this provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into 5 categories, shown below.\n\n
