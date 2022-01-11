@@ -209,6 +209,11 @@ elif nav == "Airlines":
   loadfactorB = col2.slider(label='Loadfactor B', min_value=0.0, max_value=1.0, value=loadfactorB, step=0.01)
   
   Data3['CO2 gem loadfactor'] = Data3['Mean CO2 per seat per airline (kg/km)'] / Data3['Loadfactor']
+  Data3.loc[Data3['CO2 gem loadfactor'] <= 0.065, 'Keurmerkgem'] = 'A'
+  Data3.loc[((Data3['CO2 gem loadfactor'] > 0.065) & (Data3['CO2 gem loadfactor'] <= 0.075)), 'Keurmerkgem'] = 'B'
+  Data3.loc[((Data3['CO2 gem loadfactor'] > 0.075) & (Data3['CO2 gem loadfactor'] <= 0.085)), 'Keurmerkgem'] = 'C'
+  Data3.loc[((Data3['CO2 gem loadfactor'] > 0.085) & (Data3['CO2 gem loadfactor'] <= 0.095)), 'Keurmerkgem'] = 'D'
+  Data3.loc[Data3['CO2 gem loadfactor'] > 0.095, 'Keurmerkgem'] = 'E'
   
   Data3['CO2 loadfactorA'] = Data3['Mean CO2 per seat per airline (kg/km)'] / loadfactorA
   Data3.loc[Data3['CO2 loadfactorA'] <= 0.065, 'KeurmerkA'] = 'A'
