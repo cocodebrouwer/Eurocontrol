@@ -232,8 +232,6 @@ elif nav == "Airlines":
   AirlineA = Data3[Data3['Airline']==selectboxA]
   AirlineB = Data3[Data3['Airline']==selectboxB]
   
-  st.write(AirlineA)
-  st.write(AirlineB)
   
   col1, col2, col3, col4 = st.columns(4)
   
