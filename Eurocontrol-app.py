@@ -212,7 +212,7 @@ elif nav == "Airlines":
   
   st.write(type(loadfactorA))
   
-#   Data3['CO2 loadfactorA'] = Data3['Mean CO2 per seat per airline (kg/km)'] / loadfactor1
+  Data3['CO2 loadfactorA'] = Data3['Mean CO2 per seat per airline (kg/km)'] / loadfactor1
 #   Data3.loc[Data3['CO2 loadfactorA'] <= 0.065, 'KeurmerkA'] = 'A'
 #   Data3.loc[((Data3['CO2 loadfactorA'] > 0.065) & (Data3['CO2 loadfactorA'] <= 0.075)), 'KeurmerkA'] = 'B'
 #   Data3.loc[((Data3['CO2 loadfactorA'] > 0.075) & (Data3['CO2 loadfactorA'] <= 0.085)), 'KeurmerkA'] = 'C'
