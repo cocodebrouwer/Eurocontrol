@@ -66,6 +66,8 @@ st.sidebar.title("Which user are you?")
 #Make a radio
 nav = st.sidebar.radio(label = '', options = ["Passengers", "Governments", "Airlines"])
 
+#--------------------
+
 #Make the passengers page
 if nav == "Passengers": 
   #Set title
@@ -295,74 +297,93 @@ elif nav == "Governments":
   #Add EUROCONTROL
   st.write('***© EUROCONTROL***')
   
+#--------------------
+
+#Make the airlines page  
 elif nav == "Airlines":
+  #Set title
   st.title('Airline comparison tool')
+  #Set subheader
   st.subheader('How to improve your sustainability based on your load factor.')
+  #Write information
   st.write("Select two airlines to compare or choose the same airline twice, to see immediately effect of the load factor. First, the quality mark and the average CO2 emissions per passenger (in kg/km), based on the average load factor in 2019, of the airlines are given. This load factor can be changed with the slider; load factor 0 means an empty aircraft and load factor 1 means a full aircraft. Changing the load factor changes the quality mark and the CO2 emissions of the airlines accordingly. This tool can be used to show the impact of the load factor on your sustainability and perhaps explore how your airline can become more sustainable.")
   
+  #Set columns
   col1, col2 = st.columns(2)
   
+  #Sort values
   Airline = Data3.sort_values('Airline')
-  selectboxA = col1.selectbox(label='Airline X', options=Airline['Airline'])
-  AirlineA = Data3[Data3['Airline']==selectboxA]
-  loadfactorA = float(AirlineA.iloc[0,3])
   
-  selectboxB = col2.selectbox(label='Airline Y', options=Airline['Airline'])
-  AirlineB = Data3[Data3['Airline']==selectboxB]
-  loadfactorB = float(AirlineB.iloc[0,3])
+  #'Airline X' selectbox
+  selectboxX = col1.selectbox(label = 'Airline X', options = Airline['Airline'])
+  AirlineX = Data3[Data3['Airline'] == selectboxX]
+  loadfactorX = float(AirlineX.iloc[0, 3])
   
-  loadfactorA = col1.slider(label='Load factor X', min_value=0.0, max_value=1.0, value=loadfactorA, step=0.01)
-  loadfactorB = col2.slider(label='Load factor Y', min_value=0.0, max_value=1.0, value=loadfactorB, step=0.01)
+  #'Airline Y' selectbox
+  selectboxY = col2.selectbox(label='Airline Y', options = Airline['Airline'])
+  AirlineY = Data3[Data3['Airline'] == selectboxY]
+  loadfactorY = float(AirlineY.iloc[0, 3])
   
-  Data3['CO2 gem loadfactor'] = Data3['Mean CO2 per seat per airline (kg/km)'] / Data3['Loadfactor']
+  #Loadfactor X
+  loadfactorX = col1.slider(label = 'Load factor X', min_value = 0.0, max_value = 1.0, value = loadfactorX, step = 0.01)
+  
+  #Loadfactor Y
+  loadfactorY = col2.slider(label = 'Load factor Y', min_value = 0.0, max_value = 1.0, value = loadfactorY, step = 0.01)
+  
+  #Quality marks
+  Data3['CO2 gem loadfactor'] = Data3['Mean CO2 per seat per airline (kg/km)']/Data3['Loadfactor']
   Data3.loc[Data3['CO2 gem loadfactor'] <= 0.065, 'Keurmerkgem'] = 'A'
   Data3.loc[((Data3['CO2 gem loadfactor'] > 0.065) & (Data3['CO2 gem loadfactor'] <= 0.075)), 'Keurmerkgem'] = 'B'
   Data3.loc[((Data3['CO2 gem loadfactor'] > 0.075) & (Data3['CO2 gem loadfactor'] <= 0.085)), 'Keurmerkgem'] = 'C'
   Data3.loc[((Data3['CO2 gem loadfactor'] > 0.085) & (Data3['CO2 gem loadfactor'] <= 0.095)), 'Keurmerkgem'] = 'D'
   Data3.loc[Data3['CO2 gem loadfactor'] > 0.095, 'Keurmerkgem'] = 'E'
   
-  Data3['CO2 loadfactorA'] = Data3['Mean CO2 per seat per airline (kg/km)'] / loadfactorA
+  Data3['CO2 loadfactorA'] = Data3['Mean CO2 per seat per airline (kg/km)']/loadfactorX
   Data3.loc[Data3['CO2 loadfactorA'] <= 0.065, 'KeurmerkA'] = 'A'
   Data3.loc[((Data3['CO2 loadfactorA'] > 0.065) & (Data3['CO2 loadfactorA'] <= 0.075)), 'KeurmerkA'] = 'B'
   Data3.loc[((Data3['CO2 loadfactorA'] > 0.075) & (Data3['CO2 loadfactorA'] <= 0.085)), 'KeurmerkA'] = 'C'
   Data3.loc[((Data3['CO2 loadfactorA'] > 0.085) & (Data3['CO2 loadfactorA'] <= 0.095)), 'KeurmerkA'] = 'D'
   Data3.loc[Data3['CO2 loadfactorA'] > 0.095, 'KeurmerkA'] = 'E'
   
-  Data3['CO2 loadfactorB'] = Data3['Mean CO2 per seat per airline (kg/km)'] / loadfactorB
+  Data3['CO2 loadfactorB'] = Data3['Mean CO2 per seat per airline (kg/km)']/loadfactorBY
   Data3.loc[Data3['CO2 loadfactorB'] <= 0.065, 'KeurmerkB'] = 'A'
   Data3.loc[((Data3['CO2 loadfactorB'] > 0.065) & (Data3['CO2 loadfactorB'] <= 0.075)), 'KeurmerkB'] = 'B'
   Data3.loc[((Data3['CO2 loadfactorB'] > 0.075) & (Data3['CO2 loadfactorB'] <= 0.085)), 'KeurmerkB'] = 'C'
   Data3.loc[((Data3['CO2 loadfactorB'] > 0.085) & (Data3['CO2 loadfactorB'] <= 0.095)), 'KeurmerkB'] = 'D'
   Data3.loc[Data3['CO2 loadfactorB'] > 0.095, 'KeurmerkB'] = 'E'
   
-  AirlineA = Data3[Data3['Airline']==selectboxA]
-  AirlineB = Data3[Data3['Airline']==selectboxB]
+  AirlineX = Data3[Data3['Airline'] == selectboxX]
+  AirlineY = Data3[Data3['Airline'] == selectboxY]
   
-  
+  #Set columns
   col1, col2, col3, col4 = st.columns(4)
   
+  #Name columns
   col1.write('**Quality mark with average load factor**')
   col1.write('**CO2 (kg/km) with average load factor**')
   col1.write('**Quality mark with set load factor**')
   col1.write('**CO2 (kg/km) with set load factor**')
   
-  col2.write(AirlineA.iloc[0,6])
-  col2.write(str(round(AirlineA.iloc[0,5],4)))
-  col2.write(AirlineA.iloc[0,8])
-  col2.write(str(round(AirlineA.iloc[0,7],4)))
+  #Insert information
+  col2.write(AirlineX.iloc[0, 6])
+  col2.write(str(round(AirlineX.iloc[0, 5], 4)))
+  col2.write(AirlineX.iloc[0, 8])
+  col2.write(str(round(AirlineX.iloc[0, 7], 4)))
   
-  
+  #Name columns
   col3.write('**Quality mark with average load factor**')
   col3.write('**CO2 (kg/km) with average load factor**')
   col3.write('**Quality mark with set load factor**')
   col3.write('**CO2 (kg/km) with set load factor**')
   
-  col4.write(AirlineB.iloc[0,6])
-  col4.write(str(round(AirlineB.iloc[0,5],4)))
-  col4.write(AirlineB.iloc[0,10])
-  col4.write(str(round(AirlineB.iloc[0,9],4)))
+  #Insert information
+  col4.write(AirlineY.iloc[0, 6])
+  col4.write(str(round(AirlineY.iloc[0, 5], 4)))
+  col4.write(AirlineY.iloc[0, 10])
+  col4.write(str(round(AirlineY.iloc[0, 9], 4)))
   
-  #Add black line
+  #Add a black line
   st.markdown('***')
   
+  #Add EUROCONTROL
   st.write('***© EUROCONTROL***')
