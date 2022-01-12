@@ -1,34 +1,40 @@
-#Importeer streamlit
+#Import streamlit
 import streamlit as st
 
-#Importeer de benodigde packages
+#Import the required packages
 import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 from streamlit_folium import folium_static
 import folium
-# import statsmodels.api as sm
-# import seaborn as sns
+#import statsmodels.api as sm
+#import seaborn as sns
 
-st.set_page_config(layout="wide")
+--------------------
 
-# st.get_option("theme.primaryColor")
-# st.get_option("theme.backgroundColor")
-# st.get_option("theme.secondaryBackgroundColor")
-# st.get_option("theme.textColor")
-# st.get_option("theme.font")
+#Set page configuration
+st.set_page_config(layout = "wide")
 
-# Data inladen
+--------------------
+
+#Load the data frames
 Data = pd.read_csv('PAGE1.csv')
 Data2 = pd.read_csv('PAGE2.csv')
 Data3 = pd.read_csv('PAGE3.csv')
 
-#Main page
-st.sidebar.title("General information")
-main_page = st.sidebar.radio(label='', options = ["Your guide", "Your downloads"])
+--------------------
 
-if main_page == "Your guide":
+#General information
+
+#Set the sidebar title
+st.sidebar.title("General information")
+
+#Make a radio
+main_info = st.sidebar.radio(label = '', options = ["Your guide", "Your downloads"])
+
+#Set title and subheader and write information for the guide page
+if main_info == "Your guide":
   st.title('Welcome to our dashboard!')
   st.subheader('Aviation sustainability on the AMS-network')
   st.write("""Commissioned by EUROCONTROL and as part of the minor Data Science at the Amsterdam University of Applied Sciences (AUAS), research was conducted on the sustainability of aviation on the AMS-network. The AMS-network consists of all flight routes from Amsterdam Airport Schiphol to European destinations to which at least two different airlines fly. A total of 54 European destinations and 33 airlines were investigated. With this information, three tools are created, each useful for a different target group. To guide you through this dashboard, the different tools are explained below.""")
@@ -40,57 +46,72 @@ if main_page == "Your guide":
   st.write("""**If you are an airline...**""")
   st.write("""Sometimes it can be interesting to compare your own performance with another. How sustainable are you as an airline on the AMS-network compared to other airlines? With the help of this tool, two specific airlines can be compared. Sustainability can be compared based on the average load factor of 2019. Also, the load factor can be adjusted to see how you might be able to improve your sustainability with the load factor. In short, you can compare your sustainability performance with others and thereby see how you might be able to improve your own sustainability.""")
   st.write("""***Let's go for a more sustainable aviation together!***""")
-  #Add black line
+  
+  #Add a black line
   st.markdown('***')
+  
+  #Add a caption
   st.caption("""*Made by:*\n
   - *Daan Bouwmeester (500826025)*\n
   - *Coco de Brouwer (500832466)*\n
   - *Timon van Leeuwen (500782708)*\n
   - *Inge Vijsma (500819598)*""")
-  
-#Kies inspectie
-st.sidebar.title("Which user are you?")
-nav = st.sidebar.radio(label='', options = ["Passengers", "Governments", "Airlines"])
 
+--------------------
+
+#Passengers, governments and airlines
+#Set the sidebar title
+st.sidebar.title("Which user are you?")
+
+#Make a radio
+nav = st.sidebar.radio(label = '', options = ["Passengers", "Governments", "Airlines"])
+
+#Make the passengers page
 if nav == "Passengers": 
-  #Titel toevoegen
+  #Set title
   st.title('Your sustainability tool')
+  #Set subheader
   st.subheader('How to fly sustainable from AMS to your destination.')
+  #Write information
   st.write("Select the desired destination in the selectbox. Choose the preferred day of travel in the days selectbox. In case the travel day doesn't matter, click on the all days button, this will show the entire flight schedule from Amsterdam to the desired destination. When everything is selected, the top three results will be displayed.")
   
-  col1, col2, col3, col4 = st.columns((6,6,3,1))
+  #Set columns
+  col1, col2, col3, col4 = st.columns((6, 6, 3, 1))
   
-  # From
-  From = col1.selectbox(label= 'From', options= Data['From'].unique())
+  #'From' selectbox
+  From = col1.selectbox(label = 'From', options = Data['From'].unique())
   
-  # To
-  To = col2.selectbox(label= 'To', options= Data['To'].unique())
+  #'To' selectbox
+  To = col2.selectbox(label = 'To', options = Data['To'].unique())
   
-  # Dagen
-  To_vluchten = Data[Data['To']==To]
+  #'Days' data
+  To_vluchten = Data[Data['To'] == To]
   
+  #'All days' checkbox
   col4.caption('All days')
-  Alldays = col4.checkbox(label='', value=True)
+  Alldays = col4.checkbox(label = '', value = True)
   
   if Alldays == True:
     Weekdagen = []
   else:
     Weekdagen = To_vluchten.sort_values('Weekday number')['Weekday'].unique()
   
-  Dag = col3.selectbox(label= 'Days', options= Weekdagen)
+  #'Days' selectbox
+  Dag = col3.selectbox(label = 'Days', options = Weekdagen)
   
+  #Set columns
+  col1, col2, col3, col4, col5, col6, col7, col8 = st.columns((2, 2, 2, 2, 2, 2, 2, 2))
   
-  col1, col2, col3, col4, col5, col6, col7, col8 = st.columns((2,2,2,2,2,2,2,2))
-  
-  #top 3 data
+  #Top 3 flights
   if Alldays == True:
     Dag_vluchten = To_vluchten
   else:
-    Dag_vluchten = To_vluchten[To_vluchten['Weekday']==Dag]
+    Dag_vluchten = To_vluchten[To_vluchten['Weekday'] == Dag]
   
   vluchten_sorted = Dag_vluchten.sort_values('Mean CO2 per pax compensated for flight time (kg)')
-  vluchten_sorted = vluchten_sorted.drop_duplicates(subset=['Mean CO2 per pax compensated for flight time (kg)'])
+  vluchten_sorted = vluchten_sorted.drop_duplicates(subset = ['Mean CO2 per pax compensated for flight time (kg)'])
   
+  #Name columns
   col1.write('**Ranking**')
   col2.write('**Airline**')
   col3.write('**Quality mark**')
@@ -98,45 +119,50 @@ if nav == "Passengers":
   col5.write('**Number of trees**')
   col6.write('**Weekday**')
   
+  #Set index
   range = len(vluchten_sorted.index)
   
+  #Set range
   if range >= 1:
     col1.write('1.')
-    col2.write(vluchten_sorted.iloc[0,13])
-    col3.write(vluchten_sorted.iloc[0,-1])
-    col4.write(str(round(vluchten_sorted.iloc[0,40],2)))
-    col5.write(str(round(vluchten_sorted.iloc[0,-3],2))+ '🌳')
-    col6.write(str(vluchten_sorted.iloc[0,-22]))
+    col2.write(vluchten_sorted.iloc[0, 13])
+    col3.write(vluchten_sorted.iloc[0, -1])
+    col4.write(str(round(vluchten_sorted.iloc[0, 40], 2)))
+    col5.write(str(round(vluchten_sorted.iloc[0, -3], 2)) + '🌳')
+    col6.write(str(vluchten_sorted.iloc[0, -22]))
     
   if range >= 2:
     col1.write('2.')
-    col2.write(vluchten_sorted.iloc[1,13])
-    col3.write(vluchten_sorted.iloc[1,-1])
-    col4.write(str(round(vluchten_sorted.iloc[1,40],2)))
-    col5.write(str(round(vluchten_sorted.iloc[1,-3],2))+ '🌳')
-    col6.write(str(vluchten_sorted.iloc[1,-22]))
+    col2.write(vluchten_sorted.iloc[1, 13])
+    col3.write(vluchten_sorted.iloc[1, -1])
+    col4.write(str(round(vluchten_sorted.iloc[1, 40], 2)))
+    col5.write(str(round(vluchten_sorted.iloc[1, -3], 2)) + '🌳')
+    col6.write(str(vluchten_sorted.iloc[1, -22]))
   
   if range >= 3:
     col1.write('3.')
-    col2.write(vluchten_sorted.iloc[2,13])
-    col3.write(vluchten_sorted.iloc[2,-1])
-    col4.write(str(round(vluchten_sorted.iloc[2,40],2)))
-    col5.write(str(round(vluchten_sorted.iloc[2,-3],2))+ '🌳')
-    col6.write(str(vluchten_sorted.iloc[1,-22]))
-    
+    col2.write(vluchten_sorted.iloc[2, 13])
+    col3.write(vluchten_sorted.iloc[2, -1])
+    col4.write(str(round(vluchten_sorted.iloc[2, 40], 2)))
+    col5.write(str(round(vluchten_sorted.iloc[2, -3], 2)) + '🌳')
+    col6.write(str(vluchten_sorted.iloc[1, -22]))
+  
+  #Name columns
   col7.write('**From:**')
   col7.write('**To:**')
   col7.write('**Flight distance:**')
   col7.write('**Flight time:**')
   
-  col8.write(vluchten_sorted.iloc[0,2])
-  col8.write(vluchten_sorted.iloc[0,3])
+  #Insert information
+  col8.write(vluchten_sorted.iloc[0, 2])
+  col8.write(vluchten_sorted.iloc[0, 3])
   col8.write(str(int(vluchten_sorted['Mean distance (km)'].mean())) + ' km')
   col8.write(str(int(vluchten_sorted['Flight time (min)'].mean())) + ' min')
 
-  col1, col2, col3 = st.columns((6,1,1))
+  #Set columns
+  col1, col2, col3 = st.columns((6, 1, 1))
   
-  # More information
+  #More information expander
   with st.expander('More information:'):
         st.markdown("""**Airline:** This includes 33 airlines flying on the AMS-network.\n
   **Quality mark:** This provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into five categories, shown below.\n
@@ -148,33 +174,39 @@ if nav == "Passengers":
   **CO2 (kg):** This provides the CO2 emissions per seat (in kg) for the entire flight.\n
   **Number of trees:** This indicates how much trees need to be planted in order to compensate the CO2 emissions for the flight.""")
   
-  # Begin Map
-  DataDone = pd.read_csv('Datadone.csv', index_col='To')
+  #Flight map: insert data frame, drop column
+  DataDone = pd.read_csv('Datadone.csv', index_col = 'To')
   DataDone.drop(columns = 'Unnamed: 0', inplace = True)
 
-  # Bepalen variabelen X en Y. 
+  #Variables X and Y 
   x = To[-4:-1]
   y = From[-4:-1]
 
+  #Latitude and longitude
   AvgLat = (DataDone['Latitude (From)'].loc[x] + DataDone['Latitude (To)'].loc[x])/2
   AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
 
-  m = folium.Map(location=[AvgLat, AvgLng], width=750, hight=500, zoom_start=4, control_scale=True)
+  #Create the map
+  m = folium.Map(location = [AvgLat, AvgLng], width = 750, height = 500, zoom_start = 4, control_scale = True)
 
-  folium.Marker(location=[DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]],
-                popup= '<strong>' + From + '<strong>',
-                tooltip='Push to show airport code',
+  #Add marker
+  folium.Marker(location = [DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]],
+                popup = '<strong>' + From + '<strong>',
+                tooltip = 'Push to show airport code',
                 icon = folium.Icon(color = 'blue', icon = 'home', prefix = 'fa')).add_to(m)
 
-  folium.Marker(location=[DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]],
-                popup= '<strong>' + To + '<strong>',
-                tooltip='Push to show airport code',
+  folium.Marker(location = [DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]],
+                popup = '<strong>' + To + '<strong>',
+                tooltip = 'Push to show airport code',
                 icon = folium.Icon(color = 'blue', icon = 'plane', prefix = 'fa')).add_to(m)
 
+  #Add points
   points = ((DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]), 
             (DataDone['Latitude (To)'].loc[x], DataDone['Longitude (To)'].loc[x]))
 
-  folium.PolyLine(points, popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
+  #Add polyline
+  folium.PolyLine(points, 
+                  popup = '<strong>' + str(DataDone['Mean distance (km)'].loc[x]) + ' km' + '<strong>',
                   tooltip = 'Show the distance of the flight').add_to(m)
 
   folium_static(m)
@@ -182,52 +214,71 @@ if nav == "Passengers":
   #Add black line
   st.markdown('***')
   
+  #Add EUROCONTROL 
   st.write('***© EUROCONTROL***')
 
+--------------------
+  
+#Make the governments page
 elif nav == "Governments":
+  #Set title
   st.title('Sustainability of airlines on the AMS-network')
+  #Set subheader
   st.subheader('Which airline is the most sustainable on the AMS-network?')
+  #Write information
   st.write("Choose one or more airline(s) and/or select the desired quality mark. As a result, a ranking of the most sustainable airline, based on your selection, will appear.")
   
+  #Sort values
   Data2 = Data2.sort_values('Mean CO2 per seat per airline (kg/km)')
   
+  #Set columns
   col1, col2 = st.columns(2)
   
+  #Sort values
   Airline = Data2.sort_values('Airline')
-  Airline = col1.multiselect(label='Airline', options=Airline['Airline'])
   
-  Keurmerk = Data2.sort_values('Keurmerk')
-  Keurmerk = col2.multiselect(label='Quality mark', options=Keurmerk['Keurmerk'].unique())
+  #'Airline' multiselect
+  Airline = col1.multiselect(label = 'Airline', options = Airline['Airline'])
   
+  #Sort values
+  quality_mark = Data2.sort_values('Keurmerk')
+  
+  #'Quality mark' multiselect
+  quality_mark = col2.multiselect(label = 'Quality mark', options = quality_mark['Keurmerk'].unique())
+  
+  #If-else statements
   if Airline == []:
     Airlines = Data2
   else:
-    Airlines = Data2.loc[Data2.apply(lambda x: x.Airline in Airline, axis=1)]
+    Airlines = Data2.loc[Data2.apply(lambda x: x.Airline in Airline, axis = 1)]
   
-  if Keurmerk == []:
-    Keurmerken = Data2
+  if quality_mark == []:
+    quality_marks = Data2
   else:
-    Keurmerken = Data2.loc[Data2.apply(lambda x: x.Keurmerk in Keurmerk, axis=1)]
-                              
-  Merged = Airlines.merge(Keurmerken, on='Airline', how='inner', suffixes=('', 'delete'))
+    quality_marks = Data2.loc[Data2.apply(lambda x: x.Keurmerk in quality_mark, axis = 1)]
+        
+  #Merge
+  Merged = Airlines.merge(quality_marks, on = 'Airline', how = 'inner', suffixes = ('', 'delete'))
   Merged = Merged[[c for c in Merged.columns if not c.endswith('delete')]]
   Merged = Merged.sort_values('Mean CO2 per seat per airline (kg/km)')
   
-  
+  #Set columns
   col1, col2, col3, col4 = st.columns(4)
   
+  #Name columns
   col1.write('**Ranking**')
   col2.write('**Airline**')
   col3.write('**Quality mark**')
   col4.write('**CO2 (kg)**')
 
-  
+  #Set range
   for i in range(len(Merged.index)):
     col1.write(str(i+1) + '.')
-    col2.write(Merged.iloc[i,1])
-    col3.write(Merged.iloc[i,3])
-    col4.write(str(round(Merged.iloc[i,2],4))) 
+    col2.write(Merged.iloc[i, 1])
+    col3.write(Merged.iloc[i, 3])
+    col4.write(str(round(Merged.iloc[i, 2], 4))) 
   
+  #More information expander
   with st.expander('More information:'):
         st.markdown("""**Airline:** This includes 33 airlines flying on the AMS-network.\n
   **Quality mark:** This provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into five categories, shown below.\n
@@ -238,9 +289,10 @@ elif nav == "Governments":
   E. > 0.095 CO2 per seat (kg/km)\n
   **CO2 (kg/km):** This provides information about the average CO2 emissions per seat (in kg/km) of an airline.""")
   
-  #Add black line
+  #Add a black line
   st.markdown('***')
   
+  #Add EUROCONTROL
   st.write('***© EUROCONTROL***')
   
 elif nav == "Airlines":
