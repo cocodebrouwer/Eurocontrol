@@ -11,7 +11,6 @@ import folium
 # import statsmodels.api as sm
 # import seaborn as sns
 
-
 st.set_page_config(layout="wide")
 
 # Data inladen
@@ -28,7 +27,7 @@ if main == "Main page":
   st.write('')
   
 # st.sidebar.title("Spinazie")
-# nav_main = st.sidebar.radio(label='', options = ["Main page"])
+# nav_main = st.sidebar.checkbox(label='', options = ["Main page"])
 
 # if nav_main == "Main page":
 #   #Titel toevoegen
