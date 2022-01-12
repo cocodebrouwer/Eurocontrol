@@ -19,7 +19,8 @@ Data2 = pd.read_csv('PAGE2.csv')
 Data3 = pd.read_csv('PAGE3.csv')
 
 #Main page
-main_page = st.sidebar.radio(label='General information', options = ["Main page"])
+st.sidebar.title("General information")
+main_page = st.sidebar.radio(label='', options = ["Main page", "Download page"])
 
 if main_page == "Main page":
   st.title('Welcome to our dashboard!')
