@@ -1,8 +1,11 @@
 #Importeer streamlit
 import streamlit as st
 
-st.get_option("streamlit.primaryColor")
-st.get_option("streamlit.backgroundColor")
+st.get_option("theme.primaryColor")
+st.get_option("theme.backgroundColor")
+st.get_option("theme.secondaryBackgroundColor")
+st.get_option("theme.textColor")
+st.get_option("theme.font")
 
 #Importeer de benodigde packages
 import pandas as pd
