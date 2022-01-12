@@ -19,7 +19,7 @@ Data = pd.read_csv('PAGE1.csv')
 Data2 = pd.read_csv('PAGE2.csv')
 Data3 = pd.read_csv('PAGE3.csv')
 
-with st.sidebar.form(key='Form1'):
+
   main = st.sidebar.checkbox('Main page')
 
   if main == "Main page":
