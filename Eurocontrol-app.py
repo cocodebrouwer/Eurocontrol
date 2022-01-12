@@ -40,7 +40,7 @@ if main == "Main page":
 st.sidebar.title("Which user are you?")
 nav = st.sidebar.radio(label='', options = ["Passengers", "Governments", "Airlines"])
 
-if nav == "Passengers": 
+elif nav == "Passengers": 
   #Titel toevoegen
   st.title('Your sustainability tool')
   st.subheader('How to fly sustainable from AMS to your destination.')
