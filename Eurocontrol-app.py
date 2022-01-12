@@ -29,8 +29,10 @@ if main_page == "Main page":
   st.write("""*The different tools can be accessed via the sidebar "Which user are you?".*""")
   st.write("""**If you are a passenger...**""")
   st.write("""Sustainability is becoming increasingly important, especially in aviation. Are you someone who likes to fly but wants to pay attention to your ecological footprint, then use our tool! With this tool you can check (per day of the week) which airline offers the most sustainable flight to your chosen European destination. Thereby it is possible to see per flight how much CO2 is emitted per seat in kilograms. And if you really want to contribute, you can plant the number of trees that is indicated for your flight in order to compensate your CO2 emissions.""")
-  st.write("""**If you are a member of the Dutch government agency...**""")
+  st.write("""**If you are a member of a Dutch government agency...**""")
   st.write("""For a government agency it can be interesting to know how the airlines within a certain network perform in terms of sustainability. In this case this tool is especially useful for the Dutch government since it concerns the AMS-network. Using this tool, a number of specific airlines and/or quality marks can be selected. Based on this information, a government agency can for example take measures or issue recommendations to improve the sustainability of certain airlines.""") 
+  st.write("""**If you are an airline...**""")
+  st.write("""Sometimes it can be interesting to compare your own performance with another. How sustainable are you as an airline on the AMS-network compared to other airlines? With the help of this tool, two specific airlines can be compared. Sustainability can be compared based on the average load factor of 2019.Also, the load factor can be adjusted to see how you might be able to improve your sustainability with the load factor. In short, you can compare your sustainability performance with others and thereby see how you might be able to improve your own sustainability. Let's go for a more sustainable aviation together!""")
 
 #Kies inspectie
 st.sidebar.title("Which user are you?")
