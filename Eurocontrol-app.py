@@ -13,11 +13,11 @@ import folium
 
 st.set_page_config(layout="wide")
 
-st.get_option("theme.primaryColor")
-st.get_option("theme.backgroundColor")
-st.get_option("theme.secondaryBackgroundColor")
-st.get_option("theme.textColor")
-st.get_option("theme.font")
+# st.get_option("theme.primaryColor")
+# st.get_option("theme.backgroundColor")
+# st.get_option("theme.secondaryBackgroundColor")
+# st.get_option("theme.textColor")
+# st.get_option("theme.font")
 
 # Data inladen
 Data = pd.read_csv('PAGE1.csv')
