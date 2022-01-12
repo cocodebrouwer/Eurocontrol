@@ -20,9 +20,9 @@ Data3 = pd.read_csv('PAGE3.csv')
 
 #Main page
 st.sidebar.title("General information")
-main_page = st.sidebar.radio(label='', options = ["Main page", "Download page"])
+main_page = st.sidebar.radio(label='', options = ["Your guide", "Your downloads"])
 
-if main_page == "Main page":
+if main_page == "Your guide":
   st.title('Welcome to our dashboard!')
   st.subheader('Aviation sustainability on the AMS-network')
   st.write("""Commissioned by EUROCONTROL and as part of the minor Data Science at the Amsterdam University of Applied Sciences (AUAS), research was conducted on the sustainability of aviation on the AMS-network. The AMS-network consists of all flight routes from Amsterdam Airport Schiphol to European destinations to which at least two different airlines fly. A total of 54 European destinations and 33 airlines were investigated. With this information, three tools are created, each useful for a different target group. To guide you through this dashboard, the different tools are explained below.""")
@@ -32,7 +32,8 @@ if main_page == "Main page":
   st.write("""**If you are a member of a Dutch government agency...**""")
   st.write("""For a government agency it can be interesting to know how the airlines within a certain network perform in terms of sustainability. In this case this tool is especially useful for the Dutch government since it concerns the AMS-network. Using this tool, a number of specific airlines and/or quality marks can be selected. Based on this information, a government agency can for example take measures or issue recommendations to improve the sustainability of certain airlines.""") 
   st.write("""**If you are an airline...**""")
-  st.write("""Sometimes it can be interesting to compare your own performance with another. How sustainable are you as an airline on the AMS-network compared to other airlines? With the help of this tool, two specific airlines can be compared. Sustainability can be compared based on the average load factor of 2019.Also, the load factor can be adjusted to see how you might be able to improve your sustainability with the load factor. In short, you can compare your sustainability performance with others and thereby see how you might be able to improve your own sustainability. Let's go for a more sustainable aviation together!""")
+  st.write("""Sometimes it can be interesting to compare your own performance with another. How sustainable are you as an airline on the AMS-network compared to other airlines? With the help of this tool, two specific airlines can be compared. Sustainability can be compared based on the average load factor of 2019. Also, the load factor can be adjusted to see how you might be able to improve your sustainability with the load factor. In short, you can compare your sustainability performance with others and thereby see how you might be able to improve your own sustainability.""")
+  st.write("""***Let's go for a more sustainable aviation together!***""")
 
 #Kies inspectie
 st.sidebar.title("Which user are you?")
