@@ -1,12 +1,6 @@
 #Importeer streamlit
 import streamlit as st
 
-st.get_option("theme.primaryColor")
-st.get_option("theme.backgroundColor")
-st.get_option("theme.secondaryBackgroundColor")
-st.get_option("theme.textColor")
-st.get_option("theme.font")
-
 #Importeer de benodigde packages
 import pandas as pd
 import numpy as np
@@ -18,6 +12,12 @@ import folium
 # import seaborn as sns
 
 st.set_page_config(layout="wide")
+
+st.get_option("theme.primaryColor")
+st.get_option("theme.backgroundColor")
+st.get_option("theme.secondaryBackgroundColor")
+st.get_option("theme.textColor")
+st.get_option("theme.font")
 
 # Data inladen
 Data = pd.read_csv('PAGE1.csv')
