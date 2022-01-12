@@ -189,7 +189,7 @@ if nav == "Passengers":
   AvgLng = (DataDone['Longitude (From)'].loc[x] + DataDone['Longitude (To)'].loc[x])/2
 
   #Create the map
-  m = folium.Map(location = [AvgLat, AvgLng], width = 750, height = 500, zoom_start = 4, control_scale = True)
+  m = folium.Map(location = [AvgLat, AvgLng], width = 1000, height = 1000, zoom_start = 4, control_scale = True)
 
   #Add marker
   folium.Marker(location = [DataDone['Latitude (From)'].loc[x], DataDone['Longitude (From)'].loc[x]],
