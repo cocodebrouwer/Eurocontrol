@@ -1,6 +1,15 @@
+[server]
+
+port = 4200
+
+[browser]
+
+serverAddress = "localhost"
+
 [theme]
-primaryColor = "green"
-backgroundColor = "green"
-secondaryBackgroundColor = "#f0f2f6"
-textColor = "#262730"
-font = "sans serif"
+
+primaryColor="#3390FF"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F0F2F6"
+textColor="#262730"
+font="sans serif"
