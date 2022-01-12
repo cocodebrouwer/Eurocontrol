@@ -24,7 +24,10 @@ main_page = st.sidebar.radio(label='', options = ["Main page", "Download page"])
 
 if main_page == "Main page":
   st.title('Welcome to our dashboard!')
-  st.subheader('This dashboard is made for EUROCONTROL and made by group 4')
+  st.subheader('Aviation sustainability on the AMS-network')
+  st.write("Commissioned by EUROCONTROL, as part of the minor in Data Science at the Hogeschool van Amsterdam (HvA), research was conducted on the sustainability of aviation on the AMS network. The AMS network consists of all flight routes from Amsterdam Airport Schiphol to European destinations to which at least two different airlines fly. A total of 54 European destinations and 33 airlines were investigated. With this information, three tools were created, each useful for a different target group. To guide you through this dashboard, the different tools are explained below. 
+
+Translated with www.DeepL.com/Translator (free version)")
 
 #Kies inspectie
 st.sidebar.title("Which user are you?")
