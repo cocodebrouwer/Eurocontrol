@@ -35,7 +35,7 @@ Data3 = pd.read_csv('PAGE3.csv')
 #   st.subheader('hey')
 #   st.write("hoi")
 
-main_page = st.button("Main page")
+main_page = st.sidebar.button("Main page")
 
 #Kies inspectie
 st.sidebar.title("Which user are you?")
