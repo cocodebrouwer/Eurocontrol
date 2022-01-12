@@ -22,6 +22,12 @@ Data3 = pd.read_csv('PAGE3.csv')
 st.sidebar.title("Spinazie")
 nav_main = st.sidebar.radio(label='', options = ["Main page"])
 
+if nav_main == "Main page":
+  #Titel toevoegen
+  st.title('hallo')
+  st.subheader('hey')
+  st.write("hoi")
+
 #Kies inspectie
 st.sidebar.title("Which user are you?")
 nav = st.sidebar.radio(label='', options = ["Passengers", "Governments", "Airlines"])
