@@ -2,6 +2,7 @@
 import streamlit as st
 
 st.get_option("theme.primaryColor")
+st.get_option("backgroundColor")
 
 #Importeer de benodigde packages
 import pandas as pd
