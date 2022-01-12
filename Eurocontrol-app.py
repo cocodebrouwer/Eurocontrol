@@ -19,10 +19,12 @@ Data = pd.read_csv('PAGE1.csv')
 Data2 = pd.read_csv('PAGE2.csv')
 Data3 = pd.read_csv('PAGE3.csv')
 
-st.sidebar.title("Spinazie")
-nav_main = st.sidebar.radio(label='', options = ["Main page"])
+select = st.sidebar.selectbox('hoi', ('hey'))
 
-if nav_main == "Main page":
+# st.sidebar.title("Spinazie")
+# nav_main = st.sidebar.radio(label='', options = ["Main page"])
+
+if select == "hey":
   #Titel toevoegen
   st.title('hallo')
   st.subheader('hey')
