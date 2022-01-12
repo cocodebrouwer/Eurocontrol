@@ -36,7 +36,7 @@ if main_page == "Your guide":
   st.write("""***Let's go for a more sustainable aviation together!***""")
   #Add black line
   st.markdown('***')
-  st.caption("*Made by:\n
+  st.caption("""*Made by:\n
   - Daan Bouwmeester (500826025)\n
   - Coco de Brouwer (500832466)\n
   - Timon van Leeuwen (500782708)\n
