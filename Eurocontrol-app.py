@@ -1,6 +1,8 @@
 #Importeer streamlit
 import streamlit as st
 
+st.get_option("theme.primaryColor")
+
 #Importeer de benodigde packages
 import pandas as pd
 import numpy as np
