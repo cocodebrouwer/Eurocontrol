@@ -18,13 +18,13 @@ Data = pd.read_csv('PAGE1.csv')
 Data2 = pd.read_csv('PAGE2.csv')
 Data3 = pd.read_csv('PAGE3.csv')
 
-main = st.sidebar.checkbox('Main page')
+# main = st.sidebar.checkbox('Main page')
 
-if main == "Main page":
-  #Titel toevoegen
-  st.title('')
-  st.subeader('')
-  st.write('')
+# if main == "Main page":
+#   #Titel toevoegen
+#   st.title('')
+#   st.subeader('')
+#   st.write('')
   
 # st.sidebar.title("Spinazie")
 # nav_main = st.sidebar.radio(label='', options = ["Main page"])
@@ -37,8 +37,7 @@ if main == "Main page":
 
 #Kies inspectie
 st.sidebar.title("Which user are you?")
-nav = st.sidebar.checkbox(("Passengers", "Governments", "Airlines"))
-#nav = st.sidebar.checkbox(label='', options = ["Passengers", "Governments", "Airlines"])
+nav = st.sidebar.radio(label='', options = ["Passengers", "Governments", "Airlines"])
 
 if nav == "Passengers": 
   #Titel toevoegen
