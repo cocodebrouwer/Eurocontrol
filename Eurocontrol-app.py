@@ -34,7 +34,14 @@ if main_page == "Your guide":
   st.write("""**If you are an airline...**""")
   st.write("""Sometimes it can be interesting to compare your own performance with another. How sustainable are you as an airline on the AMS-network compared to other airlines? With the help of this tool, two specific airlines can be compared. Sustainability can be compared based on the average load factor of 2019. Also, the load factor can be adjusted to see how you might be able to improve your sustainability with the load factor. In short, you can compare your sustainability performance with others and thereby see how you might be able to improve your own sustainability.""")
   st.write("""***Let's go for a more sustainable aviation together!***""")
-
+  #Add black line
+  st.markdown('***')
+  st.caption("*Made by:\n
+  - Daan Bouwmeester (500826025)\n
+  - Coco de Brouwer (500832466)\n
+  - Timon van Leeuwen (500782708)\n
+  - Inge Vijsma (500819598)*")
+  
 #Kies inspectie
 st.sidebar.title("Which user are you?")
 nav = st.sidebar.radio(label='', options = ["Passengers", "Governments", "Airlines"])
