@@ -35,6 +35,8 @@ Data3 = pd.read_csv('PAGE3.csv')
 #   st.subheader('hey')
 #   st.write("hoi")
 
+main_page = st.button("Main page")
+
 #Kies inspectie
 st.sidebar.title("Which user are you?")
 nav = st.sidebar.radio(label='', options = ["Passengers", "Governments", "Airlines"])
