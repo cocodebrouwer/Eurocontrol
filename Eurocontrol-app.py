@@ -27,7 +27,7 @@ if main == "Main page":
   st.write('')
   
 # st.sidebar.title("Spinazie")
-# nav_main = st.sidebar.checkbox(label='', options = ["Main page"])
+# nav_main = st.sidebar.radio(label='', options = ["Main page"])
 
 # if nav_main == "Main page":
 #   #Titel toevoegen
@@ -37,7 +37,7 @@ if main == "Main page":
 
 #Kies inspectie
 st.sidebar.title("Which user are you?")
-nav = st.sidebar.radio(label='', options = ["Passengers", "Governments", "Airlines"])
+nav = st.sidebar.checkbox(label='', options = ["Passengers", "Governments", "Airlines"])
 
 if nav == "Passengers": 
   #Titel toevoegen
