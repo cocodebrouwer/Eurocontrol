@@ -29,6 +29,8 @@ if main_page == "Main page":
   st.write("""*The different tools can be accessed via the sidebar "Which user are you?".*""")
   st.write("""**If you are a passenger...**""")
   st.write("""Sustainability is becoming increasingly important, especially in aviation. Are you someone who likes to fly but wants to pay attention to your ecological footprint, then use our tool! With this tool you can check (per day of the week) which airline offers the most sustainable flight to your chosen European destination. Thereby it is possible to see per flight how much CO2 is emitted per seat in kilograms. And if you really want to contribute, you can plant the number of trees that is indicated for your flight in order to compensate your CO2 emissions.""")
+  st.write("""**If you are a member of the Dutch government agency...**""")
+  st.write("""For a government agency it can be interesting to know how the airlines within a certain network perform in terms of sustainability. In this case this tool is especially useful for the Dutch government since it concerns the AMS-network. Using this tool, a number of specific airlines and/or quality marks can be selected. Based on this information, a government agency can for example take measures or issue recommendations to improve the sustainability of certain airlines.""") 
 
 #Kies inspectie
 st.sidebar.title("Which user are you?")
