@@ -11,19 +11,19 @@ import folium
 #import statsmodels.api as sm
 #import seaborn as sns
 
---------------------
+#--------------------
 
 #Set page configuration
 st.set_page_config(layout = "wide")
 
---------------------
+#--------------------
 
 #Load the data frames
 Data = pd.read_csv('PAGE1.csv')
 Data2 = pd.read_csv('PAGE2.csv')
 Data3 = pd.read_csv('PAGE3.csv')
 
---------------------
+#--------------------
 
 #General information
 
@@ -57,7 +57,7 @@ if main_info == "Your guide":
   - *Timon van Leeuwen (500782708)*\n
   - *Inge Vijsma (500819598)*""")
 
---------------------
+#--------------------
 
 #Passengers, governments and airlines
 #Set the sidebar title
