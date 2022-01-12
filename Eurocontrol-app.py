@@ -1,7 +1,7 @@
 #Importeer streamlit
 import streamlit as st
 
-primary_clr = st.get_option("theme.primaryColor")
+st.get_option("theme.primaryColor")
 st.get_option("theme.backgroundColor")
 st.get_option("theme.secondaryBackgroundColor")
 st.get_option("theme.textColor")
