@@ -19,7 +19,7 @@ Data = pd.read_csv('PAGE1.csv')
 Data2 = pd.read_csv('PAGE2.csv')
 Data3 = pd.read_csv('PAGE3.csv')
 
-st.sidebar.["Main page"]
+st.sidebar.mainpage
 #nav_main = st.sidebar.radio(label='', options = ["Main page"])
 
 #Kies inspectie
