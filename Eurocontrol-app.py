@@ -13,6 +13,9 @@ import folium
 
 st.set_page_config(layout="wide")
 
+[server]
+port = 80
+
 st.get_option("theme.primaryColor")
 st.get_option("theme.backgroundColor")
 st.get_option("theme.secondaryBackgroundColor")
