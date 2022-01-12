@@ -18,24 +18,12 @@ Data = pd.read_csv('PAGE1.csv')
 Data2 = pd.read_csv('PAGE2.csv')
 Data3 = pd.read_csv('PAGE3.csv')
 
-# main = st.sidebar.checkbox('Main page')
-
-# if main == "Main page":
-#   #Titel toevoegen
-#   st.title('')
-#   st.subeader('')
-#   st.write('')
-  
-# st.sidebar.title("Spinazie")
-# nav_main = st.sidebar.radio(label='', options = ["Main page"])
-
-# if nav_main == "Main page":
-#   #Titel toevoegen
-#   st.title('hallo')
-#   st.subheader('hey')
-#   st.write("hoi")
-
+#Main page
 main_page = st.sidebar.button("Main page")
+
+if main_page == "Main page":
+  st.title('Welcome to our dashboard!')
+  st.subheader('This dashboard is made for EUROCONTROL and made by group 4')
 
 #Kies inspectie
 st.sidebar.title("Which user are you?")
