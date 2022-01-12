@@ -19,14 +19,22 @@ Data = pd.read_csv('PAGE1.csv')
 Data2 = pd.read_csv('PAGE2.csv')
 Data3 = pd.read_csv('PAGE3.csv')
 
-st.sidebar.title("Spinazie")
-nav_main = st.sidebar.radio(label='', options = ["Main page"])
+main = st.sidebar.checkbox('Main page')
 
-if nav_main == "Main page":
+if main == "Main page":
   #Titel toevoegen
-  st.title('hallo')
-  st.subheader('hey')
-  st.write("hoi")
+  st.title('')
+  st.subeader('')
+  st.write('')
+  
+# st.sidebar.title("Spinazie")
+# nav_main = st.sidebar.radio(label='', options = ["Main page"])
+
+# if nav_main == "Main page":
+#   #Titel toevoegen
+#   st.title('hallo')
+#   st.subheader('hey')
+#   st.write("hoi")
 
 #Kies inspectie
 st.sidebar.title("Which user are you?")
