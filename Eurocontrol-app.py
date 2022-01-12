@@ -37,10 +37,10 @@ if main_page == "Your guide":
   #Add black line
   st.markdown('***')
   st.caption("""*Made by:*\n
-  - Daan Bouwmeester (500826025)\n
-  - Coco de Brouwer (500832466)\n
-  - Timon van Leeuwen (500782708)\n
-  - Inge Vijsma (500819598)""")
+  - *Daan Bouwmeester (500826025)*\n
+  - *Coco de Brouwer (500832466)*\n
+  - *Timon van Leeuwen (500782708)*\n
+  - *Inge Vijsma (500819598)*""")
   
 #Kies inspectie
 st.sidebar.title("Which user are you?")
