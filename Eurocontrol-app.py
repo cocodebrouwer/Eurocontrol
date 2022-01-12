@@ -37,7 +37,8 @@ if main == "Main page":
 
 #Kies inspectie
 st.sidebar.title("Which user are you?")
-nav = st.sidebar.checkbox(label='', options = ["Passengers", "Governments", "Airlines"])
+nav = st.sidebar.checkbox(("Passengers", "Governments", "Airlines"))
+#nav = st.sidebar.checkbox(label='', options = ["Passengers", "Governments", "Airlines"])
 
 if nav == "Passengers": 
   #Titel toevoegen
