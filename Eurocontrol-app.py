@@ -19,7 +19,7 @@ Data2 = pd.read_csv('PAGE2.csv')
 Data3 = pd.read_csv('PAGE3.csv')
 
 #Main page
-main_page = st.sidebar.button("Main page")
+main_page = st.sidebar.checkbox("Main page")
 
 if main_page == "Main page":
   st.title('Welcome to our dashboard!')
