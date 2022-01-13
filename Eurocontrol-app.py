@@ -308,7 +308,7 @@ elif st.session_state.page == 2:
   **CO2 (kg/km):** This provides information about the average CO2 emissions per seat (in kg/km) of an airline.""")
 	
   #st.download_button(label='Government', data=Government)
-  Government = Data2.to_csv('Government.csv')st.write(type(Government))
+  Government = Data2.to_csv('Government.csv')
 	st.write(type(Government)
 	
 	
