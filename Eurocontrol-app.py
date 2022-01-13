@@ -48,9 +48,9 @@ st.sidebar.title("Which user are you?")
 # #Make a radio
 # nav = st.sidebar.selectbox(label = '', options = Pages)
 
-nav1 = st.sidebar.button(label = "Passengers")
-nav2 = st.sidebar.button(label = "Governments")
-nav3 = st.sidebar.button(label = "Airlines")
+nav1 = st.sidebar.button(label = "Passenger")
+nav2 = st.sidebar.button(label = "Government")
+nav3 = st.sidebar.button(label = "Airline")
 
 #--------------------
 
