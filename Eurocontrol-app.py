@@ -56,15 +56,6 @@ if nav3:
 if main_info:
     st.session_state.page = 0
 
-# if (nav1 == False) and (nav2 == False) and (nav3 == False):
-#   main_info == True
-# if (main_info == False) and (nav2 == False) and (nav3 == False):
-#   nav1 == True
-# if (nav1 == False) and (main_info == False) and (nav3 == False):
-#   nav2 == True
-# if (nav1 == False) and (nav2 == False) and (main_info == False):
-#   nav3 == True
-
 
 #--------------------
 
@@ -316,10 +307,11 @@ elif st.session_state.page == 2:
   E. > 0.095 CO2 per seat (kg/km)\n
   **CO2 (kg/km):** This provides information about the average CO2 emissions per seat (in kg/km) of an airline.""")
 	
-  #col1.write(type(Government)
   #st.download_button(label='Government', data=Government)
   Government = Data2.to_csv('Government.csv')
-	 
+  col1.write(type(Government)
+	
+	
   #Add a black line
   st.markdown('***')
   
