@@ -70,7 +70,7 @@ if main_info == True:
     Pages = ["Passengers", "Governments", "Airlines"]
 
 #Make a radio
-nav = st.sidebar.selectbox(label = '', options = Pages)
+nav = st.sidebar.selectbox(label = '', options = Pages) 
 
 #--------------------
 
