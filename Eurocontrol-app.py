@@ -69,7 +69,7 @@ if main_info:
 #--------------------
 
 #Set title and subheader and write information for the guide page
-if st.session_state.page == 1:
+if st.session_state.page == 0:
   st.title('Welcome to our dashboard!')
   st.subheader('Aviation sustainability on the AMS-network')
   st.write("""Commissioned by EUROCONTROL and as part of the minor Data Science at the Amsterdam University of Applied Sciences (AUAS), research was conducted on the sustainability of aviation on the AMS-network. The AMS-network consists of all flight routes from Amsterdam Airport Schiphol to European destinations to which at least two different airlines fly. A total of 54 European destinations and 33 airlines were investigated, through data from October and November 2021. With this information, three tools are created, each useful for a different target group. To guide you through this dashboard, the different tools are explained below.""")
@@ -94,7 +94,7 @@ if st.session_state.page == 1:
   
 
 #Make the passengers page
-if nav1 == True: 
+if st.session_state.page == 1: 
   #Set title
   st.title('Your sustainability tool')
   #Set subheader
@@ -247,7 +247,7 @@ if nav1 == True:
 #--------------------
   
 #Make the governments page
-elif nav2 == True:
+elif st.session_state.page == 2:
   #Set title
   st.title('Sustainability of airlines on the AMS-network')
   #Set subheader
@@ -325,7 +325,7 @@ elif nav2 == True:
 #--------------------
 
 #Make the airlines page  
-elif nav3 == True:
+elif st.session_state.page == 3:
   #Set title
   st.title('Airline comparison tool')
   #Set subheader
