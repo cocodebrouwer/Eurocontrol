@@ -65,12 +65,12 @@ if main_info == True:
 st.sidebar.title("Which user are you?")
 
 if main_info == True:
-    Pages = []
-  else:
-    Pages = ["Passengers", "Governments", "Airlines"]
+  Pages = []
+else:
+  Pages = ["Passengers", "Governments", "Airlines"]
 
 #Make a radio
-nav = st.sidebar.selectbox(label = '', options = Pages) 
+nav = st.sidebar.selectbox(label = '', options = Pages)
 
 #--------------------
 
