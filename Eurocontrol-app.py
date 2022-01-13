@@ -34,6 +34,26 @@ st.sidebar.title("General information")
 # main_info = st.sidebar.checkbox(label = 'Main page', value = True)
 main_info = st.sidebar.button(label = 'Main page')
 
+#--------------------
+
+#Passengers, governments and airlines
+#Set the sidebar title
+st.sidebar.title("Which user are you?")
+
+# if main_info == True:
+#   Pages = []
+# else:
+#   Pages = ["Passengers", "Governments", "Airlines"]
+
+# #Make a radio
+# nav = st.sidebar.selectbox(label = '', options = Pages)
+
+nav1 = st.sidebar.button(label = "Passengers")
+nav2 = st.sidebar.button(label = "Governments")
+nav3 = st.sidebar.button(label = "Airlines")
+
+#--------------------
+
 #Set title and subheader and write information for the guide page
 if nav1 AND nav2 AND nav3 == False:
   st.title('Welcome to our dashboard!')
@@ -57,26 +77,7 @@ if nav1 AND nav2 AND nav3 == False:
   - *Coco de Brouwer (500832466)*\n
   - *Timon van Leeuwen (500782708)*\n
   - *Inge Vijsma (500819598)*""")
-
-#--------------------
-
-#Passengers, governments and airlines
-#Set the sidebar title
-st.sidebar.title("Which user are you?")
-
-# if main_info == True:
-#   Pages = []
-# else:
-#   Pages = ["Passengers", "Governments", "Airlines"]
-
-# #Make a radio
-# nav = st.sidebar.selectbox(label = '', options = Pages)
-
-nav1 = st.sidebar.button(label = "Passengers")
-nav2 = st.sidebar.button(label = "Governments")
-nav3 = st.sidebar.button(label = "Airlines")
-
-#--------------------
+  
 
 #Make the passengers page
 if nav1 == True: 
