@@ -309,6 +309,7 @@ elif st.session_state.page == 2:
 	
   #st.download_button(label='Government', data=Government)
   Government = Data2.to_csv('Government.csv')
+st.write(type(Government))
 	
 	
   #Add a black line
@@ -316,8 +317,6 @@ elif st.session_state.page == 2:
   
   #Add EUROCONTROL
   st.write('***© EUROCONTROL***')
-
-	st.write(type(Government))
   
 #--------------------
 
