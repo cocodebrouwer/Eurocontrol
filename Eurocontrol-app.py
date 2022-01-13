@@ -48,6 +48,8 @@ st.sidebar.title("Which user are you?")
 # #Make a radio
 # nav = st.sidebar.selectbox(label = '', options = Pages)
 
+main_info == True
+
 nav1 = st.sidebar.button(label = "Passenger")
 nav2 = st.sidebar.button(label = "Government")
 nav3 = st.sidebar.button(label = "Airline")
@@ -61,7 +63,7 @@ if (nav1 == False) and (main_info == False) and (nav3 == False):
   nav2 == True
 if (nav1 == False) and (nav2 == False) and (main_info == False):
   nav3 == True
-main_info == True
+
 
 #--------------------
 
