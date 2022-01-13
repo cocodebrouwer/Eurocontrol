@@ -44,6 +44,8 @@ nav1 = st.sidebar.button(label = "Passenger")
 nav2 = st.sidebar.button(label = "Government")
 nav3 = st.sidebar.button(label = "Airline")
 
+st.session_state.main_info = True
+
 
 # if (nav1 == False) and (nav2 == False) and (nav3 == False):
 #   main_info == True
