@@ -32,10 +32,10 @@ st.sidebar.title("General information")
 
 #Make a radio
 # main_info = st.sidebar.radio(label = '', options = ["Your guide", "Your downloads"])
-main_info = st.sidebar.checkbox(label = '', value = True)
+main_info = st.sidebar.checkbox(label = 'Main page', value = True)
 
 #Set title and subheader and write information for the guide page
-if main_info == "Your guide":
+if main_info == True:
   st.title('Welcome to our dashboard!')
   st.subheader('Aviation sustainability on the AMS-network')
   st.write("""Commissioned by EUROCONTROL and as part of the minor Data Science at the Amsterdam University of Applied Sciences (AUAS), research was conducted on the sustainability of aviation on the AMS-network. The AMS-network consists of all flight routes from Amsterdam Airport Schiphol to European destinations to which at least two different airlines fly. A total of 54 European destinations and 33 airlines were investigated. With this information, three tools are created, each useful for a different target group. To guide you through this dashboard, the different tools are explained below.""")
@@ -64,8 +64,13 @@ if main_info == "Your guide":
 #Set the sidebar title
 st.sidebar.title("Which user are you?")
 
+if main_info == True:
+    Pages = []
+  else:
+    Pages = ["Passengers", "Governments", "Airlines"]
+
 #Make a radio
-nav = st.sidebar.selectbox(label = '', options = ["Passengers", "Governments", "Airlines"])
+nav = st.sidebar.selectbox(label = '', options = Pages)
 
 #--------------------
 
