@@ -30,9 +30,9 @@ Data3 = pd.read_csv('PAGE3.csv')
 #Set the sidebar title
 st.sidebar.title("General information")
 
-#Make a radio
-# main_info = st.sidebar.radio(label = '', options = ["Your guide", "Your downloads"])
-main_info = st.sidebar.checkbox(label = 'Main page', value = True)
+#Make a 
+# main_info = st.sidebar.checkbox(label = 'Main page', value = True)
+main_info = st.sidebar.button(label = 'Main page')
 
 #Set title and subheader and write information for the guide page
 if main_info == True:
