@@ -44,8 +44,17 @@ nav1 = st.sidebar.button(label = "Passenger")
 nav2 = st.sidebar.button(label = "Government")
 nav3 = st.sidebar.button(label = "Airline")
 
-st.session_state.main_info = True
+if 'page' not in st.session_state:
+	st.session_state.page = 0
 
+if nav1:
+    st.session_state.page = 1
+if nav2:
+    st.session_state.page = 2
+if nav3:
+    st.session_state.page = 3
+if main_info:
+    st.session_state.page = 0
 
 # if (nav1 == False) and (nav2 == False) and (nav3 == False):
 #   main_info == True
@@ -60,7 +69,7 @@ st.session_state.main_info = True
 #--------------------
 
 #Set title and subheader and write information for the guide page
-if main_info == True:
+if st.session_state.page == 1:
   st.title('Welcome to our dashboard!')
   st.subheader('Aviation sustainability on the AMS-network')
   st.write("""Commissioned by EUROCONTROL and as part of the minor Data Science at the Amsterdam University of Applied Sciences (AUAS), research was conducted on the sustainability of aviation on the AMS-network. The AMS-network consists of all flight routes from Amsterdam Airport Schiphol to European destinations to which at least two different airlines fly. A total of 54 European destinations and 33 airlines were investigated, through data from October and November 2021. With this information, three tools are created, each useful for a different target group. To guide you through this dashboard, the different tools are explained below.""")
