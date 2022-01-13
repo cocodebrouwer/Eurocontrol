@@ -72,14 +72,14 @@ st.sidebar.title("Which user are you?")
 # #Make a radio
 # nav = st.sidebar.selectbox(label = '', options = Pages)
 
-nav = st.sidebar.button(label = "Passengers")
-nav = st.sidebar.button(label = "Governments")
-nav = st.sidebar.button(label = "Airlines")
+nav1 = st.sidebar.button(label = "Passengers")
+nav2 = st.sidebar.button(label = "Governments")
+nav3 = st.sidebar.button(label = "Airlines")
 
 #--------------------
 
 #Make the passengers page
-if nav == "Passengers": 
+if nav1 == True: 
   #Set title
   st.title('Your sustainability tool')
   #Set subheader
@@ -232,7 +232,7 @@ if nav == "Passengers":
 #--------------------
   
 #Make the governments page
-elif nav == "Governments":
+elif nav2 == True:
   #Set title
   st.title('Sustainability of airlines on the AMS-network')
   #Set subheader
@@ -310,7 +310,7 @@ elif nav == "Governments":
 #--------------------
 
 #Make the airlines page  
-elif nav == "Airlines":
+elif nav3 == True:
   #Set title
   st.title('Airline comparison tool')
   #Set subheader
