@@ -32,7 +32,9 @@ st.sidebar.title("General information")
 
 #Make a 
 # main_info = st.sidebar.checkbox(label = 'Main page', value = True)
-main_info = st.sidebar.button(label = 'Main page')
+main_info = st.sidebar.button(label = 'Main page', on_click=style_button_row, kwargs={
+        'clicked_button_ix': 2, 'n_buttons': 4
+    })
 
 #--------------------
 
