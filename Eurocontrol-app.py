@@ -316,6 +316,8 @@ elif st.session_state.page == 2:
   
   #Add EUROCONTROL
   st.write('***© EUROCONTROL***')
+
+	st.write(type(Government))
   
 #--------------------
 
