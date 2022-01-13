@@ -318,6 +318,7 @@ elif st.session_state.page == 2:
 	
 
   Government = Data2.to_csv('Government.csv')
+  st.write(type(Government)
   st.download_button(label='Government', data=Government)
   
   #Add a black line
