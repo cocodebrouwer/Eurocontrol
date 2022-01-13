@@ -31,13 +31,14 @@ Data3 = pd.read_csv('PAGE3.csv')
 st.sidebar.title("Hoi")
 
 #Make a radio
-st.sidebar.subheader("General information")
-nav = st.sidebar.radio(label = '', options = ["Your guide", "Your downloads"])
-st.sidebar.subheader("Which user are you?")
-nav = st.sidebar.radio(label = '', options = ["Passengers", "Governments", "Airlines"])
+#st.sidebar.subheader("General information")
+nav = st.sidebar.radio(label = '', options = ["Your guide", "Your downloads", "Passengers", "Governments", "Airlines"])
+#st.sidebar.subheader("Which user are you?")
+#nav = st.sidebar.radio(label = '', options = ["Passengers", "Governments", "Airlines"])
 
 #Set title and subheader and write information for the guide page
 if nav == "Your guide":
+  st.sidebar.subheader("General information")
   st.title('Welcome to our dashboard!')
   st.subheader('Aviation sustainability on the AMS-network')
   st.write("""Commissioned by EUROCONTROL and as part of the minor Data Science at the Amsterdam University of Applied Sciences (AUAS), research was conducted on the sustainability of aviation on the AMS-network. The AMS-network consists of all flight routes from Amsterdam Airport Schiphol to European destinations to which at least two different airlines fly. A total of 54 European destinations and 33 airlines were investigated. With this information, three tools are created, each useful for a different target group. To guide you through this dashboard, the different tools are explained below.""")
