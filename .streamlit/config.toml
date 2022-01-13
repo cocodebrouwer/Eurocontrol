@@ -1,6 +1,6 @@
 [theme]
-primaryColor = "white"
+primaryColor = "darkblue"
 backgroundColor = "snow"
-secondaryBackgroundColor = "navy"
+secondaryBackgroundColor = "whitesmoke"
 textColor = "black"
 font = "sans serif"
