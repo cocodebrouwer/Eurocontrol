@@ -31,7 +31,8 @@ Data3 = pd.read_csv('PAGE3.csv')
 st.sidebar.title("General information")
 
 #Make a radio
-main_info = st.sidebar.radio(label = '', options = ["Your guide", "Your downloads"])
+# main_info = st.sidebar.radio(label = '', options = ["Your guide", "Your downloads"])
+main_info = st.sidebar.checkbox(label = '', value = True)
 
 #Set title and subheader and write information for the guide page
 if main_info == "Your guide":
