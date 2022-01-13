@@ -64,7 +64,7 @@ if main_info == "Your guide":
 st.sidebar.title("Which user are you?")
 
 #Make a radio
-nav = st.sidebar.checkbox(label = '', options = ["Passengers", "Governments", "Airlines"])
+nav = st.sidebar.selectbox(label = '', options = ["Passengers", "Governments", "Airlines"])
 
 #--------------------
 
