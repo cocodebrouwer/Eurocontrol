@@ -32,7 +32,7 @@ st.sidebar.title("General information")
 
 #Make a 
 # main_info = st.sidebar.checkbox(label = 'Main page', value = True)
-main_info = st.sidebar.button(label = 'Main page')
+main_info = st.sidebar.button(label = 'Main page', value=True)
 
 #Set title and subheader and write information for the guide page
 if main_info == True:
