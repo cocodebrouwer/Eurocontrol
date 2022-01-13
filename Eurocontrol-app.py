@@ -80,7 +80,7 @@ if (nav1 == False) and (nav2 == False) and (nav3 == False):
   
 
 #Make the passengers page
-if if (main_info == False) and (nav2 == False) and (nav3 == False): 
+if (main_info == False) and (nav2 == False) and (nav3 == False): 
   #Set title
   st.title('Your sustainability tool')
   #Set subheader
