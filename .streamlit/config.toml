@@ -1,9 +1,6 @@
-[server]
-port = 80
-
 [theme]
-primaryColor="#3390FF"
-backgroundColor="#FFFFFF"
-secondaryBackgroundColor="#F0F2F6"
-textColor="#262730"
+primaryColor="darkblue"
+backgroundColor="snow"
+secondaryBackgroundColor="whitesmoke"
+textColor="black"
 font="sans serif"
