@@ -52,6 +52,17 @@ nav1 = st.sidebar.button(label = "Passenger")
 nav2 = st.sidebar.button(label = "Government")
 nav3 = st.sidebar.button(label = "Airline")
 
+
+if (nav1 == False) and (nav2 == False) and (nav3 == False):
+  main_info == True
+if (main_info == False) and (nav2 == False) and (nav3 == False):
+  nav1 == True
+if (nav1 == False) and (main_info == False) and (nav3 == False):
+  nav2 == True
+if (nav1 == False) and (nav2 == False) and (main_info == False):
+  nav3 == True
+
+
 #--------------------
 
 #Set title and subheader and write information for the guide page
