@@ -31,7 +31,10 @@ Data3 = pd.read_csv('PAGE3.csv')
 st.sidebar.title("Hoi")
 
 #Make a radio
-nav = st.sidebar.radio(label = 'General information', options = ["Your guide", "Your downloads"])
+st.sidebar.subheader("General information")
+nav = st.sidebar.radio(label = '', options = ["Your guide", "Your downloads"])
+st.sidebar.subheader("Which user are you?")
+nav = st.sidebar.radio(label = '', options = ["Passengers", "Governments", "Airlines"])
 
 #Set title and subheader and write information for the guide page
 if nav == "Your guide":
@@ -64,7 +67,7 @@ if nav == "Your guide":
 #st.sidebar.title("Which user are you?")
 
 #Make a radio
-nav = st.sidebar.radio(label = 'Which user are you?', options = ["Passengers", "Governments", "Airlines"])
+#nav = st.sidebar.radio(label = '', options = ["Passengers", "Governments", "Airlines"])
 
 #--------------------
 
