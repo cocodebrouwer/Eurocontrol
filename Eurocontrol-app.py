@@ -140,7 +140,7 @@ if st.session_state.page == 1:
 	range = len(vluchten_sorted.index)
 	
 	#Set range
- 	if range >= 1:
+	if range >= 1:
 		col1.write('1.')
 		col2.write(vluchten_sorted.iloc[0, 13])
 		col3.write(vluchten_sorted.iloc[0, -1])
