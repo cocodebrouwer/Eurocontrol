@@ -321,6 +321,9 @@ E. > 0.095 CO2 per seat (kg/km)\n
 	#Add EUROCONTROL
 	col1.write('***© EUROCONTROL***')
 	
+	if st.download_button(...):
+		st.balloons()
+	
 #--------------------
 
 #Make the airlines page
