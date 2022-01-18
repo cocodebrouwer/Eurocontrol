@@ -308,12 +308,12 @@ elif st.session_state.page == 2:
 	
 	Merged.rename(columns = {'Unnamed: 0':'Ranking'}, inplace = True)
 	Merged['Ranking'] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33]
-	Merged.to_csv('Eurocontrol/Government.csv')
+	Merged.to_csv('Government.csv')
 	
-	test = pd.read_csv('Government.csv')
-	st.write(test)
+# 	test = pd.read_csv('Government.csv')
+# 	st.write(test)
 	
-	#st.download_button(label='Download', data=csv, file_name='Government.csv', mime='text/csv')
+	st.download_button(label='Download', data=csv, file_name='PAGE2.csv', mime='text/csv')
 	
 
 	#Add a black line
