@@ -314,7 +314,7 @@ E. > 0.095 CO2 per seat (kg/km)\n
 	#Add a black line
 	st.markdown('***')
 	
-	col1, col2 st.columns(9,1)
+	col1, col2 = st.columns(9,1)
 	
 	col2.download_button(label='Download', data=Merged.to_csv(index=False), file_name='Government.csv')
 	
