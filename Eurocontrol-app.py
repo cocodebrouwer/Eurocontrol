@@ -313,7 +313,7 @@ elif st.session_state.page == 2:
 # 	test = pd.read_csv('Government.csv')
 # 	st.write(test)
 	
-	st.download_button(label='Download', data='Government.csv', file_name='Government.csv')
+	st.download_button(label='Download', data=Merged, file_name='Government.csv')
 	
 
 	#Add a black line
