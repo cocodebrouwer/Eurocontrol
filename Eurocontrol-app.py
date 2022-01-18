@@ -243,7 +243,7 @@ elif st.session_state.page == 2:
 	#Set subheader
 	st.subheader('Which airline is the most sustainable on the AMS-network?')
 	#Write information
-	st.write("Choose one or more airline(s) and/or select the desired quality mark. As a result, a ranking of the most sustainable airline, based on your selection, will appear.")
+	st.write("Choose one or more airline(s) and/or select the desired quality mark. As a result, a ranking of the most sustainable airline, based on your selection, will appear. Click on the download buttom to download the csv file of the entire list.")
 	
 	#Sort values
 	Data2 = Data2.sort_values('Mean CO2 per seat per airline (kg/km)')
