@@ -322,7 +322,7 @@ E. > 0.095 CO2 per seat (kg/km)\n
 	col1.write('***© EUROCONTROL***')
 	
 	if st.download_button(...):
-		st.balloons()
+		st.write('Thanks for downloading!')
 	
 #--------------------
 
