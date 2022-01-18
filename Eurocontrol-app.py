@@ -46,15 +46,14 @@ nav3 = st.sidebar.button(label = "Airline")
 
 if 'page' not in st.session_state:
 	st.session_state.page = 0
-
 if nav1:
-    st.session_state.page = 1
+	st.session_state.page = 1
 if nav2:
-    st.session_state.page = 2
+	st.session_state.page = 2
 if nav3:
-    st.session_state.page = 3
+	st.session_state.page = 3
 if main_info:
-    st.session_state.page = 0
+	st.session_state.page = 0
 
 
 #--------------------
