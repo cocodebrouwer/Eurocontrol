@@ -310,17 +310,16 @@ E. > 0.095 CO2 per seat (kg/km)\n
 	Merged['Ranking'] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33]
 	Merged.to_csv('Government.csv')
 	
-# 	test = pd.read_csv('Government.csv')
-# 	st.write(test)
-	
-	st.download_button(label='Download', data=Merged.to_csv(index=False), file_name='Government.csv')
-	
 
 	#Add a black line
 	st.markdown('***')
 	
+	col1, col2 st.columns(9,1)
+	
+	col2.download_button(label='Download', data=Merged.to_csv(index=False), file_name='Government.csv')
+	
 	#Add EUROCONTROL
-	st.write('***© EUROCONTROL***')
+	col1.write('***© EUROCONTROL***')
 	
 #--------------------
 
