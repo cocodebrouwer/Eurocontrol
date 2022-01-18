@@ -307,6 +307,7 @@ elif st.session_state.page == 2:
 			**CO2 (kg/km):** This provides information about the average CO2 emissions per seat (in kg/km) of an airline.""")
 	
 	Merged.rename(columns = {'Unnamed: 0':'Ranking'}, inplace = True)
+	Merged['Ranking'] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33]
 	st.write(Merged)
 	
 
