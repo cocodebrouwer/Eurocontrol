@@ -298,13 +298,13 @@ elif st.session_state.page == 2:
 	#More information expander
 	with st.expander('More information:'):
 		st.markdown("""**Airline:** This includes 33 airlines flying on the AMS-network.\n
-			**Quality mark:** This provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into five categories, shown below.\n
-			A. ≤ 0.065 CO2 per seat (kg/km)\n
-			B. 0.065 - 0.075 CO2 per seat (kg/km)\n
- 			C. 0.075 - 0.085 CO2 per seat (kg/km)\n
-			D. 0.085 - 0.095 CO2 per seat (kg/km)\n
-			E. > 0.095 CO2 per seat (kg/km)\n
-			**CO2 (kg/km):** This provides information about the average CO2 emissions per seat (in kg/km) of an airline.""")
+**Quality mark:** This provides information about the average CO2 emissions per seat (in kg/km) of an airline. This is then divided into five categories, shown below.\n
+A. ≤ 0.065 CO2 per seat (kg/km)\n
+B. 0.065 - 0.075 CO2 per seat (kg/km)\n
+C. 0.075 - 0.085 CO2 per seat (kg/km)\n
+D. 0.085 - 0.095 CO2 per seat (kg/km)\n
+E. > 0.095 CO2 per seat (kg/km)\n
+**CO2 (kg/km):** This provides information about the average CO2 emissions per seat (in kg/km) of an airline.""")
 	
 	Merged.rename(columns = {'Unnamed: 0':'Ranking'}, inplace = True)
 	Merged['Ranking'] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33]
