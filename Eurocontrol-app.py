@@ -316,14 +316,10 @@ E. > 0.095 CO2 per seat (kg/km)\n
 	
 	col1, col2 = st.columns((9,1))
 	
-	col2.download_button(label='Download', data=Merged.to_csv(index=False), file_name='Government.csv', on_click=st.balloons())
+	col2.download_button(label='Download', data=Merged.to_csv(index=False), file_name='Government.csv')
 	
 	#Add EUROCONTROL
 	col1.write('***© EUROCONTROL***')
-	
-# 	if st.download_button(...):
-# 		st.write('Thanks for downloading!')
-# 	st.balloons()
 
 	
 #--------------------
