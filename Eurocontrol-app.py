@@ -45,7 +45,7 @@ nav2 = st.sidebar.button(label = "Government")
 nav3 = st.sidebar.button(label = "Airline")
 
 if 'page' not in st.session_state:
-st.session_state.page = 0
+	st.session_state.page = 0
 
 if nav1:
     st.session_state.page = 1
