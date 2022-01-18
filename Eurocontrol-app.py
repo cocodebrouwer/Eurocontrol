@@ -307,7 +307,7 @@ elif st.session_state.page == 2:
   E. > 0.095 CO2 per seat (kg/km)\n
   **CO2 (kg/km):** This provides information about the average CO2 emissions per seat (in kg/km) of an airline.""")
 			
-	st.write('test')
+st.write('test')
 	
 
   #Add a black line
