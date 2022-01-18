@@ -306,7 +306,7 @@ D. 0.085 - 0.095 CO2 per seat (kg/km)\n
 E. > 0.095 CO2 per seat (kg/km)\n
 **CO2 (kg/km):** This provides information about the average CO2 emissions per seat (in kg/km) of an airline.""")
 	
-	download = Merged
+	download = Data2
 	download.rename(columns = {'Unnamed: 0':'Ranking'}, inplace = True)
 	download['Ranking'] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33]
 	download.to_csv('Government.csv')
