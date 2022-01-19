@@ -286,7 +286,7 @@ elif st.session_state.page == 2:
 	col1.write('**Ranking**')
 	col2.write('**Airline**')
 	col3.write('**Quality mark**')
-	col4.write('**CO2 (kg)**')
+	col4.write('**CO2 (kg/km)**')
 
 	#Set range
 	for i in range(len(Merged.index)):
