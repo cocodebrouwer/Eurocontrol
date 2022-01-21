@@ -385,8 +385,8 @@ elif st.session_state.page == 3:
 	col1, col2, col3, col4 = st.columns(4)
 	
 	#Name columns
-	col1.write('**Quality mark with average load factor**')
-	col1.write('**CO2 (kg/km) with average load factor**')
+	col1.write('**Quality mark with load factor 2019**')
+	col1.write('**CO2 (kg/km) with load factor 2019**')
 	col1.write('**Quality mark with set load factor**')
 	col1.write('**CO2 (kg/km) with set load factor**')
 	
@@ -397,8 +397,8 @@ elif st.session_state.page == 3:
 	col2.write(str(round(AirlineX.iloc[0, 7], 4)))
 	
 	#Name columns
-	col3.write('**Quality mark with average load factor**')
-	col3.write('**CO2 (kg/km) with average load factor**')
+	col3.write('**Quality mark with load factor 2019**')
+	col3.write('**CO2 (kg/km) with load factor 2019**')
 	col3.write('**Quality mark with set load factor**')
 	col3.write('**CO2 (kg/km) with set load factor**')
 	
